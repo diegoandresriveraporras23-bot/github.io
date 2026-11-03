@@ -3300,6 +3300,280 @@
       .design-system-v2 .project-actions .btn { width: 100%; }
     }
 
+    /* PARTE 8 — Tutorías, dirección académica, jurados y evaluación científica */
+    .design-system-v2 .mentorship-evaluation {
+      margin-top: 28px;
+      scroll-margin-top: 150px;
+    }
+    .design-system-v2 .mentor-overview {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .design-system-v2 .mentor-kpi {
+      min-width: 0;
+      padding: 14px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 12px;
+      background: var(--bg-surface);
+      box-shadow: var(--shadow-sm);
+    }
+    .design-system-v2 .mentor-kpi strong {
+      display: block;
+      font-size: clamp(24px, 4vw, 34px);
+      line-height: 1;
+      color: var(--ink-primary);
+    }
+    .design-system-v2 .mentor-kpi span {
+      display: block;
+      margin-top: 6px;
+      font-size: 11px;
+      line-height: 1.45;
+      color: var(--ink-muted);
+    }
+    .design-system-v2 .mentor-privacy-note,
+    .design-system-v2 .evaluation-integrity-note {
+      padding: 14px 16px;
+      border: 1px solid var(--brand-accent-border);
+      border-radius: 12px;
+      background: var(--brand-accent-soft);
+      color: var(--ink-secondary);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+    .design-system-v2 .mentor-privacy-note strong,
+    .design-system-v2 .evaluation-integrity-note strong { color: var(--ink-primary); }
+    .design-system-v2 .mentor-layout {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .design-system-v2 .mentor-panel {
+      padding: clamp(18px, 3vw, 24px);
+      border: 1px solid var(--border-neutral);
+      border-radius: 16px;
+      background: var(--bg-surface);
+      box-shadow: var(--shadow-sm);
+      min-width: 0;
+    }
+    .design-system-v2 .mentor-panel-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .design-system-v2 .mentor-panel-title {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.3;
+      color: var(--ink-primary);
+    }
+    .design-system-v2 .mentor-panel-desc {
+      margin-top: 5px;
+      max-width: 760px;
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--ink-secondary);
+    }
+    .design-system-v2 .mentor-panel-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-neutral);
+      background: var(--bg-elevated);
+      color: var(--ink-secondary);
+      font-size: 10.5px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .design-system-v2 .level-distribution { display: grid; gap: 11px; }
+    .design-system-v2 .level-row {
+      display: grid;
+      grid-template-columns: minmax(125px, 1fr) minmax(120px, 2.2fr) auto;
+      gap: 10px;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--ink-secondary);
+    }
+    .design-system-v2 .level-row strong { color: var(--ink-primary); }
+    .design-system-v2 .level-track {
+      height: 8px;
+      border-radius: 999px;
+      background: var(--bg-subtle);
+      overflow: hidden;
+    }
+    .design-system-v2 .level-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent));
+    }
+    .design-system-v2 .mentor-example-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .design-system-v2 .mentor-example {
+      padding: 13px 14px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 12px;
+      background: var(--bg-elevated);
+    }
+    .design-system-v2 .mentor-example-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 7px;
+    }
+    .design-system-v2 .mentor-example-meta span,
+    .design-system-v2 .jury-chip,
+    .design-system-v2 .venue-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink-secondary);
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .design-system-v2 .mentor-example strong {
+      display: block;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: var(--ink-primary);
+    }
+    .design-system-v2 .mentor-example p {
+      margin-top: 5px;
+      font-size: 11.5px;
+      line-height: 1.55;
+      color: var(--ink-muted);
+    }
+    .design-system-v2 .jury-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .design-system-v2 .jury-summary {
+      padding: 12px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 11px;
+      background: var(--bg-elevated);
+      text-align: center;
+    }
+    .design-system-v2 .jury-summary strong {
+      display: block;
+      font-size: 24px;
+      color: var(--ink-primary);
+      line-height: 1;
+    }
+    .design-system-v2 .jury-summary span {
+      display: block;
+      margin-top: 5px;
+      font-size: 10.5px;
+      color: var(--ink-muted);
+    }
+    .design-system-v2 .jury-topic-list,
+    .design-system-v2 .venue-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 12px;
+    }
+    .design-system-v2 .peer-summary {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+      margin: 12px 0 16px;
+    }
+    .design-system-v2 .peer-summary .mentor-kpi { box-shadow: none; }
+    .design-system-v2 .peer-year-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0,1fr));
+      gap: 8px;
+      align-items: end;
+      min-height: 138px;
+      padding: 14px 12px 10px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 12px;
+      background: var(--bg-elevated);
+    }
+    .design-system-v2 .peer-year-item {
+      display: flex;
+      min-width: 0;
+      height: 112px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 5px;
+    }
+    .design-system-v2 .peer-year-count {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--ink-primary);
+    }
+    .design-system-v2 .peer-year-bar {
+      width: min(34px, 82%);
+      min-height: 8px;
+      border-radius: 7px 7px 3px 3px;
+      background: linear-gradient(180deg, var(--brand-accent), var(--brand-primary));
+    }
+    .design-system-v2 .peer-year-label {
+      font-size: 9.5px;
+      color: var(--ink-muted);
+    }
+    .design-system-v2 .editorial-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .design-system-v2 .editorial-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 10px 12px;
+      border-left: 3px solid var(--brand-accent);
+      background: var(--bg-elevated);
+      border-radius: 0 9px 9px 0;
+    }
+    .design-system-v2 .editorial-year {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: var(--brand-accent-strong);
+    }
+    .design-system-v2 .editorial-title {
+      font-size: 11.5px;
+      line-height: 1.45;
+      color: var(--ink-secondary);
+    }
+    .design-system-v2 .mentor-source-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    @media (min-width: 760px) {
+      .design-system-v2 .mentor-overview { grid-template-columns: repeat(6, minmax(0,1fr)); }
+      .design-system-v2 .mentor-layout { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .design-system-v2 .mentor-example-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 639px) {
+      .design-system-v2 .level-row { grid-template-columns: 1fr auto; }
+      .design-system-v2 .level-track { grid-column: 1 / -1; grid-row: 2; }
+      .design-system-v2 .jury-summary-grid { grid-template-columns: 1fr; }
+      .design-system-v2 .peer-year-grid { grid-template-columns: repeat(4, minmax(0,1fr)); min-height: auto; }
+      .design-system-v2 .peer-year-item { height: 100px; }
+      .design-system-v2 .mentor-source-actions .btn { width: 100%; }
+    }
+
 </style>
 </head>
 <body class="design-system-v2">
@@ -3572,6 +3846,7 @@
           <h2 id="titulo-experiencia" class="section-title">Experiencia Investigativa, Consultoría en Datos, Docencia y Organizacional</h2>
           <p class="section-desc">Trayectoria organizada en cuatro líneas complementarias: investigación científica, consultoría cuantitativa, docencia de posgrado y psicología organizacional. Cada línea resume responsabilidades, capacidades técnicas y ámbito de aplicación.</p>
           <p class="section-desc">La ampliación incorpora además gestión y coordinación como eje transversal y despliega 19 periodos profesionales entre 2013 y la vinculación vigente, con fechas, dedicaciones y actividades conservadas cuando la fuente las declara.</p>
+          <p class="section-desc">La formación de talento y la evaluación académica/científica se presentan mediante registros agregados y ejemplos anonimizados de tutorías, jurados, arbitraje y revisión editorial, preservando la confidencialidad de terceros y de los procesos evaluativos.</p>
         </div>
 
         <div class="filter-group" id="exp-filters" aria-label="Filtrar experiencia por dominio">
@@ -4157,6 +4432,134 @@
         </div></div>
           <p class="project-source-note">Fuente de contenido: CvLAC público del titular. Los registros se reproducen de forma editorialmente depurada; el proyecto asociado a la institución excluida no se incorpora al HTML. Los roles personales solo se mostrarán si una fuente pública los declara expresamente.</p>
         </div>
+
+        <div class="experience-block mentorship-evaluation" id="mentoria-evaluacion" aria-labelledby="titulo-mentoria-evaluacion">
+          <div class="experience-block-head">
+            <div>
+              <span class="eyebrow">Formación de talento · Evaluación académica y científica</span>
+              <h3 id="titulo-mentoria-evaluacion" class="experience-block-title">Tutorías, dirección académica, jurados y evaluación científica</h3>
+              <p class="experience-block-desc">Síntesis pública de registros CvLAC sobre formación de talento y evaluación académica. Los conteos corresponden a entradas registradas en la fuente, no necesariamente a trabajos únicos; la presentación elimina nombres de estudiantes, orientados, autores evaluados y terceros, y no revela materiales confidenciales de arbitraje.</p>
+            </div>
+          </div>
+
+          <div class="mentor-overview" aria-label="Resumen cuantitativo de formación y evaluación">
+            <div class="mentor-kpi"><strong>114</strong><span>registros CvLAC de trabajos dirigidos y tutorías</span></div>
+            <div class="mentor-kpi"><strong>81</strong><span>registros de trabajos de grado de pregrado</span></div>
+            <div class="mentor-kpi"><strong>24</strong><span>registros de maestría o especialidad clínica</span></div>
+            <div class="mentor-kpi"><strong>9</strong><span>monografías de perfeccionamiento o especialización</span></div>
+            <div class="mentor-kpi"><strong>18</strong><span>jurados publicables tras aplicar la política institucional</span></div>
+            <div class="mentor-kpi"><strong>33</strong><span>actuaciones publicables como par evaluador</span></div>
+          </div>
+
+          <div class="mentor-privacy-note"><strong>Privacidad y confidencialidad:</strong> todos los ejemplos se anonimizan y reducen a nivel, año cuando la fuente lo expone, temática, rol y estado. Los registros institucionales excluidos por la política vigente no se trasladan al HTML. En evaluación por pares se muestra únicamente ámbito, tipo, año y entidad pública registrada; no se publican autores, manuscritos, conceptos, resultados de evaluación ni información reservada.</div>
+
+          <div class="mentor-layout">
+            <article class="mentor-panel" aria-labelledby="titulo-direccion-academica">
+              <div class="mentor-panel-head">
+                <div>
+                  <h4 id="titulo-direccion-academica" class="mentor-panel-title">Dirección académica y tutorías</h4>
+                  <p class="mentor-panel-desc">El corpus registra trabajos concluidos entre 2014 y 2025, con funciones de tutor principal y cotutor/asesor en psicología, educación, salud, gestión, administración e innovación.</p>
+                </div>
+                <span class="mentor-panel-badge">114 registros · 3 niveles/tipos</span>
+              </div>
+
+              <div class="level-distribution" aria-label="Distribución de registros de tutoría por nivel o tipo">
+                <div class="level-row"><strong>Pregrado</strong><div class="level-track" role="progressbar" aria-label="Pregrado: 81 de 114 registros" aria-valuemin="0" aria-valuemax="114" aria-valuenow="81"><div class="level-fill" style="width:71.1%"></div></div><span>81 · 71,1 %</span></div>
+                <div class="level-row"><strong>Maestría / especialidad clínica</strong><div class="level-track" role="progressbar" aria-label="Maestría o especialidad clínica: 24 de 114 registros" aria-valuemin="0" aria-valuemax="114" aria-valuenow="24"><div class="level-fill" style="width:21.1%"></div></div><span>24 · 21,1 %</span></div>
+                <div class="level-row"><strong>Monografía / especialización</strong><div class="level-track" role="progressbar" aria-label="Monografías: 9 de 114 registros" aria-valuemin="0" aria-valuemax="114" aria-valuenow="9"><div class="level-fill" style="width:7.9%"></div></div><span>9 · 7,9 %</span></div>
+              </div>
+
+              <div class="mentor-example-grid" aria-label="Ejemplos temáticos anonimizados de dirección académica">
+                <div class="mentor-example"><div class="mentor-example-meta"><span>2025</span><span>Maestría en Educación</span><span>Tutor principal</span><span>Concluida</span></div><strong>Convivencia escolar, valoración curricular y permanencia educativa</strong><p>Ejemplo anonimizado de dirección en educación secundaria y permanencia escolar.</p></div>
+                <div class="mentor-example"><div class="mentor-example-meta"><span>2024</span><span>Maestría en Administración</span><span>Tutor principal</span><span>Concluida</span></div><strong>Emprendimiento tecnológico y transferencia de conocimiento</strong><p>Dirección de trabajo aplicado a innovación, estrategia y transferencia tecnológica.</p></div>
+                <div class="mentor-example"><div class="mentor-example-meta"><span>2024</span><span>Especialidad clínica</span><span>Cotutor / asesor</span><span>Concluida</span></div><strong>Efectividad clínica de tratamientos para deterioro cognitivo leve</strong><p>Revisión sistemática en salud y evaluación de intervenciones clínicas.</p></div>
+                <div class="mentor-example"><div class="mentor-example-meta"><span>2023</span><span>Pregrado</span><span>Tutor principal</span><span>Concluida</span></div><strong>Manejo psicológico de trastornos del sueño en adultos</strong><p>Trabajo de revisión sistemática con foco en salud mental y evidencia científica.</p></div>
+                <div class="mentor-example"><div class="mentor-example-meta"><span>2020</span><span>Monografía</span><span>Tutor principal</span><span>Concluida</span></div><strong>Migración y efectos psicológicos sobre la salud mental</strong><p>Ejemplo de formación aplicada a problemáticas sociales y salud mental.</p></div>
+                <div class="mentor-example"><div class="mentor-example-meta"><span>2014</span><span>Pregrado</span><span>Tutor principal</span><span>Concluida</span></div><strong>Motivación para el trabajo en contexto institucional</strong><p>Registro temprano del corpus de dirección en psicología organizacional.</p></div>
+              </div>
+            </article>
+
+            <article class="mentor-panel" aria-labelledby="titulo-jurados">
+              <div class="mentor-panel-head">
+                <div>
+                  <h4 id="titulo-jurados" class="mentor-panel-title">Jurados y comisiones evaluadoras de trabajos de grado</h4>
+                  <p class="mentor-panel-desc">La fuente pública contiene 23 registros de jurado; después de aplicar la política institucional de exclusión quedan 18 publicables. El bloque de CvLAC no expone año en estas fichas, por lo que no se inventa una cronología.</p>
+                </div>
+                <span class="mentor-panel-badge">18 registros publicables</span>
+              </div>
+
+              <div class="jury-summary-grid" aria-label="Jurados publicables por nivel">
+                <div class="jury-summary"><strong>9</strong><span>pregrado</span></div>
+                <div class="jury-summary"><strong>8</strong><span>maestría</span></div>
+                <div class="jury-summary"><strong>1</strong><span>doctorado</span></div>
+              </div>
+
+              <p class="mentor-panel-desc">Temáticas representativas, anonimizadas y sin nombres de orientados:</p>
+              <div class="jury-topic-list" aria-label="Temáticas representativas de jurados">
+                <span class="jury-chip">diversidad sexual y necesidades educativas · doctorado</span>
+                <span class="jury-chip">convivencia escolar y participación familiar · maestría</span>
+                <span class="jury-chip">responsabilidad social y gestión · maestría</span>
+                <span class="jury-chip">competencias ciudadanas y herramientas TIC · maestría</span>
+                <span class="jury-chip">bullying y representaciones sociales · pregrado</span>
+                <span class="jury-chip">ansiedad, depresión y consumo de alcohol · pregrado</span>
+                <span class="jury-chip">clima laboral y burnout · pregrado</span>
+                <span class="jury-chip">sistematización de prácticas profesionales · pregrado</span>
+              </div>
+            </article>
+
+            <article class="mentor-panel" aria-labelledby="titulo-par-evaluador">
+              <div class="mentor-panel-head">
+                <div>
+                  <h4 id="titulo-par-evaluador" class="mentor-panel-title">Evaluación científica por pares</h4>
+                  <p class="mentor-panel-desc">Tras aplicar la exclusión institucional vigente, se conservan 33 actuaciones públicas entre 2018 y 2024: 31 evaluaciones de material para publicación científica y 2 evaluaciones de proyectos.</p>
+                </div>
+                <span class="mentor-panel-badge">32 nacionales · 1 internacional</span>
+              </div>
+
+              <div class="peer-summary" aria-label="Tipos de evaluación por pares">
+                <div class="mentor-kpi"><strong>31</strong><span>materiales para publicación científica</span></div>
+                <div class="mentor-kpi"><strong>2</strong><span>proyectos evaluados en registros publicables</span></div>
+              </div>
+
+              <div class="peer-year-grid" aria-label="Distribución temporal de actuaciones publicables como par evaluador">
+                <div class="peer-year-item"><span class="peer-year-count">1</span><div class="peer-year-bar" style="height:11%"></div><span class="peer-year-label">2018</span></div>
+                <div class="peer-year-item"><span class="peer-year-count">6</span><div class="peer-year-bar" style="height:67%"></div><span class="peer-year-label">2019</span></div>
+                <div class="peer-year-item"><span class="peer-year-count">9</span><div class="peer-year-bar" style="height:100%"></div><span class="peer-year-label">2020</span></div>
+                <div class="peer-year-item"><span class="peer-year-count">3</span><div class="peer-year-bar" style="height:33%"></div><span class="peer-year-label">2021</span></div>
+                <div class="peer-year-item"><span class="peer-year-count">4</span><div class="peer-year-bar" style="height:44%"></div><span class="peer-year-label">2022</span></div>
+                <div class="peer-year-item"><span class="peer-year-count">4</span><div class="peer-year-bar" style="height:44%"></div><span class="peer-year-label">2023</span></div>
+                <div class="peer-year-item"><span class="peer-year-count">6</span><div class="peer-year-bar" style="height:67%"></div><span class="peer-year-label">2024</span></div>
+              </div>
+
+              <p class="mentor-panel-desc" style="margin-top:14px;">Entidades y medios que aparecen en los registros publicables incluyen revistas científicas, editoriales universitarias y sistemas de investigación. Se muestran únicamente como evidencia de ámbito de evaluación, sin identificar manuscritos ni personas evaluadas.</p>
+              <div class="venue-list" aria-label="Ejemplos de medios y entidades de evaluación científica">
+                <span class="venue-chip">Revista Unimar</span><span class="venue-chip">Paakat</span><span class="venue-chip">Tesis Psicológica</span><span class="venue-chip">Revista CEA</span><span class="venue-chip">Revista Lebret</span><span class="venue-chip">Paideia Surcolombiana</span><span class="venue-chip">Cuadernos de Administración</span><span class="venue-chip">Información Tecnológica</span><span class="venue-chip">Revista de Investigación en Salud</span><span class="venue-chip">Sello Editorial UNAD</span><span class="venue-chip">Universidad del Tolima</span><span class="venue-chip">Universidad de La Guajira</span><span class="venue-chip">Universidad Surcolombiana</span><span class="venue-chip">RedColsi · Nodo Bucaramanga</span>
+              </div>
+            </article>
+
+            <article class="mentor-panel" aria-labelledby="titulo-revision-editorial">
+              <div class="mentor-panel-head">
+                <div>
+                  <h4 id="titulo-revision-editorial" class="mentor-panel-title">Edición, revisión editorial y comités de evaluación</h4>
+                  <p class="mentor-panel-desc">CvLAC registra cuatro productos de edición/revisión de libro. La categoría de participación en comités de evaluación aparece en la estructura pública, pero no presenta un bloque sustantivo poblado en la versión consultada; por integridad, no se crean registros para esa categoría.</p>
+                </div>
+                <span class="mentor-panel-badge">4 registros editoriales verificables</span>
+              </div>
+
+              <div class="editorial-list" aria-label="Registros de edición o revisión de libro">
+                <div class="editorial-item"><span class="editorial-year">2020</span><span class="editorial-title">Satisfacción laboral: un análisis desde los sectores económicos y productivos</span></div>
+                <div class="editorial-item"><span class="editorial-year">2020</span><span class="editorial-title">El liderazgo en el desarrollo y la gestión de las organizaciones</span></div>
+                <div class="editorial-item"><span class="editorial-year">2018</span><span class="editorial-title">Retos y paradigmas de las organizaciones en el siglo XXI</span></div>
+                <div class="editorial-item"><span class="editorial-year">2018</span><span class="editorial-title">Bienestar psicológico en las organizaciones: un análisis desde los sectores económicos y productivos</span></div>
+              </div>
+
+              <div class="evaluation-integrity-note" style="margin-top:14px;"><strong>Criterio de integridad:</strong> “par evaluador”, “jurado”, “tutor principal”, “cotutor/asesor” y “edición/revisión” se mantienen como categorías distintas. No se fusionan como una única función ni se atribuyen roles que la ficha pública no declara.</div>
+            </article>
+          </div>
+
+          <div class="mentor-source-actions"><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Consultar evidencia completa en CvLAC ↗</a></div>
+        </div>
+
       </div>
     </div>
   </section>
