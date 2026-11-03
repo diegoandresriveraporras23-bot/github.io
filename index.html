@@ -4834,6 +4834,153 @@
       }
     }
 
+
+    /* PARTE 14 — Contacto, conversión y ética — 2026-11-02 */
+    .design-system-v2 .contact-intro {
+      min-width: 0;
+    }
+
+    .design-system-v2 .contact-reason-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 20px 0 16px;
+    }
+
+    .design-system-v2 .contact-reason-card {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 14px;
+      background: rgba(255,255,255,.78);
+      box-shadow: var(--shadow-xs);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 7px;
+    }
+
+    .design-system-v2 .contact-reason-kicker {
+      font-size: 9.5px;
+      font-weight: 850;
+      line-height: 1.3;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--brand-accent-strong);
+    }
+
+    .design-system-v2 .contact-reason-card h3 {
+      font-size: 14px;
+      line-height: 1.35;
+      color: var(--ink-primary);
+    }
+
+    .design-system-v2 .contact-reason-card p {
+      margin: 0;
+      font-size: 11.5px;
+      line-height: 1.58;
+      color: var(--ink-secondary);
+    }
+
+    .design-system-v2 .contact-reason-action {
+      margin-top: auto;
+      min-height: 40px;
+      padding: 8px 11px;
+      font-size: 11px;
+    }
+
+    .design-system-v2 .contact-channel-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .design-system-v2 .contact-form-card {
+      align-self: start;
+      padding: clamp(22px, 2.7vw, 30px);
+    }
+
+    .design-system-v2 .contact-form-lead {
+      margin: 5px 0 14px;
+      font-size: 12px;
+      line-height: 1.62;
+      color: var(--ink-muted);
+    }
+
+    .design-system-v2 .contact-process {
+      margin: 0 0 18px;
+      padding: 13px 14px;
+      border: 1px solid #cfe0dd;
+      border-radius: 12px;
+      background: rgba(236,253,245,.68);
+    }
+
+    .design-system-v2 .contact-process-title {
+      margin-bottom: 7px;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: #0f5f59;
+    }
+
+    .design-system-v2 .contact-process ol {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.55;
+    }
+
+    .design-system-v2 .contact-process li + li {
+      margin-top: 4px;
+    }
+
+    .design-system-v2 .contact-help {
+      margin-top: 6px;
+      font-size: 11px;
+      line-height: 1.5;
+      color: var(--ink-muted);
+    }
+
+    .design-system-v2 .contact-ethics-note {
+      margin-top: 10px;
+      padding: 11px 12px;
+      border: 1px solid #d7e0ea;
+      border-radius: 11px;
+      background: rgba(248,250,252,.82);
+      color: var(--ink-secondary);
+      font-size: 11.25px;
+      line-height: 1.58;
+    }
+
+    .design-system-v2 .contact-ethics-note strong,
+    .design-system-v2 .contact-human-note strong {
+      color: var(--ink-primary);
+    }
+
+    .design-system-v2 .contact-human-note {
+      margin: 0 0 14px;
+      padding: 10px 12px;
+      border-left: 3px solid var(--accent-teal);
+      border-radius: 0 10px 10px 0;
+      background: rgba(236,253,245,.66);
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.55;
+    }
+
+    .design-system-v2 #f-mensaje {
+      min-height: 118px;
+      resize: vertical;
+    }
+
+    @media (max-width: 639px) {
+      .design-system-v2 .contact-reason-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
 </style>
 </head>
 <body class="design-system-v2">
@@ -9734,20 +9881,50 @@
   <!-- 8. CONTACTO DIRECTO -->
   <section id="contacto" class="section section-contact" aria-labelledby="titulo-contacto" style="border-bottom: none;">
     <div class="container contact-grid">
-      <div>
-        <span class="eyebrow">Canales Oficiales</span>
-        <h2 id="titulo-contacto" class="section-title">Contacto Directo</h2>
-        <p class="section-desc" style="margin-bottom: 22px;">
-          Para cooperación científica, consultoría cuantitativa, acompañamiento académico, diagnóstico presencial de riesgo psicosocial o capacitación, utiliza el correo directo o prepara una solicitud estructurada desde el formulario.
+      <div class="contact-intro">
+        <span class="eyebrow">Contacto · Colaboración · Servicios</span>
+        <h2 id="titulo-contacto" class="section-title">Contacto profesional con un motivo claro</h2>
+        <p class="section-desc">
+          Elige la vía que mejor describe tu necesidad. El portafolio respalda cooperación científica, docencia y formación de posgrado, evaluación académica/científica y consultoría profesional en los ámbitos ya documentados.
         </p>
 
-        <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="contact-reason-grid" aria-label="Motivos de contacto respaldados por la trayectoria">
+          <article class="contact-reason-card">
+            <span class="contact-reason-kicker">Investigación</span>
+            <h3>Cooperación científica y proyectos</h3>
+            <p>Para colaboración en investigación, proyectos, producción científica, revisiones y trabajo interdisciplinario dentro de las líneas documentadas.</p>
+            <button type="button" class="btn btn-outline contact-reason-action" data-contact-reason="Cooperación científica y proyectos de investigación">Preparar contacto</button>
+          </article>
+
+          <article class="contact-reason-card">
+            <span class="contact-reason-kicker">Formación</span>
+            <h3>Docencia y posgrados</h3>
+            <p>Para docencia universitaria o de posgrado, seminarios, acompañamiento metodológico y formación académica respaldada por la trayectoria docente.</p>
+            <button type="button" class="btn btn-outline contact-reason-action" data-contact-reason="Docencia universitaria y de posgrado">Preparar contacto</button>
+          </article>
+
+          <article class="contact-reason-card">
+            <span class="contact-reason-kicker">Evaluación</span>
+            <h3>Evaluación científica y académica</h3>
+            <p>Para arbitraje, evaluación de producción o proyectos, jurados y revisión académica, preservando confidencialidad y alcance de cada proceso.</p>
+            <button type="button" class="btn btn-outline contact-reason-action" data-contact-reason="Evaluación científica, arbitraje y jurados">Preparar contacto</button>
+          </article>
+
+          <article class="contact-reason-card">
+            <span class="contact-reason-kicker">Aplicación profesional</span>
+            <h3>Consultoría y servicios especializados</h3>
+            <p>Para estadística y psicometría, revisión académica, riesgo psicosocial presencial o capacitación. Selecciona en el formulario el servicio específico ya publicado.</p>
+            <button type="button" class="btn btn-outline contact-reason-action" data-contact-reason="">Elegir servicio</button>
+          </article>
+        </div>
+
+        <div class="contact-channel-stack">
           <a href="mailto:diegoandresriveraporras23@gmail.com" class="exec-card contact-direct-link visual-panel visual-panel--contact" aria-label="Enviar correo a Diego Rivera-Porras" style="padding: 15px; flex-direction: row; align-items: center; justify-content: flex-start; gap: 14px;">
             <div class="mini-icon">
               <svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
             <div>
-              <p style="font-size: 11px; font-weight: 800; color: var(--ink-muted); text-transform: uppercase;">Correo Electrónico Directo</p>
+              <p style="font-size: 11px; font-weight: 800; color: var(--ink-muted); text-transform: uppercase;">Correo electrónico directo</p>
               <p style="font-size: 13.5px; font-weight: 800; color: var(--ink-primary); word-break: break-all;">diegoandresriveraporras23@gmail.com</p>
             </div>
           </a>
@@ -9757,7 +9934,7 @@
               <svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <p style="font-size: 11px; font-weight: 800; color: var(--ink-muted); text-transform: uppercase;">Cobertura de Servicios</p>
+              <p style="font-size: 11px; font-weight: 800; color: var(--ink-muted); text-transform: uppercase;">Cobertura de servicios</p>
               <p style="font-size: 13.5px; font-weight: 800; color: var(--ink-primary);">Colombia (Presencial) &bull; Internacional (Remoto)</p>
             </div>
           </div>
@@ -9765,47 +9942,63 @@
       </div>
 
       <!-- Generador Directo de Correo -->
-      <div class="exec-card visual-panel visual-panel--contact">
-        <h3 class="card-title" style="margin-bottom: 4px;">Generador de Solicitud Formal por Correo</h3>
-        <p style="font-size: 12px; color: var(--ink-muted); margin-bottom: 16px;">Estructura tu requerimiento para enviarlo directamente a <strong>diegoandresriveraporras23@gmail.com</strong>.</p>
+      <div class="exec-card visual-panel visual-panel--contact contact-form-card">
+        <h3 class="card-title" style="margin-bottom: 4px;">Preparar una solicitud por correo</h3>
+        <p class="contact-form-lead">El formulario solo organiza un borrador para tu cliente de correo. No envía ni almacena información en este sitio.</p>
 
-        <form id="contact-form">
-          <div class="grid-2" style="gap: 12px;">
-            <div class="form-group">
-              <label class="form-label" for="f-nombre">Nombre o Institución *</label>
-              <input type="text" id="f-nombre" name="nombre" class="form-control" autocomplete="name" required placeholder="Ej. Dr. Carlos Gómez / Universidad...">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="f-correo">Correo de Contacto *</label>
-              <input type="email" id="f-correo" name="correo" class="form-control" autocomplete="email" required placeholder="correo@institucion.edu.co">
-            </div>
-          </div>
+        <div class="contact-process" aria-labelledby="contact-process-title">
+          <p id="contact-process-title" class="contact-process-title">Cómo funciona</p>
+          <ol>
+            <li>Selecciona el motivo de contacto.</li>
+            <li>Incluye únicamente el contexto necesario para valorar la solicitud.</li>
+            <li>Revisa el borrador en tu cliente de correo y decide si deseas enviarlo.</li>
+          </ol>
+        </div>
 
+        <p id="contact-human-review" class="contact-human-note"><strong>Revisión humana:</strong> no hay aprobación, respuesta ni decisión automática. Cada correo recibido se revisa de forma humana antes de cualquier respuesta o definición de alcance.</p>
+
+        <form id="contact-form" aria-describedby="contact-human-review contact-privacy-note">
           <div class="form-group">
-            <label class="form-label" for="f-asunto">Línea de Servicio Requerida *</label>
-            <select id="f-asunto" name="asunto" class="form-control" required>
-              <option value="Asesoría en Estadística, Psicometría y Ciencia de Datos">1. Asesoría en Estadística, Psicometría y Ciencia de Datos (R, Python, SPSS, AMOS, SEM)</option>
-              <option value="Revisión y Asesoría de Trabajos Académicos y Manuscritos (Multinormas)">2. Revisión y Asesoría de Trabajos Académicos y Manuscritos (APA 7, Vancouver, IEEE, Harvard, Chicago)</option>
-              <option value="Diagnóstico e Intervención de Riesgo Psicosocial (Exclusivamente Presencial)">3. Diagnóstico e Intervención de Riesgo Psicosocial (Exclusivamente Presencial - Licencia SST)</option>
-              <option value="Talleres, Seminarios y Capacitaciones In-Company">4. Talleres, Seminarios y Capacitaciones In-Company</option>
-              <option value="Cooperación en Investigación Científica">Cooperación en Investigación Científica / Arbitraje</option>
+            <label class="form-label" for="f-asunto">Motivo de contacto *</label>
+            <select id="f-asunto" name="asunto" class="form-control" required aria-describedby="contact-purpose-help">
+              <option value="" selected disabled>Selecciona una opción</option>
+              <optgroup label="Colaboración académica y científica">
+                <option value="Cooperación científica y proyectos de investigación">Cooperación científica y proyectos de investigación</option>
+                <option value="Docencia universitaria y de posgrado">Docencia universitaria y de posgrado</option>
+                <option value="Evaluación científica, arbitraje y jurados">Evaluación científica, arbitraje y jurados</option>
+              </optgroup>
+              <optgroup label="Servicios profesionales">
+                <option value="Asesoría en Estadística, Psicometría y Ciencia de Datos">Asesoría en Estadística, Psicometría y Ciencia de Datos (R, Python, SPSS, AMOS, SEM)</option>
+                <option value="Revisión y Asesoría de Trabajos Académicos y Manuscritos">Revisión y Asesoría de Trabajos Académicos y Manuscritos (APA 7, Vancouver, IEEE, Harvard, Chicago)</option>
+                <option value="Diagnóstico e Intervención de Riesgo Psicosocial (Exclusivamente Presencial)">Diagnóstico e Intervención de Riesgo Psicosocial (Exclusivamente Presencial - Licencia SST)</option>
+                <option value="Talleres, Seminarios y Capacitaciones In-Company">Talleres, Seminarios y Capacitaciones In-Company</option>
+              </optgroup>
             </select>
+            <p id="contact-purpose-help" class="contact-help">Las opciones corresponden a colaboración, docencia, evaluación y servicios ya respaldados dentro del portafolio.</p>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="f-mensaje">Descripción del Proyecto o Requerimiento *</label>
-            <textarea id="f-mensaje" name="mensaje" rows="3" class="form-control" required placeholder="Indica el alcance, fechas estimadas, ciudad (si requiere diagnóstico presencial) o detalles técnicos..."></textarea>
+            <label class="form-label" for="f-nombre">Nombre o institución <span aria-hidden="true">·</span> <span style="text-transform: none; letter-spacing: 0; font-weight: 700;">opcional</span></label>
+            <input type="text" id="f-nombre" name="nombre" class="form-control" autocomplete="name" placeholder="Ej. Grupo de investigación / organización">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="f-mensaje">Contexto de la solicitud *</label>
+            <textarea id="f-mensaje" name="mensaje" rows="4" class="form-control" required aria-describedby="contact-data-minimization" placeholder="Describe objetivo, alcance aproximado, fechas relevantes y, solo si aplica, ciudad o modalidad requerida."></textarea>
+            <p id="contact-data-minimization" class="contact-help">No incluyas datos personales sensibles, información confidencial, datos de participantes/pacientes ni nombres de terceros. La documentación adicional puede acordarse después por correo cuando sea necesaria.</p>
           </div>
 
           <div style="display: flex; flex-wrap: wrap; gap: 10px;">
             <button type="submit" class="btn btn-primary" style="flex: 1;">
-              <span>Abrir solicitud en correo</span>
+              <span>Revisar borrador en correo</span>
             </button>
             <button type="button" id="btn-copy-email" class="btn btn-outline">
-              <span>Copiar Correo</span>
+              <span>Copiar correo</span>
             </button>
           </div>
-          <p class="privacy-note">Privacidad: este formulario no envía información a un servidor ni almacena tus datos. Al enviarlo, prepara un correo en el cliente de correo de tu dispositivo para que revises el contenido antes de enviarlo.</p>
+
+          <p id="contact-privacy-note" class="privacy-note"><strong>Privacidad por diseño:</strong> este formulario no transmite datos a un servidor, no crea registros, no usa cookies de seguimiento y no incorpora analytics ni píxeles. Solo prepara localmente un enlace <code>mailto:</code> con el texto que tú mismo revisarás antes de enviarlo.</p>
+          <p class="contact-ethics-note"><strong>Alcance ético:</strong> el contacto inicial no implica aceptación del encargo ni promesa de resultado. El alcance, disponibilidad, condiciones y viabilidad se definen únicamente después de revisar la solicitud concreta.</p>
         </form>
       </div>
     </div>
@@ -10638,6 +10831,28 @@
         });
       }
 
+      // PARTE 14: motivos de contacto respaldados, sin envío automático ni recolección adicional.
+      var contactReasonBtns = document.querySelectorAll('.contact-reason-action');
+      for (var cr = 0; cr < contactReasonBtns.length; cr++) {
+        contactReasonBtns[cr].addEventListener('click', function() {
+          var reason = this.getAttribute('data-contact-reason') || '';
+          if (reason && selectAsunto) {
+            for (var ro = 0; ro < selectAsunto.options.length; ro++) {
+              if (selectAsunto.options[ro].value === reason) {
+                selectAsunto.selectedIndex = ro;
+                break;
+              }
+            }
+          }
+          var contactForm = document.getElementById('contact-form');
+          if (contactForm) contactForm.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+          if (selectAsunto) {
+            window.setTimeout(function() { selectAsunto.focus(); }, prefersReducedMotion ? 0 : 420);
+          }
+          notify(reason ? 'Motivo seleccionado: ' + reason : 'Selecciona el servicio profesional que corresponda.');
+        });
+      }
+
       // 7. Generador de solicitud por Correo
       var footerYear = document.getElementById('footer-year');
       if (footerYear) footerYear.textContent = String(new Date().getFullYear());
@@ -10646,18 +10861,36 @@
       if (form) {
         form.addEventListener('submit', function(e) {
           e.preventDefault();
-          var nombre = (document.getElementById('f-nombre').value || '').trim();
-          var correo = (document.getElementById('f-correo').value || '').trim();
-          var asunto = (document.getElementById('f-asunto').value || '').trim();
-          var mensaje = (document.getElementById('f-mensaje').value || '').trim();
-          var body = 'Cordial saludo, Dr. Diego Rivera-Porras:%0D%0A%0D%0A' +
-                     'Nombre / Institución: ' + encodeURIComponent(nombre) + '%0D%0A' +
-                     'Correo de contacto: ' + encodeURIComponent(correo) + '%0D%0A' +
-                     'Servicio requerido: ' + encodeURIComponent(asunto) + '%0D%0A%0D%0A' +
-                     'Detalle de la solicitud:%0D%0A' + encodeURIComponent(mensaje);
-          var mailtoUrl = 'mailto:diegoandresriveraporras23@gmail.com?subject=' + encodeURIComponent('Solicitud Profesional: ' + asunto) + '&body=' + body;
-          window.open(mailtoUrl, '_blank');
-          notify('Solicitud preparada. Revisa el mensaje en tu cliente de correo antes de enviarlo.');
+          var nombreEl = document.getElementById('f-nombre');
+          var asuntoEl = document.getElementById('f-asunto');
+          var mensajeEl = document.getElementById('f-mensaje');
+          var nombre = nombreEl ? (nombreEl.value || '').trim() : '';
+          var asunto = asuntoEl ? (asuntoEl.value || '').trim() : '';
+          var mensaje = mensajeEl ? (mensajeEl.value || '').trim() : '';
+
+          if (!asunto || !mensaje) {
+            notify('Completa el motivo y el contexto de la solicitud.');
+            return;
+          }
+
+          var bodyLines = [
+            'Cordial saludo, Dr. Diego Rivera-Porras:',
+            '',
+            nombre ? 'Nombre / institución: ' + nombre : '',
+            'Motivo de contacto: ' + asunto,
+            '',
+            'Contexto de la solicitud:',
+            mensaje,
+            '',
+            'Este mensaje fue preparado desde el portafolio y será revisado antes de enviarse.'
+          ];
+          if (!nombre) bodyLines.splice(2, 1);
+
+          var mailtoUrl = 'mailto:diegoandresriveraporras23@gmail.com?subject=' +
+                          encodeURIComponent('Contacto profesional: ' + asunto) +
+                          '&body=' + encodeURIComponent(bodyLines.join('\r\n'));
+          window.location.href = mailtoUrl;
+          notify('Borrador preparado. Revisa destinatario, asunto y contenido antes de enviarlo.');
         });
       }
     })();
