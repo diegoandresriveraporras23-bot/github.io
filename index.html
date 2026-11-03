@@ -5641,37 +5641,37 @@ main > :is(#trayectoria,#complementaria,#contacto) .section-title {font-size:cla
 }
 
 
-/* 2026-11-03 · Diseño aprobado: romana clásica, paleta gris verdosa, navegación bajo demanda. */
+/* 2026-11-03 · Paleta azul y tipografía sans-serif profesional aprobadas; navegación sin cambios. */
 :root {
-  --bg-canvas:#CDD7D1;
-  --bg-surface:#E4EBE6;
-  --bg-subtle:#DCE5DE;
-  --ink-primary:#162623;
-  --ink-secondary:#263A35;
-  --ink-muted:#354A42;
-  --brand-primary:#25433E;
-  --brand-primary-soft:#30594F;
-  --brand-accent:#25433E;
-  --brand-accent-strong:#183B35;
-  --brand-accent-soft:#E0E9E2;
-  --brand-accent-border:#AFBEB3;
-  --border-neutral:#AFBEB3;
-  --border-strong:#98ADA0;
+  --bg-canvas:#CDD9EA;
+  --bg-surface:#E4ECF7;
+  --bg-subtle:#D7E3F2;
+  --ink-primary:#142B49;
+  --ink-secondary:#29425F;
+  --ink-muted:#405A75;
+  --brand-primary:#24527F;
+  --brand-primary-soft:#34618B;
+  --brand-accent:#24527F;
+  --brand-accent-strong:#173F6F;
+  --brand-accent-soft:#DCE8F5;
+  --brand-accent-border:#A8BDD7;
+  --border-neutral:#A8BDD7;
+  --border-strong:#92ABC9;
 }
-html {background:#CDD7D1!important;scroll-padding-top:104px;}
-body.design-system-v2 {background:#CDD7D1!important;color:#162623!important;}
-/* Romanas clásicas del sistema: sin descargas de fuentes ni dependencias externas. */
+html {background:#CDD9EA!important;scroll-padding-top:104px;}
+body.design-system-v2 {background:#CDD9EA!important;color:#142B49!important;}
+/* Tipografía moderna, amable y formal del sistema: sin descargas ni dependencias externas. */
 body.design-system-v2, body.design-system-v2 *:not(svg):not(path):not(line):not(circle):not(rect):not(polyline):not(polygon) {
-  font-family:"Palatino Linotype","Book Antiqua",Palatino,Georgia,"Times New Roman",serif!important;
+  font-family:"Segoe UI",Aptos,system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif!important;
 }
 body.design-system-v2 :is(p,li,input,textarea,select,button,summary) {letter-spacing:normal!important;}
 body.design-system-v2 :is(p,li,.section-desc,.hero-lead,.pillar-copy,.card-desc) {line-height:1.57!important;}
-body.design-system-v2 :is(h1,h2,h3,h4,.brand-name,.section-title) {color:#162623!important;letter-spacing:-.018em!important;}
-body.design-system-v2 :is(.section-desc,.hero-lead,.card-desc,.db-sub,.eyebrow,.brand-sub) {color:#263A35!important;}
-body.design-system-v2 :is(.btn-primary,.btn.btn-primary) {background:#25433E!important;border-color:#25433E!important;color:#F7FAF6!important;box-shadow:none!important;}
-body.design-system-v2 .btn-primary:hover {background:#183B35!important;color:#FFF!important;}
-body.design-system-v2 :is(.btn-outline,.filter-btn) {color:#162623!important;border-color:#879F92!important;background:#E4EBE6!important;}
-body.design-system-v2 :is(.btn-outline:hover,.filter-btn:hover,.filter-btn.active) {background:#D7E2D9!important;color:#162623!important;}
+body.design-system-v2 :is(h1,h2,h3,h4,.brand-name,.section-title) {color:#142B49!important;letter-spacing:-.018em!important;}
+body.design-system-v2 :is(.section-desc,.hero-lead,.card-desc,.db-sub,.eyebrow,.brand-sub) {color:#29425F!important;}
+body.design-system-v2 :is(.btn-primary,.btn.btn-primary) {background:#24527F!important;border-color:#24527F!important;color:#F8FBFF!important;box-shadow:none!important;}
+body.design-system-v2 .btn-primary:hover {background:#173F6F!important;color:#FFF!important;}
+body.design-system-v2 :is(.btn-outline,.filter-btn) {color:#142B49!important;border-color:#87A6C7!important;background:#E4ECF7!important;}
+body.design-system-v2 :is(.btn-outline:hover,.filter-btn:hover,.filter-btn.active) {background:#DAE6F4!important;color:#142B49!important;}
 /* Barra superior restaurada a la composición y enlaces directos previos. */
 /* Solo Inicio y Contacto ocupan la portada de forma predeterminada. */
 html.portfolio-tabbed-ready body.design-system-v2 main > section:not(#inicio):not(#contacto):not(.is-portfolio-selected) {display:none!important;}
@@ -5679,48 +5679,48 @@ body.design-system-v2 main > .section {background:transparent!important;}
 body.design-system-v2 main > .section::before {background:none!important;}
 body.design-system-v2 #inicio.section-hero {min-height:0!important;padding:clamp(28px,4vw,52px) 0!important;background:transparent!important;align-items:flex-start!important;}
 body.design-system-v2 #inicio .hero-grid {align-items:start!important;gap:clamp(20px,3vw,38px)!important;}
-body.design-system-v2 #inicio .hero-title {color:#162623!important;white-space:nowrap!important;letter-spacing:-.038em!important;font-weight:700!important;font-size:clamp(24px,3.7vw,51px)!important;max-width:none!important;}
-body.design-system-v2 #inicio .hero-positioning {color:#162623!important;font-weight:600!important;font-size:clamp(19px,2.1vw,26px)!important;line-height:1.31!important;}
+body.design-system-v2 #inicio .hero-title {color:#142B49!important;white-space:nowrap!important;letter-spacing:-.038em!important;font-weight:700!important;font-size:clamp(24px,3.7vw,51px)!important;max-width:none!important;}
+body.design-system-v2 #inicio .hero-positioning {color:#142B49!important;font-weight:600!important;font-size:clamp(19px,2.1vw,26px)!important;line-height:1.31!important;}
 body.design-system-v2 #inicio .hero-lead {font-size:clamp(14px,1.25vw,16px)!important;line-height:1.65!important;}
 body.design-system-v2 #inicio .hero-actions {gap:9px!important;}
 body.design-system-v2 #inicio .hero-actions .btn {min-height:44px!important;}
 /* Un sistema de paneles consistente; sin fondos blancos y sin grandes huecos. */
-body.design-system-v2 :is(.exec-card,.visual-panel,.visual-panel--hero,.visual-panel--contact,.contact-form-card,.contact-reason-card,.profile-db-card,.shareable-card,.mini-pillar,.proof-item,.experience-stat,.academic-overview-item,.metric-box,.pub-card,.publication-summary-card,.experience-index,.learning-summary,.reputation-hub,.comp-catalog) {background:#E4EBE6!important;border-color:#AFBEB3!important;box-shadow:none!important;color:#162623!important;}
+body.design-system-v2 :is(.exec-card,.visual-panel,.visual-panel--hero,.visual-panel--contact,.contact-form-card,.contact-reason-card,.profile-db-card,.shareable-card,.mini-pillar,.proof-item,.experience-stat,.academic-overview-item,.metric-box,.pub-card,.publication-summary-card,.experience-index,.learning-summary,.reputation-hub,.comp-catalog) {background:#E4ECF7!important;border-color:#A8BDD7!important;box-shadow:none!important;color:#142B49!important;}
 body.design-system-v2 :is(.profile-db-card,.mini-pillar,.proof-item,.contact-reason-card) {height:auto!important;min-height:0!important;}
-body.design-system-v2 :is(.db-icon,.mini-icon,.proof-kicker) {color:#25433E!important;}
-body.design-system-v2 :is(.section-title,.card-title,.proof-value,.db-title) {color:#162623!important;}
+body.design-system-v2 :is(.db-icon,.mini-icon,.proof-kicker) {color:#24527F!important;}
+body.design-system-v2 :is(.section-title,.card-title,.proof-value,.db-title) {color:#142B49!important;}
 body.design-system-v2 .section {padding-block:clamp(12px,2.5vw,32px)!important;}
 body.design-system-v2 main > .section:not(#inicio):not(#contacto) > .container {max-width:1120px!important;padding:0 clamp(16px,3vw,34px)!important;}
-body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer {background:#E4EBE6!important;border:1px solid #AFBEB3!important;border-radius:15px!important;box-shadow:none!important;overflow:hidden!important;}
-body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer > summary {background:#E4EBE6!important;color:#162623!important;font-size:clamp(20px,2.3vw,27px)!important;min-height:64px!important;padding:17px clamp(16px,3vw,26px)!important;}
-body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer[open] > summary {border-bottom:1px solid #AFBEB3!important;}
-body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer__body {background:#DDE7DF!important;padding:clamp(16px,3vw,30px)!important;}
-body.design-system-v2 main > .section:not(#inicio):not(#contacto) :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) {background:#E4EBE6!important;border-color:#AFBEB3!important;box-shadow:none!important;}
-body.design-system-v2 main > .section:not(#inicio):not(#contacto) :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) > summary {background:#E4EBE6!important;color:#162623!important;}
-body.design-system-v2 main > .section:not(#inicio):not(#contacto) :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) > summary:hover {background:#DAE3DC!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer {background:#E4ECF7!important;border:1px solid #A8BDD7!important;border-radius:15px!important;box-shadow:none!important;overflow:hidden!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer > summary {background:#E4ECF7!important;color:#142B49!important;font-size:clamp(20px,2.3vw,27px)!important;min-height:64px!important;padding:17px clamp(16px,3vw,26px)!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer[open] > summary {border-bottom:1px solid #A8BDD7!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer__body {background:#DBE6F4!important;padding:clamp(16px,3vw,30px)!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) {background:#E4ECF7!important;border-color:#A8BDD7!important;box-shadow:none!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) > summary {background:#E4ECF7!important;color:#142B49!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) > summary:hover {background:#D8E5F4!important;}
 body.design-system-v2 #experiencia .experience-evidence {display:grid!important;gap:18px!important;min-width:0!important;margin-bottom:22px!important;}
 body.design-system-v2 #experiencia .hero-domain-grid {display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;margin:0!important;}
 body.design-system-v2 #experiencia .hero-specialties {display:flex!important;flex-wrap:wrap!important;gap:7px!important;margin:0!important;}
-body.design-system-v2 #experiencia .hero-chip {background:#DAE3DC!important;border-color:#AFBEB3!important;color:#162623!important;}
+body.design-system-v2 #experiencia .hero-chip {background:#D8E5F4!important;border-color:#A8BDD7!important;color:#142B49!important;}
 body.design-system-v2 #experiencia .hero-proof--expanded {display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin:0!important;}
-body.design-system-v2 #experiencia .mini-pillar,body.design-system-v2 #experiencia .proof-item {background:#E4EBE6!important;border:1px solid #AFBEB3!important;border-radius:12px!important;padding:16px!important;min-width:0!important;}
+body.design-system-v2 #experiencia .mini-pillar,body.design-system-v2 #experiencia .proof-item {background:#E4ECF7!important;border:1px solid #A8BDD7!important;border-radius:12px!important;padding:16px!important;min-width:0!important;}
 body.design-system-v2 #experiencia .reputation-hub {margin:0!important;padding:clamp(14px,3vw,26px)!important;}
 body.design-system-v2 #experiencia :is(.hero-domain-grid,.hero-proof,.reputation-hub) {max-width:100%!important;}
 body.design-system-v2 #contacto {padding:clamp(18px,2.5vw,36px) 0!important;background:transparent!important;}
-body.design-system-v2 #contacto > .container.contact-grid {background:#E4EBE6!important;border:1px solid #AFBEB3!important;border-radius:16px!important;box-shadow:none!important;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:clamp(18px,3vw,34px)!important;padding:clamp(18px,3vw,36px)!important;align-items:start!important;}
+body.design-system-v2 #contacto > .container.contact-grid {background:#E4ECF7!important;border:1px solid #A8BDD7!important;border-radius:16px!important;box-shadow:none!important;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:clamp(18px,3vw,34px)!important;padding:clamp(18px,3vw,36px)!important;align-items:start!important;}
 body.design-system-v2 #contacto :is(.contact-intro,.contact-form-card) {min-width:0!important;}
-body.design-system-v2 :is(input,select,textarea,.form-control) {background:#F0F4F0!important;color:#162623!important;border-color:#91A497!important;}
-body.design-system-v2 :is(input,textarea)::placeholder {color:#354A42!important;opacity:1!important;}
-body.design-system-v2 footer,body.design-system-v2 .site-footer {background:#25433E!important;color:#F7FAF6!important;}
-body.design-system-v2 footer :is(p,a,small,span,div) {color:#F7FAF6!important;}
+body.design-system-v2 :is(input,select,textarea,.form-control) {background:#EFF4FA!important;color:#142B49!important;border-color:#92ABC9!important;}
+body.design-system-v2 :is(input,textarea)::placeholder {color:#405A75!important;opacity:1!important;}
+body.design-system-v2 footer,body.design-system-v2 .site-footer {background:#24527F!important;color:#F8FBFF!important;}
+body.design-system-v2 footer :is(p,a,small,span,div) {color:#F8FBFF!important;}
 body.design-system-v2 footer nav[aria-label="Navegación del pie"] {display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:10px!important;}
-body.design-system-v2 footer nav[aria-label="Navegación del pie"] > .nav-link {color:#F7FAF6!important;}
+body.design-system-v2 footer nav[aria-label="Navegación del pie"] > .nav-link {color:#F8FBFF!important;}
 .footer-section-menu {position:relative!important;z-index:20!important;}
-.footer-section-menu__trigger {list-style:none!important;cursor:pointer!important;min-height:44px!important;padding:10px 14px!important;border:1px solid #A7BCB2!important;border-radius:9px!important;display:flex!important;gap:6px!important;align-items:center!important;color:#FFF!important;font-size:14px!important;}
+.footer-section-menu__trigger {list-style:none!important;cursor:pointer!important;min-height:44px!important;padding:10px 14px!important;border:1px solid #ABC1DA!important;border-radius:9px!important;display:flex!important;gap:6px!important;align-items:center!important;color:#FFF!important;font-size:14px!important;}
 .footer-section-menu__trigger::-webkit-details-marker {display:none!important;}
-.footer-section-menu__items {position:absolute!important;right:0!important;bottom:calc(100% + 8px)!important;display:grid!important;gap:3px!important;min-width:235px!important;padding:9px!important;border:1px solid #8CA397!important;border-radius:10px!important;background:#E4EBE6!important;z-index:30!important;box-shadow:0 12px 20px -16px #152821!important;}
-body.design-system-v2 .footer-section-menu__items > button {color:#162623!important;text-align:left!important;min-height:44px!important;}
-body.design-system-v2 .footer-section-menu__items > button:hover {background:#D7E2D9!important;color:#162623!important;}
+.footer-section-menu__items {position:absolute!important;right:0!important;bottom:calc(100% + 8px)!important;display:grid!important;gap:3px!important;min-width:235px!important;padding:9px!important;border:1px solid #8CAAC8!important;border-radius:10px!important;background:#E4ECF7!important;z-index:30!important;box-shadow:0 12px 20px -16px #163453!important;}
+body.design-system-v2 .footer-section-menu__items > button {color:#142B49!important;text-align:left!important;min-height:44px!important;}
+body.design-system-v2 .footer-section-menu__items > button:hover {background:#DAE6F4!important;color:#142B49!important;}
 
 @media(max-width:899px) {
   body.design-system-v2 #inicio .hero-grid {grid-template-columns:1fr!important;}
@@ -5736,10 +5736,27 @@ body.design-system-v2 .footer-section-menu__items > button:hover {background:#D7
   body.design-system-v2 #experiencia .hero-proof--expanded {grid-template-columns:repeat(2,minmax(0,1fr))!important;}
   body.design-system-v2 #contacto > .container.contact-grid {padding:18px!important;}
 }
-body.design-system-v2 #inicio .visual-panel--hero,body.design-system-v2 #inicio .profile-db-card {background:#E4EBE6!important;border-color:#AFBEB3!important;}
-body.design-system-v2 #contacto .contact-form-card,body.design-system-v2 #contacto .contact-reason-card {background:#E4EBE6!important;border-color:#AFBEB3!important;}
+body.design-system-v2 #inicio .visual-panel--hero,body.design-system-v2 #inicio .profile-db-card {background:#E4ECF7!important;border-color:#A8BDD7!important;}
+body.design-system-v2 #contacto .contact-form-card,body.design-system-v2 #contacto .contact-reason-card {background:#E4ECF7!important;border-color:#A8BDD7!important;}
 @media(prefers-reduced-motion:reduce) {html:focus-within {scroll-behavior:auto!important;}}
 
+
+/* Coherencia cromática azul en componentes heredados con colores fijos de prioridad alta. */
+body.design-system-v2 .site-header {background:#E4ECF7!important;border-bottom-color:#A8BDD7!important;box-shadow:0 1px 0 #A8BDD7!important;}
+body.design-system-v2 .brand-logo {background:#24527F!important;color:#FFFFFF!important;}
+body.design-system-v2 .brand-name {color:#142B49!important;}
+body.design-system-v2 .brand-sub {color:#405A75!important;}
+body.design-system-v2 .site-header .nav-link {color:#29425F!important;}
+body.design-system-v2 .site-header .nav-link:hover {background:#DCE8F5!important;color:#173F6F!important;}
+body.design-system-v2 .site-header .nav-link[aria-current="page"],
+body.design-system-v2 .site-header .nav-link.active {background:#DCE8F5!important;color:#173F6F!important;box-shadow:inset 0 0 0 1px #A8BDD7!important;}
+body.design-system-v2 #inicio .hero-lead {color:#29425F!important;}
+body.design-system-v2 #inicio .hero-identity-name {color:#142B49!important;}
+body.design-system-v2 #inicio .hero-identity-role {color:#24527F!important;}
+body.design-system-v2 #inicio .db-icon {background:#DCE8F5!important;color:#24527F!important;border-color:#A8BDD7!important;}
+body.design-system-v2 #inicio .photo-frame {background:#DCE8F5!important;border-color:#A8BDD7!important;}
+body.design-system-v2 #inicio .db-sub {color:#405A75!important;}
+body.design-system-v2 :is(a,button,summary,input,select,textarea):focus-visible {outline-color:#3974B1!important;}
 </style>
 </head>
 <body class="design-system-v2">
