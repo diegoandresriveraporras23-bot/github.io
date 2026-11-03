@@ -5640,6 +5640,127 @@ main > :is(#trayectoria,#complementaria,#contacto) .section-title {font-size:cla
  #contacto .contact-reason-grid {grid-template-columns:1fr!important;gap:9px!important;}
 }
 
+
+/* 2026-11-03 · Diseño aprobado: romana clásica, paleta gris verdosa, navegación bajo demanda. */
+:root {
+  --bg-canvas:#B7C2BC;
+  --bg-surface:#D6DED9;
+  --bg-subtle:#CAD5CE;
+  --ink-primary:#162623;
+  --ink-secondary:#263A35;
+  --ink-muted:#354A42;
+  --brand-primary:#25433E;
+  --brand-primary-soft:#30594F;
+  --brand-accent:#25433E;
+  --brand-accent-strong:#183B35;
+  --brand-accent-soft:#CBD9D1;
+  --brand-accent-border:#9FAFA4;
+  --border-neutral:#9FAFA4;
+  --border-strong:#82978C;
+}
+html {background:#B7C2BC!important;scroll-padding-top:104px;}
+body.design-system-v2 {background:#B7C2BC!important;color:#162623!important;}
+/* Romanas clásicas del sistema: sin descargas de fuentes ni dependencias externas. */
+body.design-system-v2, body.design-system-v2 *:not(svg):not(path):not(line):not(circle):not(rect):not(polyline):not(polygon) {
+  font-family:"Palatino Linotype","Book Antiqua",Palatino,Georgia,"Times New Roman",serif!important;
+}
+body.design-system-v2 :is(p,li,input,textarea,select,button,summary) {letter-spacing:normal!important;}
+body.design-system-v2 :is(p,li,.section-desc,.hero-lead,.pillar-copy,.card-desc) {line-height:1.57!important;}
+body.design-system-v2 :is(h1,h2,h3,h4,.brand-name,.section-title) {color:#162623!important;letter-spacing:-.018em!important;}
+body.design-system-v2 :is(.section-desc,.hero-lead,.card-desc,.db-sub,.eyebrow,.brand-sub) {color:#263A35!important;}
+body.design-system-v2 :is(.btn-primary,.btn.btn-primary) {background:#25433E!important;border-color:#25433E!important;color:#F7FAF6!important;box-shadow:none!important;}
+body.design-system-v2 .btn-primary:hover {background:#183B35!important;color:#FFF!important;}
+body.design-system-v2 :is(.btn-outline,.filter-btn) {color:#162623!important;border-color:#879F92!important;background:#D6DED9!important;}
+body.design-system-v2 :is(.btn-outline:hover,.filter-btn:hover,.filter-btn.active) {background:#C4D1C9!important;color:#162623!important;}
+/* Cabecera: navegación compacta y simétrica. */
+body.design-system-v2 .site-header {background:#C6D1CA!important;border-bottom:1px solid #8C9F94!important;box-shadow:0 3px 18px -14px rgba(14,39,29,.5)!important;backdrop-filter:none!important;}
+body.design-system-v2 .header-inner {display:flex!important;gap:clamp(12px,2vw,30px)!important;align-items:center!important;justify-content:space-between!important;min-height:74px!important;padding-block:8px!important;}
+body.design-system-v2 .brand-wrap {min-width:0!important;max-width:100%!important;gap:10px!important;}
+body.design-system-v2 .brand-logo {background:#25433E!important;border-radius:9px!important;box-shadow:none!important;}
+body.design-system-v2 .brand-name {font-size:clamp(14px,1.45vw,18px)!important;font-weight:700!important;white-space:nowrap!important;}
+body.design-system-v2 .brand-sub {font-size:clamp(11px,1.1vw,13px)!important;font-weight:500!important;letter-spacing:0!important;}
+body.design-system-v2 .site-header .nav-links {display:flex!important;align-items:center!important;flex-wrap:nowrap!important;gap:8px!important;overflow:visible!important;padding:0!important;border:0!important;background:transparent!important;min-width:0!important;}
+body.design-system-v2 .site-header .nav-link {color:#162623!important;background:transparent!important;font-size:14px!important;min-height:44px!important;padding:9px 14px!important;font-weight:600!important;}
+body.design-system-v2 .site-header .nav-link:hover,body.design-system-v2 .site-header .nav-link[aria-current="page"] {color:#162623!important;background:#D6DED9!important;box-shadow:none!important;}
+body.design-system-v2 .site-header .btn-primary {min-height:44px!important;padding:10px 18px!important;font-size:14px!important;font-weight:700!important;white-space:nowrap!important;}
+.nav-section-menu {position:relative!important;flex:0 0 auto!important;z-index:50!important;}
+.nav-section-menu__trigger {list-style:none!important;cursor:pointer!important;display:flex!important;gap:7px!important;align-items:center!important;justify-content:center!important;min-height:44px!important;padding:10px 14px!important;border:1px solid #879F92!important;border-radius:9px!important;background:#D6DED9!important;color:#162623!important;font-size:14px!important;font-weight:700!important;white-space:nowrap!important;}
+.nav-section-menu__trigger::-webkit-details-marker {display:none!important;}
+.nav-section-menu__trigger:focus-visible,.nav-section-menu__items button:focus-visible {outline:3px solid #25433E!important;outline-offset:3px!important;}
+.nav-section-menu__items {position:absolute!important;top:calc(100% + 9px)!important;right:0!important;display:grid!important;grid-template-columns:1fr!important;gap:3px!important;min-width:250px!important;max-width:min(340px,90vw)!important;max-height:70vh!important;overflow-y:auto!important;padding:9px!important;background:#D6DED9!important;border:1px solid #879F92!important;border-radius:12px!important;box-shadow:0 12px 26px -15px rgba(16,35,29,.42)!important;z-index:70!important;}
+.nav-section-menu__items button {text-align:left!important;width:100%!important;white-space:normal!important;border-radius:8px!important;}
+/* Solo Inicio y Contacto ocupan la portada de forma predeterminada. */
+html.portfolio-tabbed-ready body.design-system-v2 main > section:not(#inicio):not(#contacto):not(.is-portfolio-selected) {display:none!important;}
+body.design-system-v2 main > .section {background:transparent!important;}
+body.design-system-v2 main > .section::before {background:none!important;}
+body.design-system-v2 #inicio.section-hero {min-height:0!important;padding:clamp(28px,4vw,52px) 0!important;background:transparent!important;align-items:flex-start!important;}
+body.design-system-v2 #inicio .hero-grid {align-items:start!important;gap:clamp(20px,3vw,38px)!important;}
+body.design-system-v2 #inicio .hero-title {color:#162623!important;white-space:nowrap!important;letter-spacing:-.038em!important;font-weight:700!important;font-size:clamp(24px,3.7vw,51px)!important;max-width:none!important;}
+body.design-system-v2 #inicio .hero-positioning {color:#162623!important;font-weight:600!important;font-size:clamp(19px,2.1vw,26px)!important;line-height:1.31!important;}
+body.design-system-v2 #inicio .hero-lead {font-size:clamp(14px,1.25vw,16px)!important;line-height:1.65!important;}
+body.design-system-v2 #inicio .hero-actions {gap:9px!important;}
+body.design-system-v2 #inicio .hero-actions .btn {min-height:44px!important;}
+/* Un sistema de paneles consistente; sin fondos blancos y sin grandes huecos. */
+body.design-system-v2 :is(.exec-card,.visual-panel,.visual-panel--hero,.visual-panel--contact,.contact-form-card,.contact-reason-card,.profile-db-card,.shareable-card,.mini-pillar,.proof-item,.experience-stat,.academic-overview-item,.metric-box,.pub-card,.publication-summary-card,.experience-index,.learning-summary,.reputation-hub,.comp-catalog) {background:#D6DED9!important;border-color:#9FAFA4!important;box-shadow:none!important;color:#162623!important;}
+body.design-system-v2 :is(.profile-db-card,.mini-pillar,.proof-item,.contact-reason-card) {height:auto!important;min-height:0!important;}
+body.design-system-v2 :is(.db-icon,.mini-icon,.proof-kicker) {color:#25433E!important;}
+body.design-system-v2 :is(.section-title,.card-title,.proof-value,.db-title) {color:#162623!important;}
+body.design-system-v2 .section {padding-block:clamp(12px,2.5vw,32px)!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) > .container {max-width:1120px!important;padding:0 clamp(16px,3vw,34px)!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer {background:#D6DED9!important;border:1px solid #9FAFA4!important;border-radius:15px!important;box-shadow:none!important;overflow:hidden!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer > summary {background:#D6DED9!important;color:#162623!important;font-size:clamp(20px,2.3vw,27px)!important;min-height:64px!important;padding:17px clamp(16px,3vw,26px)!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer[open] > summary {border-bottom:1px solid #9FAFA4!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer__body {background:#CBD6CF!important;padding:clamp(16px,3vw,30px)!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) {background:#D6DED9!important;border-color:#9FAFA4!important;box-shadow:none!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) > summary {background:#D6DED9!important;color:#162623!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) > summary:hover {background:#C5D2C9!important;}
+body.design-system-v2 #experiencia .experience-evidence {display:grid!important;gap:18px!important;min-width:0!important;margin-bottom:22px!important;}
+body.design-system-v2 #experiencia .hero-domain-grid {display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;margin:0!important;}
+body.design-system-v2 #experiencia .hero-specialties {display:flex!important;flex-wrap:wrap!important;gap:7px!important;margin:0!important;}
+body.design-system-v2 #experiencia .hero-chip {background:#C5D2C9!important;border-color:#9FAFA4!important;color:#162623!important;}
+body.design-system-v2 #experiencia .hero-proof--expanded {display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin:0!important;}
+body.design-system-v2 #experiencia .mini-pillar,body.design-system-v2 #experiencia .proof-item {background:#D6DED9!important;border:1px solid #9FAFA4!important;border-radius:12px!important;padding:16px!important;min-width:0!important;}
+body.design-system-v2 #experiencia .reputation-hub {margin:0!important;padding:clamp(14px,3vw,26px)!important;}
+body.design-system-v2 #experiencia :is(.hero-domain-grid,.hero-proof,.reputation-hub) {max-width:100%!important;}
+body.design-system-v2 #contacto {padding:clamp(18px,2.5vw,36px) 0!important;background:transparent!important;}
+body.design-system-v2 #contacto > .container.contact-grid {background:#D6DED9!important;border:1px solid #9FAFA4!important;border-radius:16px!important;box-shadow:none!important;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:clamp(18px,3vw,34px)!important;padding:clamp(18px,3vw,36px)!important;align-items:start!important;}
+body.design-system-v2 #contacto :is(.contact-intro,.contact-form-card) {min-width:0!important;}
+body.design-system-v2 :is(input,select,textarea,.form-control) {background:#E6ECE7!important;color:#162623!important;border-color:#91A497!important;}
+body.design-system-v2 :is(input,textarea)::placeholder {color:#354A42!important;opacity:1!important;}
+body.design-system-v2 footer,body.design-system-v2 .site-footer {background:#25433E!important;color:#F7FAF6!important;}
+body.design-system-v2 footer :is(p,a,small,span,div) {color:#F7FAF6!important;}
+body.design-system-v2 footer nav[aria-label="Navegación del pie"] {display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:10px!important;}
+body.design-system-v2 footer nav[aria-label="Navegación del pie"] > .nav-link {color:#F7FAF6!important;}
+.footer-section-menu {position:relative!important;z-index:20!important;}
+.footer-section-menu__trigger {list-style:none!important;cursor:pointer!important;min-height:44px!important;padding:10px 14px!important;border:1px solid #A7BCB2!important;border-radius:9px!important;display:flex!important;gap:6px!important;align-items:center!important;color:#FFF!important;font-size:14px!important;}
+.footer-section-menu__trigger::-webkit-details-marker {display:none!important;}
+.footer-section-menu__items {position:absolute!important;right:0!important;bottom:calc(100% + 8px)!important;display:grid!important;gap:3px!important;min-width:235px!important;padding:9px!important;border:1px solid #8CA397!important;border-radius:10px!important;background:#D6DED9!important;z-index:30!important;box-shadow:0 12px 20px -16px #152821!important;}
+body.design-system-v2 .footer-section-menu__items > button {color:#162623!important;text-align:left!important;min-height:44px!important;}
+body.design-system-v2 .footer-section-menu__items > button:hover {background:#C4D1C9!important;color:#162623!important;}
+
+@media(max-width:899px) {
+  body.design-system-v2 #inicio .hero-grid {grid-template-columns:1fr!important;}
+  body.design-system-v2 #experiencia .hero-proof--expanded {grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  body.design-system-v2 #contacto > .container.contact-grid {grid-template-columns:1fr!important;}
+}
+@media(max-width:639px) {
+  html {scroll-padding-top:136px!important;}
+  body.design-system-v2 .header-inner {flex-wrap:wrap!important;justify-content:center!important;gap:7px!important;}
+  body.design-system-v2 .brand-wrap {width:100%!important;justify-content:center!important;}
+  body.design-system-v2 .site-header .nav-links {width:100%!important;justify-content:center!important;gap:8px!important;}
+  body.design-system-v2 .site-header .nav-link,body.design-system-v2 .nav-section-menu__trigger,body.design-system-v2 .site-header .btn-primary {font-size:13px!important;min-height:44px!important;padding:8px 12px!important;}
+  body.design-system-v2 .nav-section-menu__items {right:-55px!important;max-width:calc(100vw - 24px)!important;}
+  body.design-system-v2 #inicio .hero-title {font-size:clamp(24px,6.8vw,35px)!important;}
+  body.design-system-v2 #inicio .hero-grid {gap:18px!important;}
+  body.design-system-v2 #inicio .hero-actions .btn {width:auto!important;}
+  body.design-system-v2 #experiencia .hero-domain-grid {grid-template-columns:1fr!important;}
+  body.design-system-v2 #experiencia .hero-proof--expanded {grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  body.design-system-v2 #contacto > .container.contact-grid {padding:18px!important;}
+}
+body.design-system-v2 #inicio .visual-panel--hero,body.design-system-v2 #inicio .profile-db-card {background:#D6DED9!important;border-color:#9FAFA4!important;}
+body.design-system-v2 #contacto .contact-form-card,body.design-system-v2 #contacto .contact-reason-card {background:#D6DED9!important;border-color:#9FAFA4!important;}
+@media(prefers-reduced-motion:reduce) {html:focus-within {scroll-behavior:auto!important;}}
+
 </style>
 </head>
 <body class="design-system-v2">
@@ -5654,18 +5775,23 @@ main > :is(#trayectoria,#complementaria,#contacto) .section-title {font-size:cla
         <div class="brand-logo">DR</div>
         <div>
           <span class="brand-name">Diego Rivera-Porras</span>
-          <span class="brand-sub">Investigador sénior · consultor especializado</span>
+          <span class="brand-sub">Consultor especializado</span>
         </div>
       </button>
 
       <nav class="nav-links" aria-label="Navegación principal">
         <button type="button" class="nav-link nav-scroll" data-target="#inicio" aria-current="page">Inicio</button>
+        <details class="nav-section-menu">
+          <summary class="nav-section-menu__trigger" aria-label="Explorar secciones del portafolio">Secciones <span aria-hidden="true">▾</span></summary>
+          <div class="nav-section-menu__items" id="nav-section-list" role="group" aria-label="Secciones disponibles">
         <button type="button" class="nav-link nav-scroll" data-target="#experiencia">Experiencia</button>
         <button type="button" class="nav-link nav-scroll" data-target="#metricas">Impacto</button>
         <button type="button" class="nav-link nav-scroll" data-target="#trayectoria">Formación</button>
         <button type="button" class="nav-link nav-scroll" data-target="#complementaria">Cursos</button>
         <button type="button" class="nav-link nav-scroll" data-target="#servicios">Servicios</button>
         <button type="button" class="nav-link nav-scroll" data-target="#publicaciones">Publicaciones</button>
+          </div>
+        </details>
         <button type="button" class="btn btn-primary nav-scroll" data-target="#contacto" aria-label="Ir a contacto para solicitar una consulta" style="padding: 8px 14px; font-size: 11px;">Contactar</button>
       </nav>
     </div>
@@ -5686,60 +5812,6 @@ main > :is(#trayectoria,#complementaria,#contacto) .section-title {font-size:cla
           Doctor en Psicología y especialista en Estadística Aplicada y Seguridad y Salud en el Trabajo. Mi trayectoria profesional articula 13 áreas de actuación, 14 líneas de investigación activas y experiencia en producción científica, evaluación por pares, formación de talento, análisis cuantitativo y consultoría.
         </p>
 
-        <div class="hero-domain-grid" aria-label="Ámbitos centrales de trabajo">
-          <article class="mini-pillar">
-            <div class="mini-icon">
-              <svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
-            </div>
-            <div>
-              <h3 class="pillar-title">Investigación y evaluación científica</h3>
-              <p class="pillar-copy">14 líneas activas, proyectos, producción científica, evaluación por pares y revisión editorial.</p>
-            </div>
-          </article>
-
-          <article class="mini-pillar">
-            <div class="mini-icon">
-              <svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-            </div>
-            <div>
-              <h3 class="pillar-title">Estadística, datos y psicometría</h3>
-              <p class="pillar-copy">Estadística aplicada, bioestadística, psicometría, SEM y análisis reproducible en R y Python.</p>
-            </div>
-          </article>
-
-          <article class="mini-pillar">
-            <div class="mini-icon">
-              <svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            </div>
-            <div>
-              <h3 class="pillar-title">Docencia y formación de talento</h3>
-              <p class="pillar-copy">Docencia universitaria y de posgrado, tutorías, jurados y acompañamiento metodológico.</p>
-            </div>
-          </article>
-
-          <article class="mini-pillar">
-            <div class="mini-icon">
-              <svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div>
-              <h3 class="pillar-title">Psicología organizacional y SST</h3>
-              <p class="pillar-copy">Bienestar, satisfacción laboral, liderazgo, cultura, gestión organizacional y riesgo psicosocial.</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="hero-specialties" role="list" aria-label="Áreas representativas de actuación">
-          <span class="hero-specialties-label">Áreas representativas</span>
-          <span class="hero-chip" role="listitem">Investigación científica</span>
-          <span class="hero-chip" role="listitem">Estadística y metodología</span>
-          <span class="hero-chip" role="listitem">Psicometría</span>
-          <span class="hero-chip" role="listitem">Psicología organizacional</span>
-          <span class="hero-chip" role="listitem">SST</span>
-          <span class="hero-chip" role="listitem">Educación</span>
-          <span class="hero-chip" role="listitem">Salud pública</span>
-          <span class="hero-chip" role="listitem">Gestión del conocimiento</span>
-        </div>
-
         <div class="hero-actions" aria-label="Accesos rápidos del portafolio">
           <button type="button" class="btn btn-primary nav-scroll" data-target="#experiencia">
             <span>Explorar trayectoria</span>
@@ -5756,89 +5828,6 @@ main > :is(#trayectoria,#complementaria,#contacto) .section-title {font-size:cla
           </button>
         </div>
 
-        <div class="hero-proof hero-proof--expanded" role="list" aria-label="Evidencia de autoridad">
-          <div class="proof-item" role="listitem">
-            <span class="proof-kicker">Minciencias</span>
-            <span class="proof-value">Investigador Sénior</span>
-            <span class="proof-label">Categoría pública de investigación</span>
-          </div>
-          <div class="proof-item" role="listitem">
-            <span class="proof-kicker">Evaluación científica</span>
-            <span class="proof-value">Par evaluador reconocido</span>
-            <span class="proof-label">Proyectos y producción académica</span>
-          </div>
-          <div class="proof-item" role="listitem">
-            <span class="proof-kicker">Agenda investigativa</span>
-            <span class="proof-value">14 líneas activas</span>
-            <span class="proof-label">Investigación y aplicación interdisciplinaria</span>
-          </div>
-          <div class="proof-item" role="listitem">
-            <span class="proof-kicker">Trayectoria</span>
-            <span class="proof-value">12 reconocimientos públicos</span>
-            <span class="proof-label">Registrados entre 2017 y 2025</span>
-          </div>
-        </div>
-
-
-        <div class="reputation-hub" aria-labelledby="titulo-reputacion-digital">
-          <div class="reputation-hub-head">
-            <div>
-              <span class="eyebrow">Presencia digital profesional · una sola identidad</span>
-              <h2 id="titulo-reputacion-digital" class="reputation-hub-title">Evidencia que puede recorrerse, verificarse y compartirse</h2>
-              <p class="reputation-hub-copy">El portafolio organiza una misma trayectoria para públicos académicos, grupos de investigación, empresas, posgrados y cooperación. Los mensajes priorizan autoridad verificable, contexto y alcance, sin convertir antecedentes en promesas de resultado.</p>
-            </div>
-            <button type="button" class="btn btn-outline share-trigger" data-share-target="#inicio" data-share-title="Diego Rivera-Porras | Portafolio profesional" data-share-text="Investigación, estadística, psicología aplicada, docencia, evaluación científica y consultoría con evidencia verificable.">Compartir portafolio</button>
-          </div>
-
-          <div class="communication-pillars" role="list" aria-label="Pilares de comunicación del portafolio">
-            <span role="listitem"><strong>Autoridad</strong> · credenciales y roles públicos</span>
-            <span role="listitem"><strong>Evidencia</strong> · registros y fuentes verificables</span>
-            <span role="listitem"><strong>Aplicación</strong> · capacidades sustentadas en trayectoria</span>
-            <span role="listitem"><strong>Cooperación</strong> · conversación profesional según pertinencia y alcance</span>
-          </div>
-
-          <div class="shareable-grid" aria-label="Bloques compartibles de reputación profesional">
-            <article class="shareable-card">
-              <span class="shareable-kicker">Proyectos</span>
-              <strong>Proyectos de investigación, desarrollo, innovación y extensión CTI</strong>
-              <p>Evidencia curricular organizada por propósito, periodo y naturaleza del proyecto, sin atribuir resultados no documentados.</p>
-              <div class="shareable-actions">
-                <button type="button" class="btn btn-outline nav-scroll" data-target="#proyectos-investigacion">Ver proyectos</button>
-                <button type="button" class="share-link share-trigger" data-share-target="#proyectos-investigacion" data-share-title="Proyectos de investigación | Diego Rivera-Porras" data-share-text="13 proyectos de investigación documentan investigación, desarrollo, innovación y extensión CTI en el portafolio profesional de Diego Rivera-Porras.">Compartir</button>
-              </div>
-            </article>
-
-            <article class="shareable-card">
-              <span class="shareable-kicker">Publicaciones</span>
-              <strong>Publicaciones organizadas por tipo, año y temática</strong>
-              <p>Publicaciones consultables por tipo, año y área temática.</p>
-              <div class="shareable-actions">
-                <button type="button" class="btn btn-outline nav-scroll" data-target="#publicaciones">Ver producción</button>
-                <button type="button" class="share-link share-trigger" data-share-target="#publicaciones" data-share-title="Producción bibliográfica | Diego Rivera-Porras" data-share-text="138 publicaciones organizadas por tipo, año y temática en el portafolio profesional de Diego Rivera-Porras.">Compartir</button>
-              </div>
-            </article>
-
-            <article class="shareable-card">
-              <span class="shareable-kicker">Áreas y agenda</span>
-              <strong>Áreas de actuación y líneas de investigación activas</strong>
-              <p>Una lectura interdisciplinaria que conecta investigación, estadística, psicología, salud, educación, organizaciones y gestión del conocimiento.</p>
-              <div class="shareable-actions">
-                <button type="button" class="btn btn-outline nav-scroll" data-target="#experiencia">Ver trayectoria</button>
-                <button type="button" class="share-link share-trigger" data-share-target="#experiencia" data-share-title="Áreas y agenda de investigación | Diego Rivera-Porras" data-share-text="13 áreas de actuación y 14 líneas de investigación activas articulan la trayectoria pública de Diego Rivera-Porras.">Compartir</button>
-              </div>
-            </article>
-
-            <article class="shareable-card">
-              <span class="shareable-kicker">Capacidades aplicadas</span>
-              <strong>Producción técnica y consultoría</strong>
-              <p>La capacidad aplicada se muestra como evidencia curricular y profesional; no se presenta como garantía de resultado ni como alcance automático de un servicio.</p>
-              <div class="shareable-actions">
-                <button type="button" class="btn btn-outline nav-scroll" data-target="#produccion-tecnica">Ver capacidades</button>
-                <button type="button" class="share-link share-trigger" data-share-target="#produccion-tecnica" data-share-title="Capacidades aplicadas | Diego Rivera-Porras" data-share-text="42 productos técnicos y experiencia en consultoría respaldan capacidades aplicadas en el portafolio profesional de Diego Rivera-Porras.">Compartir</button>
-              </div>
-            </article>
-          </div>
-        </div>
       </div>
 
       <!-- Columna Derecha: Foto Oficial + 6 Perfiles Científicos -->
@@ -5973,6 +5962,146 @@ main > :is(#trayectoria,#complementaria,#contacto) .section-title {font-size:cla
           <button type="button" class="filter-btn" data-exp="gestion" aria-controls="exp-corpus">Gestión y coordinación</button>
           <button type="button" class="filter-btn" data-exp="organizacional" aria-controls="exp-corpus">4. Organizacional y SST</button>
           <p id="exp-filter-status" class="exp-filter-status" role="status" aria-live="polite">Mostrando el corpus completo de experiencia y transferencia.</p>
+        </div>
+      </div>
+
+      <div class="experience-evidence" aria-label="Áreas, especialidades y evidencia profesional">
+        <div class="hero-domain-grid" aria-label="Ámbitos centrales de trabajo">
+          <article class="mini-pillar">
+            <div class="mini-icon">
+              <svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
+            </div>
+            <div>
+              <h3 class="pillar-title">Investigación y evaluación científica</h3>
+              <p class="pillar-copy">14 líneas activas, proyectos, producción científica, evaluación por pares y revisión editorial.</p>
+            </div>
+          </article>
+
+          <article class="mini-pillar">
+            <div class="mini-icon">
+              <svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <div>
+              <h3 class="pillar-title">Estadística, datos y psicometría</h3>
+              <p class="pillar-copy">Estadística aplicada, bioestadística, psicometría, SEM y análisis reproducible en R y Python.</p>
+            </div>
+          </article>
+
+          <article class="mini-pillar">
+            <div class="mini-icon">
+              <svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div>
+              <h3 class="pillar-title">Docencia y formación de talento</h3>
+              <p class="pillar-copy">Docencia universitaria y de posgrado, tutorías, jurados y acompañamiento metodológico.</p>
+            </div>
+          </article>
+
+          <article class="mini-pillar">
+            <div class="mini-icon">
+              <svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3 class="pillar-title">Psicología organizacional y SST</h3>
+              <p class="pillar-copy">Bienestar, satisfacción laboral, liderazgo, cultura, gestión organizacional y riesgo psicosocial.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="hero-specialties" role="list" aria-label="Áreas representativas de actuación">
+          <span class="hero-specialties-label">Áreas representativas</span>
+          <span class="hero-chip" role="listitem">Investigación científica</span>
+          <span class="hero-chip" role="listitem">Estadística y metodología</span>
+          <span class="hero-chip" role="listitem">Psicometría</span>
+          <span class="hero-chip" role="listitem">Psicología organizacional</span>
+          <span class="hero-chip" role="listitem">SST</span>
+          <span class="hero-chip" role="listitem">Educación</span>
+          <span class="hero-chip" role="listitem">Salud pública</span>
+          <span class="hero-chip" role="listitem">Gestión del conocimiento</span>
+        </div>
+
+        <div class="hero-proof hero-proof--expanded" role="list" aria-label="Evidencia de autoridad">
+          <div class="proof-item" role="listitem">
+            <span class="proof-kicker">Minciencias</span>
+            <span class="proof-value">Investigador Sénior</span>
+            <span class="proof-label">Categoría pública de investigación</span>
+          </div>
+          <div class="proof-item" role="listitem">
+            <span class="proof-kicker">Evaluación científica</span>
+            <span class="proof-value">Par evaluador reconocido</span>
+            <span class="proof-label">Proyectos y producción académica</span>
+          </div>
+          <div class="proof-item" role="listitem">
+            <span class="proof-kicker">Agenda investigativa</span>
+            <span class="proof-value">14 líneas activas</span>
+            <span class="proof-label">Investigación y aplicación interdisciplinaria</span>
+          </div>
+          <div class="proof-item" role="listitem">
+            <span class="proof-kicker">Trayectoria</span>
+            <span class="proof-value">12 reconocimientos públicos</span>
+            <span class="proof-label">Registrados entre 2017 y 2025</span>
+          </div>
+        </div>
+
+
+        <div class="reputation-hub" aria-labelledby="titulo-reputacion-digital">
+          <div class="reputation-hub-head">
+            <div>
+              <span class="eyebrow">Presencia digital profesional · una sola identidad</span>
+              <h2 id="titulo-reputacion-digital" class="reputation-hub-title">Evidencia que puede recorrerse, verificarse y compartirse</h2>
+              <p class="reputation-hub-copy">El portafolio organiza una misma trayectoria para públicos académicos, grupos de investigación, empresas, posgrados y cooperación. Los mensajes priorizan autoridad verificable, contexto y alcance, sin convertir antecedentes en promesas de resultado.</p>
+            </div>
+            <button type="button" class="btn btn-outline share-trigger" data-share-target="#inicio" data-share-title="Diego Rivera-Porras | Portafolio profesional" data-share-text="Investigación, estadística, psicología aplicada, docencia, evaluación científica y consultoría con evidencia verificable.">Compartir portafolio</button>
+          </div>
+
+          <div class="communication-pillars" role="list" aria-label="Pilares de comunicación del portafolio">
+            <span role="listitem"><strong>Autoridad</strong> · credenciales y roles públicos</span>
+            <span role="listitem"><strong>Evidencia</strong> · registros y fuentes verificables</span>
+            <span role="listitem"><strong>Aplicación</strong> · capacidades sustentadas en trayectoria</span>
+            <span role="listitem"><strong>Cooperación</strong> · conversación profesional según pertinencia y alcance</span>
+          </div>
+
+          <div class="shareable-grid" aria-label="Bloques compartibles de reputación profesional">
+            <article class="shareable-card">
+              <span class="shareable-kicker">Proyectos</span>
+              <strong>Proyectos de investigación, desarrollo, innovación y extensión CTI</strong>
+              <p>Evidencia curricular organizada por propósito, periodo y naturaleza del proyecto, sin atribuir resultados no documentados.</p>
+              <div class="shareable-actions">
+                <button type="button" class="btn btn-outline nav-scroll" data-target="#proyectos-investigacion">Ver proyectos</button>
+                <button type="button" class="share-link share-trigger" data-share-target="#proyectos-investigacion" data-share-title="Proyectos de investigación | Diego Rivera-Porras" data-share-text="13 proyectos de investigación documentan investigación, desarrollo, innovación y extensión CTI en el portafolio profesional de Diego Rivera-Porras.">Compartir</button>
+              </div>
+            </article>
+
+            <article class="shareable-card">
+              <span class="shareable-kicker">Publicaciones</span>
+              <strong>Publicaciones organizadas por tipo, año y temática</strong>
+              <p>Publicaciones consultables por tipo, año y área temática.</p>
+              <div class="shareable-actions">
+                <button type="button" class="btn btn-outline nav-scroll" data-target="#publicaciones">Ver producción</button>
+                <button type="button" class="share-link share-trigger" data-share-target="#publicaciones" data-share-title="Producción bibliográfica | Diego Rivera-Porras" data-share-text="138 publicaciones organizadas por tipo, año y temática en el portafolio profesional de Diego Rivera-Porras.">Compartir</button>
+              </div>
+            </article>
+
+            <article class="shareable-card">
+              <span class="shareable-kicker">Áreas y agenda</span>
+              <strong>Áreas de actuación y líneas de investigación activas</strong>
+              <p>Una lectura interdisciplinaria que conecta investigación, estadística, psicología, salud, educación, organizaciones y gestión del conocimiento.</p>
+              <div class="shareable-actions">
+                <button type="button" class="btn btn-outline nav-scroll" data-target="#experiencia">Ver trayectoria</button>
+                <button type="button" class="share-link share-trigger" data-share-target="#experiencia" data-share-title="Áreas y agenda de investigación | Diego Rivera-Porras" data-share-text="13 áreas de actuación y 14 líneas de investigación activas articulan la trayectoria pública de Diego Rivera-Porras.">Compartir</button>
+              </div>
+            </article>
+
+            <article class="shareable-card">
+              <span class="shareable-kicker">Capacidades aplicadas</span>
+              <strong>Producción técnica y consultoría</strong>
+              <p>La capacidad aplicada se muestra como evidencia curricular y profesional; no se presenta como garantía de resultado ni como alcance automático de un servicio.</p>
+              <div class="shareable-actions">
+                <button type="button" class="btn btn-outline nav-scroll" data-target="#produccion-tecnica">Ver capacidades</button>
+                <button type="button" class="share-link share-trigger" data-share-target="#produccion-tecnica" data-share-title="Capacidades aplicadas | Diego Rivera-Porras" data-share-text="42 productos técnicos y experiencia en consultoría respaldan capacidades aplicadas en el portafolio profesional de Diego Rivera-Porras.">Compartir</button>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
 
@@ -10676,13 +10805,18 @@ main > :is(#trayectoria,#complementaria,#contacto) .section-title {font-size:cla
       </div>
       <nav aria-label="Navegación del pie" style="display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #cbd5e1; font-weight: 600;">
         <button type="button" class="nav-link nav-scroll" data-target="#inicio" style="color: #cbd5e1;">Inicio</button>
-        <button type="button" class="nav-link nav-scroll" data-target="#experiencia" style="color: #cbd5e1;">Experiencia</button>
+    <details class="footer-section-menu">
+          <summary class="footer-section-menu__trigger">Secciones <span aria-hidden="true">▴</span></summary>
+          <div class="footer-section-menu__items">
+    <button type="button" class="nav-link nav-scroll" data-target="#experiencia" style="color: #cbd5e1;">Experiencia</button>
         <button type="button" class="nav-link nav-scroll" data-target="#metricas" style="color: #cbd5e1;">Impacto</button>
         <button type="button" class="nav-link nav-scroll" data-target="#trayectoria" style="color: #cbd5e1;">Formación</button>
         <button type="button" class="nav-link nav-scroll" data-target="#complementaria" style="color: #cbd5e1;">Cursos</button>
         <button type="button" class="nav-link nav-scroll" data-target="#servicios" style="color: #cbd5e1;">Servicios</button>
         <button type="button" class="nav-link nav-scroll" data-target="#publicaciones" style="color: #cbd5e1;">Publicaciones</button>
-      </nav>
+          </div>
+        </details>
+</nav>
       <div class="footer-meta" style="width: 100%;">
         <span>&copy; <span id="footer-year">2026</span> Diego Rivera-Porras.</span>
         <span> Portafolio profesional publicado en GitHub Pages.</span>
@@ -11583,7 +11717,7 @@ main > :is(#trayectoria,#complementaria,#contacto) .section-title {font-size:cla
         Object.keys(labels).forEach(function(id) {
           var sec=document.getElementById(id);
           if (!sec) return;
-          if (id==='trayectoria' || id==='complementaria' || id==='contacto') return; // Visibles por petición expresa.
+          if (id==='contacto') return; // Contacto permanece visible; las otras seis secciones se pueden plegar.
           var box=sec.querySelector(':scope > .container');
           if(!box) return;
           var drawer=el('details','portfolio-drawer'); drawer.setAttribute('data-disclosure-section',id);
@@ -11664,26 +11798,63 @@ main > :is(#trayectoria,#complementaria,#contacto) .section-title {font-size:cla
           });
           syncPublicationGroups();
         }
-        // Navegación: abrir automáticamente los padres del destino, incluso desde el índice o los CTA.
+        // Navegación bajo demanda. Se mantienen ocho secciones y sus anclas existentes.
+        var sections = Array.prototype.slice.call(document.querySelectorAll('main > section'));
+        var secondary = sections.filter(function(sec) {return sec.id!=='inicio' && sec.id!=='contacto';});
+        var menu = document.querySelector('.nav-section-menu');
+        var footerMenu = document.querySelector('.footer-section-menu');
         function revealTarget(selector) {
-          if(!selector||selector.charAt(0)!=='#')return;
-          var target=document.getElementById(selector.slice(1));if(!target)return;
-          if(target.matches('main > section')) {var major=target.querySelector('.portfolio-drawer');if(major)major.open=true;}
+          if (!selector || selector.charAt(0)!=='#') return;
+          var target=document.getElementById(selector.slice(1));
+          if(!target)return;
+          var panel=target.matches('main > section') ? target : target.closest('main > section');
+          secondary.forEach(function(sec) {
+            var current=(sec===panel);
+            sec.classList.toggle('is-portfolio-selected',current);
+            var major=sec.querySelector('.portfolio-drawer');
+            if(major)major.open=current;
+          });
+          // Si el destino es interno, abrir los detalles ancestrales de forma explícita.
           var node=target;
           while(node){if(node.tagName==='DETAILS')node.open=true;node=node.parentElement;}
+          if(panel && panel!==document.getElementById('inicio') && panel!==document.getElementById('contacto')) {
+            var major=panel.querySelector('.portfolio-drawer');if(major)major.open=true;
+          }
+          // El contacto no forma parte de los paneles plegables y siempre es accesible.
+          var headerNavLinks=document.querySelectorAll('.site-header [data-target]');
+          Array.prototype.forEach.call(headerNavLinks,function(button){
+            if(button.getAttribute('data-target')===('#'+(panel ? panel.id : 'inicio')))button.setAttribute('aria-current','page');
+            else button.removeAttribute('aria-current');
+          });
+          if(menu)menu.open=false;
+          if(footerMenu)footerMenu.open=false;
         }
         document.addEventListener('click',function(evt){
           var link=evt.target.closest('a[href^="#"], [data-target^="#"]');
-          if(link)revealTarget(link.getAttribute('data-target')||link.getAttribute('href'));
+          if(link){
+            var selector=link.getAttribute('data-target')||link.getAttribute('href');
+            revealTarget(selector);
+            // El historial conserva la navegación de la barra y habilita botón Atrás.
+            if(link.matches('.nav-scroll') && selector && selector.charAt(0)==='#' && window.history && window.history.pushState && location.hash!==selector) {
+              window.history.pushState(null,'',selector);
+            }
+          }
           if(evt.target.closest('.btn-cotizar, .contact-reason-action')) {
             revealTarget('#contacto');
             var formCard=document.querySelector('#contacto .contact-form-card');
             if(formCard){var p=formCard.parentElement;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement;}}
           }
+          if(menu && menu.open && !evt.target.closest('.nav-section-menu'))menu.open=false;
+          if(footerMenu && footerMenu.open && !evt.target.closest('.footer-section-menu'))footerMenu.open=false;
         },true);
-        window.addEventListener('hashchange',function(){revealTarget(window.location.hash);});
-        if(window.location.hash)revealTarget(window.location.hash);
-        document.documentElement.classList.add('progressive-ui-ready');
+        document.addEventListener('keydown',function(evt){
+          if(evt.key==='Escape' && menu && menu.open){menu.open=false;menu.querySelector('summary').focus();}
+          if(evt.key==='Escape' && footerMenu && footerMenu.open){footerMenu.open=false;footerMenu.querySelector('summary').focus();}
+        });
+        window.addEventListener('hashchange',function(){revealTarget(window.location.hash || '#inicio');});
+        window.addEventListener('popstate',function(){revealTarget(window.location.hash || '#inicio');});
+        document.documentElement.classList.add('progressive-ui-ready','portfolio-tabbed-ready');
+        revealTarget(window.location.hash || '#inicio');
       })();
 
     })();
