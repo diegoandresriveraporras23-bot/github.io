@@ -3052,6 +3052,254 @@
       .design-system-v2 .pub-card-actions { align-self: stretch; }
       .design-system-v2 .pub-card-actions .btn { flex: 1 1 150px; }
     }
+
+
+    /* PARTE 7 — Proyectos, investigación aplicada y líneas temáticas */
+    .design-system-v2 .project-portfolio {
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-neutral);
+    }
+    .design-system-v2 .project-overview {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+      margin: 18px 0 20px;
+    }
+    .design-system-v2 .project-kpi {
+      min-width: 0;
+      padding: 14px 15px;
+      border: 1px solid var(--border-neutral);
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+      box-shadow: var(--shadow-xs);
+    }
+    .design-system-v2 .project-kpi strong {
+      display: block;
+      font-size: clamp(20px, 3vw, 28px);
+      line-height: 1;
+      color: var(--ink-primary);
+      font-variant-numeric: tabular-nums;
+    }
+    .design-system-v2 .project-kpi span {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink-muted);
+      font-size: 10.8px;
+      line-height: 1.4;
+    }
+    .design-system-v2 .project-ethics {
+      margin: 0 0 20px;
+      padding: 13px 15px;
+      border: 1px solid var(--brand-accent-border);
+      border-radius: var(--radius-md);
+      background: var(--brand-accent-soft);
+      color: var(--ink-secondary);
+      font-size: 12px;
+      line-height: 1.62;
+    }
+    .design-system-v2 .project-theme-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 9px;
+      margin: 0 0 20px;
+    }
+    .design-system-v2 .project-theme-card {
+      min-width: 0;
+      padding: 12px 13px;
+      border: 1px solid var(--border-neutral);
+      border-radius: var(--radius-md);
+      background: var(--bg-elevated);
+    }
+    .design-system-v2 .project-theme-card strong {
+      display: block;
+      font-size: 11.5px;
+      line-height: 1.35;
+      color: var(--ink-primary);
+    }
+    .design-system-v2 .project-theme-card span {
+      display: block;
+      margin-top: 3px;
+      font-size: 10.5px;
+      line-height: 1.4;
+      color: var(--ink-muted);
+    }
+    .design-system-v2 .project-filter-panel {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      padding: 15px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border-neutral);
+      border-radius: var(--radius-lg);
+      background: var(--bg-elevated);
+    }
+    .design-system-v2 .project-filter-field label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .45px;
+      color: var(--ink-muted);
+    }
+    .design-system-v2 .project-filter-field .form-control { background: #fff; }
+    .design-system-v2 .project-results-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px 16px;
+      flex-wrap: wrap;
+      margin: 0 0 18px;
+      color: var(--ink-muted);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+    .design-system-v2 .project-results-meta strong { color: var(--ink-primary); }
+    .design-system-v2 .project-timeline {
+      position: relative;
+      display: grid;
+      gap: 20px;
+      margin-top: 8px;
+    }
+    .design-system-v2 .project-year-group {
+      position: relative;
+      min-width: 0;
+      padding-left: 30px;
+    }
+    .design-system-v2 .project-year-group::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 10px;
+      bottom: -20px;
+      width: 1px;
+      background: var(--border-neutral);
+    }
+    .design-system-v2 .project-year-group:last-child::before { bottom: 8px; }
+    .design-system-v2 .project-year-group::after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 7px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      border: 3px solid var(--bg-canvas);
+      background: var(--brand-accent);
+      box-shadow: 0 0 0 1px var(--brand-accent-border);
+    }
+    .design-system-v2 .project-year-title {
+      margin-bottom: 9px;
+      font-size: 13px;
+      font-weight: 850;
+      color: var(--ink-primary);
+    }
+    .design-system-v2 .project-year-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .design-system-v2 .project-card {
+      min-width: 0;
+      padding: 16px 17px;
+      border: 1px solid var(--border-neutral);
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      box-shadow: var(--shadow-sm);
+    }
+    .design-system-v2 .project-card[hidden],
+    .design-system-v2 .project-year-group[hidden] { display: none !important; }
+    .design-system-v2 .project-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .design-system-v2 .project-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border-neutral);
+      background: var(--bg-elevated);
+      color: var(--ink-secondary);
+      font-size: 10.3px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .design-system-v2 .project-meta .project-state-open {
+      border-color: #fde68a;
+      background: #fffbeb;
+      color: #854d0e;
+    }
+    .design-system-v2 .project-title {
+      margin: 0;
+      font-size: clamp(14px, 1.7vw, 16.5px);
+      line-height: 1.42;
+      color: var(--ink-primary);
+    }
+    .design-system-v2 .project-summary {
+      margin-top: 8px;
+      color: var(--ink-secondary);
+      font-size: 12px;
+      line-height: 1.62;
+    }
+    .design-system-v2 .project-details {
+      margin-top: 9px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border-neutral);
+    }
+    .design-system-v2 .project-details summary {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      cursor: pointer;
+      color: var(--brand-accent-strong);
+      font-size: 11.5px;
+      font-weight: 800;
+    }
+    .design-system-v2 .project-details p {
+      padding: 2px 0 6px;
+      color: var(--ink-muted);
+      font-size: 11.5px;
+      line-height: 1.62;
+    }
+    .design-system-v2 .project-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .design-system-v2 .project-actions .btn {
+      padding: 8px 12px;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 11px;
+    }
+    .design-system-v2 .project-source-note {
+      margin-top: 18px;
+      color: var(--ink-muted);
+      font-size: 11.5px;
+      line-height: 1.6;
+    }
+    @media (min-width: 720px) {
+      .design-system-v2 .project-overview { grid-template-columns: repeat(5, minmax(0,1fr)); }
+      .design-system-v2 .project-theme-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+      .design-system-v2 .project-filter-panel { grid-template-columns: repeat(2, minmax(180px,1fr)) minmax(130px,.55fr); }
+      .design-system-v2 .project-filter-actions { display: flex; align-items: end; }
+      .design-system-v2 .project-filter-actions .btn { width: 100%; }
+      .design-system-v2 .project-year-list { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 639px) {
+      .design-system-v2 .project-overview,
+      .design-system-v2 .project-theme-grid { grid-template-columns: 1fr; }
+      .design-system-v2 .project-year-group { padding-left: 24px; }
+      .design-system-v2 .project-actions .btn { width: 100%; }
+    }
+
 </style>
 </head>
 <body class="design-system-v2">
@@ -3775,6 +4023,139 @@
               </article>
             </div>
           </details>
+        </div>
+
+        <div class="experience-block project-portfolio" id="proyectos-investigacion" aria-labelledby="titulo-proyectos-investigacion">
+          <div class="experience-block-head">
+            <div>
+              <span class="eyebrow">Investigación aplicada · CvLAC depurado</span>
+              <h3 id="titulo-proyectos-investigacion" class="experience-block-title">13 proyectos de investigación, desarrollo, innovación y extensión CTI</h3>
+              <p class="experience-block-desc">Línea temporal de proyectos publicables registrados entre 2016 y 2024. El CvLAC expone 14 proyectos; uno se excluye por la política institucional vigente, dejando 13 fichas. La ausencia de fecha final no se interpreta como proyecto vigente y el rol individual no se infiere cuando la ficha no lo declara.</p>
+            </div>
+          </div>
+
+          <div class="project-overview" aria-label="Resumen cuantitativo de proyectos">
+            <div class="project-kpi"><strong>13</strong><span>proyectos publicables</span></div>
+            <div class="project-kpi"><strong>9</strong><span>investigación y desarrollo</span></div>
+            <div class="project-kpi"><strong>3</strong><span>investigación, desarrollo e innovación</span></div>
+            <div class="project-kpi"><strong>1</strong><span>extensión y responsabilidad social CTI</span></div>
+            <div class="project-kpi"><strong>10 / 3</strong><span>con cierre consignado / sin fecha final declarada</span></div>
+          </div>
+
+          <div class="project-ethics"><strong>Criterio editorial y ético:</strong> se omiten nombres de participantes y datos sensibles, se excluye el proyecto institucional no publicable según la política vigente y se sintetizan contextos vulnerables al nivel mínimo necesario. Las líneas temáticas siguientes son una organización editorial derivada de títulos y resúmenes públicos, no categorías oficiales de CvLAC. Los accesos a producción afín se basan en coincidencias temáticas explícitas dentro del catálogo bibliográfico y no afirman que una publicación sea resultado directo del proyecto.</div>
+
+          <div class="project-theme-grid" aria-label="Líneas temáticas recurrentes">
+            <div class="project-theme-card"><strong>Educación y aprendizaje</strong><span>Inteligencia emocional, inclusión, competencias investigativas, práctica pedagógica, funciones ejecutivas y habilidades para la vida.</span></div><div class="project-theme-card"><strong>Psicología, salud y bienestar</strong><span>Bienestar laboral, consumo de tabaco, salud comunitaria, envejecimiento y desarrollo de habilidades psicosociales.</span></div><div class="project-theme-card"><strong>Migración, frontera y sociedad</strong><span>Movilidad venezolana, realidades fronterizas, gestión social, sostenibilidad y formulación de políticas inclusivas.</span></div><div class="project-theme-card"><strong>Innovación aplicada</strong><span>I+D+i con alcance en salud, energía, empresa, comunidades rurales, entidades gubernamentales y organizaciones sociales.</span></div>
+          </div>
+
+          <div class="project-filter-panel" aria-label="Filtros de proyectos">
+            <div class="project-filter-field"><label for="project-type-filter">Tipo de proyecto</label><select id="project-type-filter" class="form-control" aria-controls="project-timeline"><option value="all">Todos los tipos</option><option value="id">Investigación y desarrollo</option><option value="idi">I+D+i</option><option value="extension">Extensión / responsabilidad social CTI</option></select></div>
+            <div class="project-filter-field"><label for="project-theme-filter">Línea temática</label><select id="project-theme-filter" class="form-control" aria-controls="project-timeline"><option value="all">Todas las líneas</option><option value="educacion">Educación y aprendizaje</option><option value="organizaciones">Bienestar y organizaciones</option><option value="frontera">Migración y frontera</option><option value="sociedad">Sociedad y comunidad</option><option value="salud">Psicología y salud</option><option value="neuro">Neuropsicología y ciclo vital</option><option value="innovacion">Innovación aplicada</option></select></div>
+            <div class="project-filter-actions"><button type="button" id="project-reset" class="btn btn-outline">Restablecer</button></div>
+          </div>
+          <div class="project-results-meta"><strong id="project-results-count" role="status" aria-live="polite">13 de 13 proyectos visibles</strong><span>Orden descendente por año de inicio registrado.</span></div>
+          <div id="project-empty" class="empty-state" hidden>No se encontraron proyectos con los filtros seleccionados.</div>
+          <div class="project-timeline" id="project-timeline"><div class="project-year-group" data-project-year="2024">
+          <div class="project-year-title">2024 · 1 proyecto iniciados</div>
+          <div class="project-year-list"><article class="project-card" data-project-type="idi" data-project-theme="innovacion">
+              <div class="project-meta"><span>Investigación, desarrollo e Innovación</span><span>Enero 2024</span><span class="project-state-open">Sin fecha de cierre consignada</span><span>Innovación aplicada</span></div>
+              <h4 class="project-title">INNOVACIÓN APLICADA EN SECTOR SALUD, ENERGIA, EMPRESARIAL, COMUNIDADES RURALES, ENTIDADES GUBERNAMENTALES Y ONG</h4>
+              <p class="project-summary">Agenda de innovación aplicada con alcance multisectorial en salud, energía, empresa, comunidades rurales, entidades gubernamentales y organizaciones no gubernamentales.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>El registro público consigna el alcance sectorial en el título y no aporta un resumen metodológico adicional. Se conserva esa limitación sin completar objetivos, resultados ni rol individual por inferencia.</p></details>
+              <div class="project-actions"><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article></div>
+        </div><div class="project-year-group" data-project-year="2022">
+          <div class="project-year-title">2022 · 2 proyectos iniciados</div>
+          <div class="project-year-list"><article class="project-card" data-project-type="id" data-project-theme="frontera sociedad">
+              <div class="project-meta"><span>Investigación y desarrollo</span><span>Julio 2022</span><span class="project-state-open">Sin fecha de cierre consignada</span><span>Migración y frontera · Sociedad y comunidad</span></div>
+              <h4 class="project-title">MIGRACIÓN VENEZOLANA EN CIUDADES FRONTERIZAS SURAMERICANAS. REALIDADES Y SUBJETIVIDADES DE LOS INMIGRANTES</h4>
+              <p class="project-summary">Analiza efectos de la migración venezolana desde percepciones, situaciones, comportamientos, sentimientos y dimensiones socioeconómicas en ciudades fronterizas de Brasil y Colombia.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>El registro plantea una lectura de las experiencias migratorias y de su entorno familiar en territorios de frontera. La presentación pública evita individualizar personas o comunidades y resume el contexto con criterio de minimización.</p></details>
+              <div class="project-actions"><button type="button" class="btn btn-outline project-pub-link" data-project-pub-query="migración venezolana">Explorar producción afín</button><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article><article class="project-card" data-project-type="id" data-project-theme="frontera sociedad innovacion">
+              <div class="project-meta"><span>Investigación y desarrollo</span><span>Enero 2022</span><span class="project-state-open">Sin fecha de cierre consignada</span><span>Migración y frontera · Sociedad y comunidad · Innovación aplicada</span></div>
+              <h4 class="project-title">REALIDADES SOCIALES EN EL CONTEXTO DE LA FRONTERA COLOMBO-VENEZOLANA, DESDE UNA MIRADA DE LA GESTIÓN E INTERVENCIÓN DE EMPRESAS SOCIALES O ENTIDADES DEL SECTOR PÚBLICO, EN PRO DEL DLLO SOSTENIBLE DE LAS COMUNIDADES Y FORMULACIÓN DE POLÍTICAS INCLUSIVAS</h4>
+              <p class="project-summary">Estudia fenómenos sociales de la frontera colombo-venezolana desde la gestión e intervención de organizaciones sociales y entidades públicas, con orientación a desarrollo sostenible y políticas inclusivas.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>La fuente sitúa el proyecto en la comprensión de realidades fronterizas y en la formulación de respuestas de gestión e intervención. No se publican nombres de participantes ni detalles que permitan individualizar comunidades específicas.</p></details>
+              <div class="project-actions"><button type="button" class="btn btn-outline project-pub-link" data-project-pub-query="frontera">Explorar producción afín</button><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article></div>
+        </div><div class="project-year-group" data-project-year="2021">
+          <div class="project-year-title">2021 · 1 proyecto iniciados</div>
+          <div class="project-year-list"><article class="project-card" data-project-type="idi" data-project-theme="salud">
+              <div class="project-meta"><span>Investigación, desarrollo e Innovación</span><span>Agosto 2021 — Julio 2022</span><span class="">Cierre consignado</span><span>Psicología y salud</span></div>
+              <h4 class="project-title">EFECTO DE LA TERAPIA REGRESIVA RECONSTRUCTIVA EN EL CONSUMO DE TABACO</h4>
+              <p class="project-summary">Proyecto orientado a estudiar el efecto de una intervención terapéutica sobre el consumo de tabaco.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>CvLAC registra tipo, título y periodo, pero no aporta resumen del proyecto. No se añaden población, resultados, efectividad clínica ni características de intervención que la fuente no consigna.</p></details>
+              <div class="project-actions"><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article></div>
+        </div><div class="project-year-group" data-project-year="2019">
+          <div class="project-year-title">2019 · 1 proyecto iniciados</div>
+          <div class="project-year-list"><article class="project-card" data-project-type="idi" data-project-theme="organizaciones salud">
+              <div class="project-meta"><span>Investigación, desarrollo e Innovación</span><span>Septiembre 2019 — Septiembre 2020</span><span class="">Cierre consignado</span><span>Bienestar y organizaciones · Psicología y salud</span></div>
+              <h4 class="project-title">BIENESTAR PSICOLÓGICO, SATISFACCIÓN LABORAL Y FELICIDAD EN EL TRABAJO: UN ANÁLISIS DESDE LOS SECTORES ECONÓMICOS Y PRODUCTIVOS DE CÚCUTA - NORTE DE SANTANDER</h4>
+              <p class="project-summary">Analiza la relación entre bienestar psicológico, satisfacción laboral y felicidad en trabajadores de sectores económicos y productivos, con orientación a estrategias preventivas desde la psicología organizacional.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>La fuente describe un enfoque cuantitativo, diseño no experimental y alcance descriptivo-correlacional. Esta versión pública sintetiza la población a nivel sectorial y omite cualquier identificación individual.</p></details>
+              <div class="project-actions"><button type="button" class="btn btn-outline project-pub-link" data-project-pub-query="bienestar psicológico">Explorar producción afín</button><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article></div>
+        </div><div class="project-year-group" data-project-year="2018">
+          <div class="project-year-title">2018 · 1 proyecto iniciados</div>
+          <div class="project-year-list"><article class="project-card" data-project-type="id" data-project-theme="educacion salud">
+              <div class="project-meta"><span>Investigación y desarrollo</span><span>Enero 2018 — Diciembre 2018</span><span class="">Cierre consignado</span><span>Educación y aprendizaje · Psicología y salud</span></div>
+              <h4 class="project-title">INTELIGENCIA EMOCIONAL Y ESTRATEGIAS DE ESTUDIO - APRENDIZAJE DE LOS ESTUDIANTES DE PRIMER SEMESTRE DEL PROGRAMA DE PSICOLOGÍA</h4>
+              <p class="project-summary">Examina la relación entre inteligencia emocional y estrategias de estudio-aprendizaje en estudiantes universitarios de primer semestre de Psicología.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>CvLAC reporta metodología cuantitativa, diseño no experimental, alcance descriptivo y corte transversal. La ficha pública omite nombres institucionales y detalles censales innecesarios para comunicar el alcance científico.</p></details>
+              <div class="project-actions"><button type="button" class="btn btn-outline project-pub-link" data-project-pub-query="inteligencia emocional">Explorar producción afín</button><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article></div>
+        </div><div class="project-year-group" data-project-year="2017">
+          <div class="project-year-title">2017 · 2 proyectos iniciados</div>
+          <div class="project-year-list"><article class="project-card" data-project-type="id" data-project-theme="educacion salud">
+              <div class="project-meta"><span>Investigación y desarrollo</span><span>Septiembre 2017 — Noviembre 2018</span><span class="">Cierre consignado</span><span>Educación y aprendizaje · Psicología y salud</span></div>
+              <h4 class="project-title">VARIABLES SOCIODEMOGRÁFICAS, HABILIDADES PARA LA VIDA Y ESTILOS DE APRENDIZAJE DE LOS ESTUDIANTES DE UN PROGRAMA DE PSICOLOGÍA</h4>
+              <p class="project-summary">Relaciona variables sociodemográficas, habilidades para la vida y estilos de aprendizaje para aportar al diseño de programas y estrategias de fortalecimiento profesional en estudiantes de Psicología.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>El registro enfatiza habilidades para la vida y estilos de aprendizaje como dimensiones relevantes para el desarrollo humano y la formación profesional. La publicación web mantiene el nivel agregado y no identifica estudiantes.</p></details>
+              <div class="project-actions"><button type="button" class="btn btn-outline project-pub-link" data-project-pub-query="habilidades para la vida">Explorar producción afín</button><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article><article class="project-card" data-project-type="id" data-project-theme="educacion innovacion">
+              <div class="project-meta"><span>Investigación y desarrollo</span><span>Enero 2017 — Diciembre 2017</span><span class="">Cierre consignado</span><span>Educación y aprendizaje · Innovación aplicada</span></div>
+              <h4 class="project-title">FORTALECIMIENTO DE LAS COMPETENCIAS INVESTIGATIVAS EN LOS PROGRAMAS DE ADMINISTRACIÓN DE EMPRESAS E INGENIERA DE SISTEMAS ARTICULADO CON EL PROYECTO PADIE, PROYECTO AULA, PROYECCIÓN SOCIAL</h4>
+              <p class="project-summary">Proyecto de fortalecimiento de competencias científicas e investigativas mediante formación continua y articulación entre programas académicos y sectores sociales.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>CvLAC describe una metodología de investigación-acción con diagnóstico, planeación, aplicación y evaluación del proceso. No se infieren indicadores de impacto ni resultados no consignados en la ficha pública.</p></details>
+              <div class="project-actions"><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article></div>
+        </div><div class="project-year-group" data-project-year="2016">
+          <div class="project-year-title">2016 · 5 proyectos iniciados</div>
+          <div class="project-year-list"><article class="project-card" data-project-type="id" data-project-theme="educacion salud">
+              <div class="project-meta"><span>Investigación y desarrollo</span><span>Septiembre 2016 — Noviembre 2017</span><span class="">Cierre consignado</span><span>Educación y aprendizaje · Psicología y salud</span></div>
+              <h4 class="project-title">CONOCIMIENTO Y PRÁCTICA PEDAGÓGICA DE LOS DOCENTES EN ESCOLARES CON INATENCIÓN, HIPERACTIVIDAD E IMPULSIVIDAD</h4>
+              <p class="project-summary">Describe conocimiento y práctica pedagógica docente frente a manifestaciones de inatención, hiperactividad e impulsividad en contexto escolar.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>La fuente reporta un estudio cuantitativo, no experimental, descriptivo y transversal. Por criterio ético se omiten el nombre de la institución educativa, el tamaño de la muestra y cualquier elemento que pueda facilitar identificación innecesaria.</p></details>
+              <div class="project-actions"><button type="button" class="btn btn-outline project-pub-link" data-project-pub-query="inatención, hiperactividad e impulsividad">Explorar producción afín</button><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article><article class="project-card" data-project-type="extension" data-project-theme="salud sociedad">
+              <div class="project-meta"><span>Extensión y responsabilidad social CTI</span><span>Septiembre 2016 — Febrero 2017</span><span class="">Cierre consignado</span><span>Psicología y salud · Sociedad y comunidad</span></div>
+              <h4 class="project-title">PROMOTORES EN SALUD COMUNITARIA</h4>
+              <p class="project-summary">Fortalece capacidades de actores comunitarios y sociales en salud mental mediante herramientas de atención primaria, enfoque psicosocial y metodologías participativas.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>El proyecto emplea trabajo participativo y talleres reflexivos orientados a réplica comunitaria. La síntesis evita localizar comunidades vulnerables concretas y mantiene únicamente el propósito social y metodológico relevante.</p></details>
+              <div class="project-actions"><button type="button" class="btn btn-outline project-pub-link" data-project-pub-query="atención primaria en salud">Explorar producción afín</button><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article><article class="project-card" data-project-type="id" data-project-theme="educacion neuro">
+              <div class="project-meta"><span>Investigación y desarrollo</span><span>Febrero 2016 — Marzo 2017</span><span class="">Cierre consignado</span><span>Educación y aprendizaje · Neuropsicología y ciclo vital</span></div>
+              <h4 class="project-title">CARACTERIZACIÓN DE LAS FUNCIONES EJECUTIVAS EN ESTUDIANTES DE GRADO 11, DE LAS I.E. PÚBLICAS DEL MUNICIPIO DE CÚCUTA</h4>
+              <p class="project-summary">Caracteriza funciones ejecutivas en estudiantes de grado 11 de instituciones educativas públicas de Cúcuta y relaciona el análisis neuropsicológico con el desempeño y las estrategias educativas.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>CvLAC describe un diseño no experimental, transversal y descriptivo para identificar fortalezas y dificultades del funcionamiento ejecutivo. Se omiten detalles de identificación institucional y resultados individuales.</p></details>
+              <div class="project-actions"><button type="button" class="btn btn-outline project-pub-link" data-project-pub-query="funciones ejecutivas">Explorar producción afín</button><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article><article class="project-card" data-project-type="id" data-project-theme="educacion sociedad">
+              <div class="project-meta"><span>Investigación y desarrollo</span><span>Febrero 2016 — Diciembre 2016</span><span class="">Cierre consignado</span><span>Educación y aprendizaje · Sociedad y comunidad</span></div>
+              <h4 class="project-title">ACTITUDES, CONOCIMIENTOS Y PRÁCTICAS DE LOS DOCENTES ANTE LA EDUCACIÓN INCLUSIVA EN LA CIUDAD CÚCUTA-COLOMBIA</h4>
+              <p class="project-summary">Analiza actitudes, conocimientos y prácticas docentes frente a la educación inclusiva y el contexto escolar y social en que se desarrolla la práctica pedagógica.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>El propósito declarado es comprender el accionar inclusivo de profesionales de la educación y aportar al fortalecimiento de la educación inclusiva. La ficha pública no identifica docentes ni instituciones específicas.</p></details>
+              <div class="project-actions"><button type="button" class="btn btn-outline project-pub-link" data-project-pub-query="educación inclusiva">Explorar producción afín</button><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article><article class="project-card" data-project-type="id" data-project-theme="neuro salud">
+              <div class="project-meta"><span>Investigación y desarrollo</span><span>Febrero 2016 — Agosto 2017</span><span class="">Cierre consignado</span><span>Neuropsicología y ciclo vital · Psicología y salud</span></div>
+              <h4 class="project-title">ESTUDIO DE LAS FUNCIONES COGNITIVAS EN EL ENVEJECIMIENTO NORMAL Y PATOLÓGICO EN CÚCUTA</h4>
+              <p class="project-summary">Estudia funciones cognitivas asociadas al envejecimiento y la evaluación neuropsicológica, con interés en caracterización regional y apoyo al diagnóstico oportuno.</p>
+              <details class="project-details"><summary>Ver alcance depurado</summary><p>La fuente plantea un diseño cuantitativo descriptivo y evaluación de atención, memoria, lenguaje y funciones ejecutivas. La síntesis pública evita cifras muestrales y detalles clínicos innecesarios, y no presenta resultados no consignados.</p></details>
+              <div class="project-actions"><button type="button" class="btn btn-outline project-pub-link" data-project-pub-query="envejecimiento">Explorar producción afín</button><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver registro CvLAC ↗</a></div>
+            </article></div>
+        </div></div>
+          <p class="project-source-note">Fuente de contenido: CvLAC público del titular. Los registros se reproducen de forma editorialmente depurada; el proyecto asociado a la institución excluida no se incorpora al HTML. Los roles personales solo se mostrarán si una fuente pública los declara expresamente.</p>
         </div>
       </div>
     </div>
@@ -7520,6 +7901,64 @@
         });
       }
       filterPublications();
+
+      // PARTE 7 — filtros de proyectos y conexión temática con producción bibliográfica
+      var projectItems = Array.prototype.slice.call(document.querySelectorAll('.project-card'));
+      var projectGroups = Array.prototype.slice.call(document.querySelectorAll('.project-year-group'));
+      var projectTypeFilter = document.getElementById('project-type-filter');
+      var projectThemeFilter = document.getElementById('project-theme-filter');
+      var projectReset = document.getElementById('project-reset');
+
+      function filterProjects() {
+        var typeValue = projectTypeFilter ? projectTypeFilter.value : 'all';
+        var themeValue = projectThemeFilter ? projectThemeFilter.value : 'all';
+        var visibleCount = 0;
+        projectItems.forEach(function(item) {
+          var itemType = item.getAttribute('data-project-type') || '';
+          var themes = (item.getAttribute('data-project-theme') || '').split(/\s+/);
+          var matchType = typeValue === 'all' || itemType === typeValue;
+          var matchTheme = themeValue === 'all' || themes.indexOf(themeValue) !== -1;
+          var show = matchType && matchTheme;
+          item.hidden = !show;
+          if (show) visibleCount += 1;
+        });
+        projectGroups.forEach(function(group) {
+          var visibleInGroup = Array.prototype.some.call(group.querySelectorAll('.project-card'), function(card) { return !card.hidden; });
+          group.hidden = !visibleInGroup;
+        });
+        var count = document.getElementById('project-results-count');
+        var empty = document.getElementById('project-empty');
+        if (count) count.textContent = visibleCount + ' de ' + projectItems.length + ' ' + (projectItems.length === 1 ? 'proyecto visible' : 'proyectos visibles');
+        if (empty) empty.hidden = visibleCount !== 0;
+      }
+
+      [projectTypeFilter, projectThemeFilter].forEach(function(el) {
+        if (el) el.addEventListener('change', filterProjects);
+      });
+      if (projectReset) {
+        projectReset.addEventListener('click', function() {
+          if (projectTypeFilter) projectTypeFilter.value = 'all';
+          if (projectThemeFilter) projectThemeFilter.value = 'all';
+          filterProjects();
+          if (projectTypeFilter) projectTypeFilter.focus();
+        });
+      }
+      filterProjects();
+
+      var projectPublicationLinks = document.querySelectorAll('.project-pub-link');
+      for (var pp = 0; pp < projectPublicationLinks.length; pp++) {
+        projectPublicationLinks[pp].addEventListener('click', function() {
+          var query = this.getAttribute('data-project-pub-query') || '';
+          if (pubSearch) pubSearch.value = query;
+          if (pubTypeFilter) pubTypeFilter.value = 'all';
+          if (pubYearFilter) pubYearFilter.value = 'all';
+          if (pubThemeFilter) pubThemeFilter.value = 'all';
+          filterPublications();
+          var publicationsSection = document.getElementById('publicaciones');
+          if (publicationsSection) publicationsSection.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+          if (pubSearch) window.setTimeout(function() { pubSearch.focus(); }, reduceMotion ? 0 : 420);
+        });
+      }
 
       var copyBtns = document.querySelectorAll('.btn-copy');
       for (var c = 0; c < copyBtns.length; c++) {
