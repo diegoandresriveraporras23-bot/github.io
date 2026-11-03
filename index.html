@@ -4992,7 +4992,390 @@
       box-shadow: 0 0 0 3px #60a5fa !important;
     }
 
-</style>
+
+    /* BLOQUE C — Sistema editorial unificado, exclusivamente de presentación.
+       Mantiene DOM, datos, secciones, filtros, acciones, enlaces y URL. */
+    :root {
+      --bg-canvas: #f7f8fa;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f0f2f5;
+      --ink-primary: #162235;
+      --ink-secondary: #3a4859;
+      --ink-muted: #5b6878;
+      --brand-primary: #172b45;
+      --brand-primary-soft: #254365;
+      --brand-accent: #275b8d;
+      --brand-accent-strong: #174d7e;
+      --brand-accent-soft: #eef3f8;
+      --brand-accent-border: #d6e2ee;
+      --border-neutral: #e0e5eb;
+      --border-strong: #c8d1db;
+      --radius-xs: 7px;
+      --radius-sm: 9px;
+      --radius-md: 12px;
+      --radius-lg: 15px;
+      --radius-xl: 19px;
+      --shadow-xs: 0 1px 2px rgba(20,35,55,.018);
+      --shadow-sm: 0 2px 7px rgba(20,35,55,.032);
+      --shadow-md: 0 8px 22px -16px rgba(20,35,55,.15);
+      --shadow-lg: 0 14px 36px -24px rgba(20,35,55,.20);
+      --content-width: 1180px;
+      --section-space: clamp(58px,7vw,86px);
+      --grid-gap: clamp(14px,1.7vw,21px);
+    }
+    html { scroll-padding-top: 105px; }
+    body.design-system-v2 {
+      color: var(--ink-primary);
+      background: var(--bg-canvas);
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    body.design-system-v2 :is(button,input,select,textarea) {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    }
+    .design-system-v2 .container { max-width: var(--content-width); }
+    .design-system-v2 .site-header {
+      background: rgba(255,255,255,.97);
+      box-shadow: none;
+      border-bottom: 1px solid var(--border-neutral);
+      backdrop-filter: blur(12px);
+    }
+    .design-system-v2 .brand-logo {
+      border-radius: 10px;
+      background: var(--brand-primary);
+      box-shadow: none;
+    }
+    .design-system-v2 .brand-name { font-weight: 750; font-size: 15px; letter-spacing: -.018em; }
+    .design-system-v2 .brand-sub { font-size: 11px; letter-spacing: .025em; font-weight: 550; }
+    .design-system-v2 .nav-links {
+      gap: 2px;
+      padding: 3px;
+      border-color: transparent;
+      box-shadow: none;
+      background: transparent;
+    }
+    .design-system-v2 .nav-link {
+      font-size: 12px;
+      font-weight: 650;
+      color: var(--ink-secondary);
+      border: 1px solid transparent;
+      border-radius: 9px;
+      box-shadow: none;
+    }
+    .design-system-v2 .nav-link[aria-current="page"] {
+      background: var(--brand-accent-soft);
+      color: var(--brand-accent-strong);
+      border-color: var(--brand-accent-border);
+    }
+    .design-system-v2 .section {
+      padding-block: var(--section-space);
+      background: transparent;
+      border-bottom: 1px solid var(--border-neutral);
+    }
+    .design-system-v2 main > .section:nth-of-type(even) { background: #fcfcfd; }
+    .design-system-v2 .hero-section,
+    .design-system-v2 .section-hero {
+      background: linear-gradient(180deg,#f8fafc 0%,#f4f6f9 100%);
+      border-bottom: 1px solid var(--border-neutral);
+    }
+    .design-system-v2 .hero-section::after,
+    .design-system-v2 .visual-panel::before,
+    .design-system-v2 .section-heading-block > div:first-child::before,
+    .design-system-v2 .section-impact .section-heading-block > div:first-child::before {
+      display: none;
+    }
+    .design-system-v2 .hero-grid { align-items: start; gap: clamp(30px,4vw,52px); }
+    .design-system-v2 .hero-title {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      font-size: clamp(42px,5.5vw,72px);
+      font-weight: 750;
+      letter-spacing: -.055em;
+      line-height: 1.06;
+      max-width: 12ch;
+      margin: 20px 0 13px;
+    }
+    .design-system-v2 .hero-positioning {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      font-weight: 650;
+      font-size: clamp(20px,2.2vw,27px);
+      letter-spacing: -.026em;
+      line-height: 1.32;
+      color: var(--brand-primary-soft);
+      max-width: 28ch;
+      margin: 0 0 18px;
+    }
+    .design-system-v2 .hero-lead {
+      font-size: clamp(14px,1.38vw,16px);
+      line-height: 1.78;
+      color: var(--ink-secondary);
+      max-width: 68ch;
+      margin-bottom: 24px;
+    }
+    .design-system-v2 .hero-authority-badge {
+      border-radius: 7px;
+      background: #e9eff6;
+      color: var(--brand-primary);
+      border: 1px solid #d7e1ec;
+      box-shadow: none;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 10px;
+    }
+    .design-system-v2 .authority-dot { background: #396b98; box-shadow: none; }
+    .design-system-v2 .hero-domain-grid {
+      gap: 0;
+      border-block: 1px solid var(--border-neutral);
+      margin-top: 4px;
+    }
+    .design-system-v2 .mini-pillar {
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      padding: 17px 12px;
+    }
+    .design-system-v2 .mini-pillar:hover { border-color: transparent; transform: none; }
+    @media (min-width: 640px) {
+      .design-system-v2 .mini-pillar:nth-child(even) { border-left: 1px solid var(--border-neutral); }
+      .design-system-v2 .mini-pillar:nth-child(n+3) { border-top: 1px solid var(--border-neutral); }
+    }
+    @media (max-width: 639px) {
+      .design-system-v2 .mini-pillar + .mini-pillar { border-top: 1px solid var(--border-neutral); }
+    }
+    .design-system-v2 .mini-icon {
+      background: #eef3f8;
+      border: 1px solid #dbe4ed;
+      color: #355c80;
+    }
+    .design-system-v2 .pillar-title { font-size: 13px; font-weight: 730; line-height: 1.43; }
+    .design-system-v2 .pillar-copy { font-size: 12.5px; line-height: 1.65; color: var(--ink-secondary); }
+    .design-system-v2 .photo-frame {
+      border: 1px solid var(--border-neutral);
+      background: #f0f3f7;
+      border-radius: 14px;
+      box-shadow: none;
+    }
+    .design-system-v2 .hero-proof--expanded,
+    .design-system-v2 .hero-proof { gap: 8px; }
+    .design-system-v2 .proof-item {
+      background: transparent;
+      box-shadow: none;
+      border: 0;
+      border-left: 2px solid var(--border-strong);
+      border-radius: 0;
+      padding: 7px 10px;
+      min-height: unset;
+    }
+    .design-system-v2 .proof-value { color: var(--ink-primary); font-size: 12px; font-weight: 720; }
+    .design-system-v2 .proof-label { color: var(--ink-muted); font-size: 11px; }
+    .design-system-v2 .section-header { margin-bottom: 29px; }
+    .design-system-v2 .section-heading-block { gap: 20px; }
+    .design-system-v2 .section-title {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      font-size: clamp(28px,3.15vw,37px);
+      font-weight: 740;
+      line-height: 1.18;
+      letter-spacing: -.034em;
+      max-width: 36ch;
+    }
+    .design-system-v2 .eyebrow {
+      color: var(--brand-accent-strong);
+      font-size: 11px;
+      letter-spacing: .035em;
+      font-weight: 720;
+      margin-bottom: 11px;
+    }
+    .design-system-v2 .section-desc,
+    .design-system-v2 .metrics-intro {
+      font-size: 14px;
+      max-width: 75ch;
+      line-height: 1.75;
+      color: var(--ink-secondary);
+    }
+    .design-system-v2 .section-desc + .section-desc { margin-top: 10px; }
+    .design-system-v2 .exec-card,
+    .design-system-v2 .project-card,
+    .design-system-v2 .technical-card,
+    .design-system-v2 .event-card,
+    .design-system-v2 .contact-reason-card,
+    .design-system-v2 .visual-panel {
+      border: 1px solid var(--border-neutral);
+      background: var(--bg-surface);
+      box-shadow: none;
+      border-radius: 12px;
+    }
+    .design-system-v2 .exec-card:hover,
+    .design-system-v2 .project-card:hover,
+    .design-system-v2 .technical-card:hover,
+    .design-system-v2 .visual-panel:hover {
+      border-color: var(--border-strong);
+      box-shadow: none;
+      transform: none;
+    }
+    .design-system-v2 .badge-soft,
+    .design-system-v2 .badge-neutral,
+    .design-system-v2 .pub-year-badge,
+    .design-system-v2 .venue-chip {
+      background: #f2f5f8;
+      color: #3d536a;
+      border: 1px solid #e0e7ef;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: 0;
+      box-shadow: none;
+    }
+    .design-system-v2 .badge-solid {
+      background: var(--brand-primary);
+      color: white;
+      box-shadow: none;
+      letter-spacing: .005em;
+      font-weight: 650;
+    }
+    .design-system-v2 .btn {
+      border-radius: 9px;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0;
+      box-shadow: none;
+      min-height: 44px;
+    }
+    .design-system-v2 .btn-primary { background: var(--brand-primary); color: white; border-color: var(--brand-primary); }
+    .design-system-v2 .btn-outline { background: white; border-color: var(--border-strong); color: var(--brand-primary); }
+    .design-system-v2 .btn:hover { box-shadow: none; transform: none; }
+    .design-system-v2 .filter-btn {
+      background: #fff;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      color: var(--ink-secondary);
+      font-size: 12px;
+      font-weight: 650;
+      box-shadow: none;
+      min-height: 44px;
+    }
+    .design-system-v2 .filter-btn.active { background: var(--brand-primary); border-color: var(--brand-primary); color: #fff; }
+    .design-system-v2 .card-title { font-size: clamp(17px,1.55vw,21px); font-weight: 730; line-height: 1.38; }
+    .design-system-v2 .card-text { font-size: 13.5px; line-height: 1.76; }
+    .design-system-v2 .card-subtitle { color: var(--brand-accent-strong); }
+    .design-system-v2 .experience-index {
+      border: 1px solid var(--border-neutral);
+      background: #fff;
+      box-shadow: none;
+      border-radius: 11px;
+      padding: 20px;
+    }
+    .design-system-v2 .experience-index__title { font-size: 14px; font-weight: 720; color: var(--ink-primary); }
+    .design-system-v2 .experience-index__links a {
+      background: #f7f9fb;
+      border: 1px solid #e2e8ee;
+      color: #284562;
+      box-shadow: none;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 650;
+    }
+    .design-system-v2 .experience-index__links a:hover { background: #edf3f8; border-color: #bdcbd8; transform: none; }
+    .design-system-v2 .experience-block-title { font-size: clamp(22px,2.3vw,28px); font-weight: 740; }
+    .design-system-v2 .experience-block-desc { font-size: 13.5px; line-height: 1.72; }
+    .design-system-v2 .experience-stat,
+    .design-system-v2 .academic-overview-item,
+    .design-system-v2 .technical-kpi,
+    .design-system-v2 .curricular-kpi,
+    .design-system-v2 .publication-summary-card,
+    .design-system-v2 .learning-summary > div {
+      background: #fff;
+      border: 1px solid var(--border-neutral);
+      border-radius: 11px;
+      box-shadow: none;
+    }
+    .design-system-v2 .experience-stat-value,
+    .design-system-v2 .curricular-kpi-value,
+    .design-system-v2 .publication-summary-value {
+      color: var(--brand-primary);
+      font-weight: 740;
+    }
+    .design-system-v2 .section-impact .visual-panel--impact,
+    .design-system-v2 .impact-panel,
+    .design-system-v2 .reputation-hub {
+      background: #fff;
+      border: 1px solid var(--border-neutral);
+      box-shadow: none;
+      border-radius: 14px;
+    }
+    .design-system-v2 .impact-source-card,
+    .design-system-v2 .metrics-trust,
+    .design-system-v2 .contact-process,
+    .design-system-v2 .contact-ethics-note,
+    .design-system-v2 .contact-human-note {
+      background: #f7f9fb;
+      border: 1px solid #e3e8ee;
+      border-radius: 10px;
+      box-shadow: none;
+    }
+    .design-system-v2 .metric-box,
+    .design-system-v2 .trend-summary-card {
+      background: #f8fafc;
+      border-color: var(--border-neutral);
+      box-shadow: none;
+    }
+    .design-system-v2 .section-services .exec-card {
+      background: #fff;
+      border: 1px solid var(--border-neutral);
+      box-shadow: none;
+      padding: clamp(20px,2.25vw,27px);
+    }
+    .design-system-v2 .publication-filter-panel,
+    .design-system-v2 .comp-selectors {
+      border: 1px solid var(--border-neutral);
+      border-radius: 11px;
+      background: #f9fafc;
+      box-shadow: none;
+    }
+    .design-system-v2 .publication-catalog .pub-card,
+    .design-system-v2 .pub-card {
+      border: 1px solid var(--border-neutral);
+      border-radius: 10px;
+      background: white;
+      box-shadow: none;
+      padding: 18px 20px;
+      gap: 12px;
+    }
+    .design-system-v2 .publication-catalog .pub-card:hover { border-color: var(--border-strong); box-shadow: none; }
+    .design-system-v2 .pub-card .card-title { font-size: 16px; font-weight: 700; line-height: 1.48; }
+    .design-system-v2 .pub-venue { color: var(--ink-muted); font-size: 12px; line-height: 1.56; }
+    .design-system-v2 .pub-details { border-color: var(--border-neutral); }
+    .design-system-v2 .comp-record { background: #fff; box-shadow: none; }
+    .design-system-v2 .comp-record:hover { background: #fbfcfe; box-shadow: none; }
+    .design-system-v2 .contact-form-card,
+    .design-system-v2 .contact-reason-card {
+      box-shadow: none;
+      border: 1px solid var(--border-neutral);
+      background: #fff;
+    }
+    .design-system-v2 .form-control { border-color: var(--border-strong); background: #fff; font-size: 13.5px; }
+    .design-system-v2 footer { background: var(--brand-primary); }
+    .design-system-v2 .footer-meta { border-color: rgba(255,255,255,.16); }
+    @media (max-width: 899px) {
+      .design-system-v2 .hero-title { max-width: 100%; font-size: clamp(42px,9vw,58px); }
+      .design-system-v2 .section-title { max-width: 100%; }
+      .design-system-v2 .section { padding-block: 56px; }
+      .design-system-v2 .header-inner { gap: 7px; }
+    }
+    @media (max-width: 639px) {
+      .design-system-v2 .hero-title { font-size: clamp(38px,10vw,46px); letter-spacing: -.045em; }
+      .design-system-v2 .hero-positioning { font-size: 20px; }
+      .design-system-v2 .hero-lead { font-size: 14px; line-height: 1.75; }
+      .design-system-v2 .section { padding-block: 48px; }
+      .design-system-v2 .section-title { font-size: 28px; }
+      .design-system-v2 .experience-index { padding: 14px; }
+      .design-system-v2 .pub-card { padding: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .design-system-v2 * { scroll-behavior: auto; }
+    }
+
+  </style>
 </head>
 <body class="design-system-v2">
 
