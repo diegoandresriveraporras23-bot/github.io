@@ -2643,7 +2643,246 @@
       }
     }
 
-  </style>
+  
+
+    /* PARTE 5 — Formación académica y complementaria exhaustiva — 2026-11-02 */
+    .academic-source-note {
+      max-width: 78ch;
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.62;
+      color: var(--ink-muted);
+    }
+
+    .academic-overview,
+    .learning-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0 0 22px;
+    }
+
+    .academic-overview-item,
+    .learning-summary > div {
+      min-width: 0;
+      padding: 13px 14px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 12px;
+      background: var(--bg-elevated);
+    }
+
+    .academic-overview-item strong,
+    .learning-summary strong {
+      display: block;
+      font-size: 18px;
+      line-height: 1.2;
+      color: var(--ink-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .academic-overview-item span,
+    .learning-summary span {
+      display: block;
+      margin-top: 3px;
+      font-size: 10.5px;
+      line-height: 1.4;
+      color: var(--ink-muted);
+    }
+
+    .credential-period {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--ink-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .credential-fact {
+      margin: 0 0 14px;
+      padding: 9px 10px;
+      border-left: 3px solid var(--brand-accent-border);
+      border-radius: 0 8px 8px 0;
+      background: var(--bg-elevated);
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.55;
+    }
+
+    .credential-detail {
+      margin: 0 0 14px;
+      border-top: 1px solid var(--border-neutral);
+      border-bottom: 1px solid var(--border-neutral);
+    }
+
+    .credential-detail summary {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: var(--brand-accent-strong);
+      font-size: 11.5px;
+      font-weight: 800;
+    }
+
+    .credential-detail p {
+      padding: 0 0 12px;
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.58;
+    }
+
+    .comp-summary-grid { margin-bottom: 30px; }
+
+    .comp-catalog {
+      margin-top: 12px;
+      padding: clamp(18px, 3vw, 28px);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.78);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comp-catalog-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+      gap: 22px;
+      align-items: end;
+      margin-bottom: 12px;
+    }
+
+    .comp-catalog-head h3 {
+      font-size: clamp(20px, 2.4vw, 26px);
+      line-height: 1.25;
+      color: var(--ink-primary);
+    }
+
+    .comp-catalog-head p {
+      max-width: 70ch;
+      margin-top: 6px;
+      color: var(--ink-secondary);
+      font-size: 12.5px;
+      line-height: 1.6;
+    }
+
+    .comp-selectors {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+    }
+
+    .comp-selectors label {
+      display: block;
+      color: var(--ink-muted);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: .35px;
+      text-transform: uppercase;
+    }
+
+    .comp-selectors .form-control {
+      margin-top: 5px;
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 600;
+    }
+
+    .comp-results-status {
+      margin: 0 0 14px;
+      color: var(--ink-muted);
+      font-size: 11.5px;
+      font-weight: 700;
+    }
+
+    .comp-year-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .comp-year-group {
+      border: 1px solid var(--border-neutral);
+      border-radius: 12px;
+      background: var(--bg-surface);
+      overflow: clip;
+    }
+
+    .comp-year-group > summary {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 14px;
+      cursor: pointer;
+      background: var(--bg-elevated);
+      color: var(--ink-primary);
+      list-style-position: inside;
+    }
+
+    .comp-year-group > summary span { font-size: 15px; font-weight: 800; }
+    .comp-year-group > summary strong { font-size: 11px; color: var(--ink-muted); }
+
+    .comp-record-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0;
+    }
+
+    .comp-record {
+      min-width: 0;
+      padding: 14px;
+      border-top: 1px solid var(--border-neutral);
+    }
+
+    .comp-record:nth-child(odd) { border-right: 1px solid var(--border-neutral); }
+
+    .comp-record-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 7px;
+      color: var(--ink-muted);
+      font-size: 10.5px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .comp-record h4 {
+      color: var(--ink-primary);
+      font-size: 12.5px;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+    }
+
+    .comp-record p {
+      margin-top: 5px;
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.45;
+    }
+
+    .comp-record-family {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--brand-accent-strong);
+      font-size: 10.5px;
+      font-weight: 800;
+    }
+
+    @media (max-width: 899px) {
+      .academic-overview,
+      .learning-summary { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .comp-catalog-head { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 639px) {
+      .academic-overview,
+      .learning-summary,
+      .comp-selectors,
+      .comp-record-list { grid-template-columns: 1fr; }
+      .comp-record:nth-child(odd) { border-right: 0; }
+      .comp-record + .comp-record { border-top: 1px solid var(--border-neutral); }
+    }
+</style>
 </head>
 <body class="design-system-v2">
 
@@ -3478,6 +3717,7 @@
           <span class="eyebrow">Formación Universitaria</span>
           <h2 id="titulo-trayectoria" class="section-title">Trayectoria Académica y Credenciales</h2>
           <p class="section-desc">Formación universitaria presentada por estado y nivel: estudios en curso, posgrados obtenidos y habilitación profesional. Las denominaciones y estados se mantienen conforme al contenido autoritativo aprobado.</p>
+          <p class="academic-source-note">La cronología y los trabajos académicos desplegables se incorporan únicamente cuando están reportados en CvLAC. La Maestría en Estadística (ULA) y la denominación institucional del pregrado en Derecho se conservan según el estado autoritativo aprobado por el titular.</p>
         </div>
 
         <div class="filter-group" id="formacion-filters">
@@ -3488,124 +3728,89 @@
         </div>
       </div>
 
+      <div class="academic-overview" aria-label="Resumen de trayectoria académica">
+        <div class="academic-overview-item"><strong>7</strong><span>formaciones vigentes en el portafolio</span></div>
+        <div class="academic-overview-item"><strong>4</strong><span>posgrados obtenidos</span></div>
+        <div class="academic-overview-item"><strong>2</strong><span>estudios en curso</span></div>
+        <div class="academic-overview-item"><strong>2008–2026+</strong><span>rango cronológico documentado</span></div>
+      </div>
+
       <div class="grid-3">
-        <!-- En Curso 1: Maestría en Estadística -->
         <div class="exec-card border-left-blue form-item visual-panel visual-panel--credential" data-f-cat="en-curso">
           <div>
-            <div class="card-top-meta">
-              <span class="badge-soft">Formación en Curso</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">Posgrado</span>
-            </div>
+            <div class="card-top-meta"><span class="badge-soft">Formación en Curso</span><span class="credential-period">Estado autoritativo</span></div>
             <h3 class="card-title">Maestría en Estadística</h3>
             <p class="card-subtitle">Universidad de los Andes (ULA, Venezuela)</p>
             <p class="card-text">Instituto de Estadística Aplicada y Computación (IEAC - FACES). Modelado estocástico, inferencia avanzada, diseño experimental y bioestadística.</p>
+            <div class="credential-fact"><strong>Estado:</strong> En curso. No se añade un periodo CvLAC porque esta formación se conserva por decisión autoritativa del titular.</div>
           </div>
-          <div class="card-footer">
-            <span>IEAC - FACES</span>
-            <strong style="color: var(--ink-primary);">En Curso</strong>
-          </div>
+          <div class="card-footer"><span>IEAC - FACES</span><strong style="color: var(--ink-primary);">En Curso</strong></div>
         </div>
 
-        <!-- En Curso 2: Abogado -->
         <div class="exec-card border-left-blue form-item visual-panel visual-panel--credential" data-f-cat="en-curso">
           <div>
-            <div class="card-top-meta">
-              <span class="badge-soft">Formación en Curso</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">Pregrado Jurídico</span>
-            </div>
+            <div class="card-top-meta"><span class="badge-soft">Formación en Curso</span><span class="credential-period">Inicio registrado: 2026</span></div>
             <h3 class="card-title">Abogado</h3>
             <p class="card-subtitle">Fundación Universidad INCCA de Colombia</p>
             <p class="card-text">Formación en ciencias jurídicas con profundización en derecho laboral, seguridad social y marco regulatorio de las organizaciones.</p>
+            <div class="credential-fact"><strong>Estado:</strong> En curso. El estado autoritativo conserva esta institución; CvLAC reporta formación universitaria en Derecho iniciada en 2026 sin esa denominación institucional.</div>
           </div>
-          <div class="card-footer">
-            <span>Derecho &amp; Ciencias Jurídicas</span>
-            <strong style="color: var(--ink-primary);">En Curso</strong>
-          </div>
+          <div class="card-footer"><span>Derecho &amp; Ciencias Jurídicas</span><strong style="color: var(--ink-primary);">En Curso</strong></div>
         </div>
 
-        <!-- Obtenido 1: Doctor en Psicología -->
         <div class="exec-card form-item" data-f-cat="posgrados">
           <div>
-            <div class="card-top-meta">
-              <span class="badge-solid">Doctorado</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">Título Obtenido</span>
-            </div>
+            <div class="card-top-meta"><span class="badge-solid">Doctorado</span><span class="credential-period">2018 — 2023</span></div>
             <h3 class="card-title">Doctor en Psicología</h3>
             <p class="card-subtitle">Universidad de Baja California (UBC), México</p>
             <p class="card-text">Título doctoral convalidado oficialmente por el Ministerio de Educación Nacional de Colombia (MEN). Investigación avanzada en ciencias del comportamiento.</p>
+            <details class="credential-detail"><summary>Ver trabajo académico reportado en CvLAC</summary><p>EFECTIVIDAD DEL PROGRAMA DE INTERVENCIÓN VIVENCIAL &quot;ANALÍZATE, CONÓCETE Y CRECE&quot; EN EL FORTALECIMIENTO DE LA INTELIGENCIA EMOCIONAL Y EL BIENESTAR PSICOLÓGICO EN ESTUDIANTES DE PRIMER SEMESTRE DE DOS INSTITUCIONES PRIVADAS DE EDUCACIÓN SUPERIOR</p></details>
           </div>
-          <div class="card-footer">
-            <span>MEN Colombia</span>
-            <strong style="color: var(--brand-accent);">Convalidado Oficialmente</strong>
-          </div>
+          <div class="card-footer"><span>MEN Colombia</span><strong style="color: var(--brand-accent);">Convalidado Oficialmente</strong></div>
         </div>
 
-        <!-- Obtenido 2: Especialista en Estadística Aplicada -->
         <div class="exec-card form-item" data-f-cat="posgrados">
           <div>
-            <div class="card-top-meta">
-              <span class="badge-neutral">Especialización</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">Título Obtenido</span>
-            </div>
+            <div class="card-top-meta"><span class="badge-neutral">Especialización</span><span class="credential-period">2013 — 2014</span></div>
             <h3 class="card-title">Especialista en Estadística Aplicada</h3>
             <p class="card-subtitle">Universidad Francisco de Paula Santander (UFPS)</p>
             <p class="card-text">Diseño muestral, modelado inferencial y análisis estadístico multivariante aplicado a la investigación científica y organizacional.</p>
+            <details class="credential-detail"><summary>Ver trabajo académico reportado en CvLAC</summary><p>DISEÑO DE UNA ESCALA DE DESGASTE LABORAL PARA PERSONAL DEL SECTOR SALUD</p></details>
           </div>
-          <div class="card-footer">
-            <span>UFPS</span>
-            <strong style="color: var(--ink-primary);">Métodos Cuantitativos</strong>
-          </div>
+          <div class="card-footer"><span>UFPS</span><strong style="color: var(--ink-primary);">Métodos Cuantitativos</strong></div>
         </div>
 
-        <!-- Obtenido 3: Magíster en Dirección de Recursos Humanos -->
         <div class="exec-card form-item" data-f-cat="posgrados">
           <div>
-            <div class="card-top-meta">
-              <span class="badge-neutral">Maestría</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">Título Obtenido</span>
-            </div>
+            <div class="card-top-meta"><span class="badge-neutral">Maestría</span><span class="credential-period">2014 — 2016</span></div>
             <h3 class="card-title">Magíster en Dirección y Gestión de Recursos Humanos</h3>
             <p class="card-subtitle">Universidad Internacional Iberoamericana (UNINI)</p>
             <p class="card-text">Título convalidado oficialmente por el Ministerio de Educación Nacional de Colombia. Dirección estratégica, comportamiento organizacional y gestión humana.</p>
+            <details class="credential-detail"><summary>Ver trabajo académico reportado en CvLAC</summary><p>MOTIVACIÓN LABORAL Y CLIMA ORGANIZACIONAL DE LOS FUNCIONARIOS QUE LABORAN EN INTEGRADOS EN SALUD EN EL I SEMESTRE DEL 2016</p></details>
           </div>
-          <div class="card-footer">
-            <span>MEN Colombia</span>
-            <strong style="color: var(--brand-accent);">Convalidado Oficialmente</strong>
-          </div>
+          <div class="card-footer"><span>MEN Colombia</span><strong style="color: var(--brand-accent);">Convalidado Oficialmente</strong></div>
         </div>
 
-        <!-- Obtenido 4: Especialista en Gerencia de Riesgos Laborales SST (Sin número de licencia) -->
         <div class="exec-card form-item" data-f-cat="posgrados">
           <div>
-            <div class="card-top-meta">
-              <span class="badge-neutral">Especialización</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">Título Obtenido</span>
-            </div>
+            <div class="card-top-meta"><span class="badge-neutral">Especialización</span><span class="credential-period">2016 — 2017</span></div>
             <h3 class="card-title">Especialista en Gerencia de Riesgos Laborales, Seguridad y Salud en el Trabajo</h3>
             <p class="card-subtitle">Corporación Universitaria Minuto de Dios (UNIMINUTO)</p>
             <p class="card-text">Habilitación oficial con Licencia SST vigente para diagnóstico, monitoreo e intervención de factores de riesgo psicosocial y sistemas de gestión SST.</p>
+            <details class="credential-detail"><summary>Ver trabajo académico reportado en CvLAC</summary><p>FORTALECIMIENTO DEL SISTEMA DE GESTIÓN DE SEGURIDAD Y SALUD EN EL TRABAJO EN EL ÁMBITO PSICOSOCIAL SEGÚN LA RESOLUCIÓN 2646 DE 2008</p></details>
           </div>
-          <div class="card-footer">
-            <span>Habilitación Oficial</span>
-            <strong style="color: var(--brand-accent);">Licencia SST Vigente</strong>
-          </div>
+          <div class="card-footer"><span>Habilitación Oficial</span><strong style="color: var(--brand-accent);">Licencia SST Vigente</strong></div>
         </div>
 
-        <!-- Obtenido 5: Psicólogo (Sin número de tarjeta) -->
         <div class="exec-card form-item" data-f-cat="pregrado">
           <div>
-            <div class="card-top-meta">
-              <span class="badge-neutral">Pregrado</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">Título Obtenido</span>
-            </div>
+            <div class="card-top-meta"><span class="badge-neutral">Pregrado</span><span class="credential-period">2008 — 2013</span></div>
             <h3 class="card-title">Psicólogo</h3>
             <p class="card-subtitle">Universidad de Pamplona, Colombia</p>
             <p class="card-text">Profesional con Tarjeta Profesional vigente expedida por COLPSIC e inscripción activa en el Registro Único Nacional del Talento Humano en Salud (RETHUS).</p>
+            <details class="credential-detail"><summary>Ver trabajo académico reportado en CvLAC</summary><p>SITUACIONES VINCULADAS CON ESTRÉS EN PERSONAS VIH POSITIVAS</p></details>
           </div>
-          <div class="card-footer">
-            <span>COLPSIC &amp; RETHUS</span>
-            <strong style="color: var(--brand-accent);">Tarjeta Profesional Vigente</strong>
-          </div>
+          <div class="card-footer"><span>COLPSIC &amp; RETHUS</span><strong style="color: var(--brand-accent);">Tarjeta Profesional Vigente</strong></div>
         </div>
       </div>
     </div>
@@ -3619,110 +3824,570 @@
           <span class="eyebrow">Educación Continua y Actualización</span>
           <h2 id="titulo-complementaria" class="section-title">Formación Complementaria y Actualización Profesional</h2>
           <p class="section-desc">Actualización continua organizada por cuatro frentes de práctica: investigación y publicación, estadística y software, docencia universitaria, y gestión organizacional y SST.</p>
+          <p class="academic-source-note">Inventario curricular ampliado: 76 registros de formación complementaria reportados en CvLAC entre 2011 y 2026. El catálogo conserva título, institución, tipo y periodo reportados; las familias temáticas son una organización editorial para facilitar la consulta.</p>
         </div>
 
-        <div class="filter-group" id="comp-filters">
-          <button type="button" class="filter-btn active" data-c="all" aria-controls="complementaria">Todos</button>
-          <button type="button" class="filter-btn" data-c="investigacion" aria-controls="complementaria">1. Investigación y Publicación</button>
-          <button type="button" class="filter-btn" data-c="estadistica" aria-controls="complementaria">2. Estadística y Software</button>
-          <button type="button" class="filter-btn" data-c="docencia" aria-controls="complementaria">3. Docencia Universitaria</button>
-          <button type="button" class="filter-btn" data-c="sst" aria-controls="complementaria">4. Organizacional y SST</button>
+        <div class="filter-group" id="comp-filters" aria-label="Filtrar formación complementaria por familia temática">
+          <button type="button" class="filter-btn active" data-c="all" aria-controls="comp-catalog">Todos (76)</button>
+          <button type="button" class="filter-btn" data-c="investigacion" aria-controls="comp-catalog">1. Investigación y Publicación</button>
+          <button type="button" class="filter-btn" data-c="estadistica" aria-controls="comp-catalog">2. Estadística y Software</button>
+          <button type="button" class="filter-btn" data-c="docencia" aria-controls="comp-catalog">3. Docencia Universitaria</button>
+          <button type="button" class="filter-btn" data-c="sst" aria-controls="comp-catalog">4. Organizacional y SST</button>
+          <button type="button" class="filter-btn" data-c="gestion" aria-controls="comp-catalog">5. Liderazgo y Gestión</button>
+          <button type="button" class="filter-btn" data-c="psicologia" aria-controls="comp-catalog">6. Psicología y Salud</button>
+          <button type="button" class="filter-btn" data-c="proyectos" aria-controls="comp-catalog">7. Innovación y Proyectos</button>
+          <button type="button" class="filter-btn" data-c="otras" aria-controls="comp-catalog">8. Otras</button>
         </div>
       </div>
 
-      <div class="grid-3">
-        <!-- 1. Investigación y Publicación -->
+      <div class="learning-summary" aria-label="Resumen del inventario de formación complementaria">
+        <div><strong>76</strong><span>registros CvLAC</span></div>
+        <div><strong>61</strong><span>cursos de corta duración</span></div>
+        <div><strong>10</strong><span>registros de extensión</span></div>
+        <div><strong>5</strong><span>otros procesos formativos</span></div>
+      </div>
+
+      <div class="grid-3 comp-summary-grid" aria-label="Síntesis temática previamente vigente">
         <div class="exec-card comp-item visual-panel visual-panel--learning" data-c-cat="investigacion">
-          <div>
-            <div class="card-top-meta">
-              <span class="badge-soft">1. Investigación y Publicación</span>
-              <span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">Revistas Q1 / Q2</span>
-            </div>
-            <h3 class="card-title">Redacción Científica, Bibliometría y Revisiones Sistemáticas</h3>
-            <p class="card-text" style="margin-top: 8px;">Estructuración de artículos científicos de alto impacto, protocolo PRISMA, análisis bibliométrico y cumplimiento de estándares editoriales internacionales.</p>
-          </div>
-          <div class="card-footer">
-            <span>Producción Científica</span>
-            <strong style="color: var(--ink-primary);">Scopus / WoS</strong>
-          </div>
+          <div><div class="card-top-meta"><span class="badge-soft">1. Investigación y Publicación</span><span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">Revistas Q1 / Q2</span></div><h3 class="card-title">Redacción Científica, Bibliometría y Revisiones Sistemáticas</h3><p class="card-text" style="margin-top: 8px;">Estructuración de artículos científicos de alto impacto, protocolo PRISMA, análisis bibliométrico y cumplimiento de estándares editoriales internacionales.</p></div><div class="card-footer"><span>Producción Científica</span><strong style="color: var(--ink-primary);">Scopus / WoS</strong></div>
         </div>
-
-        <!-- 2. Estadística y Software -->
         <div class="exec-card comp-item visual-panel visual-panel--learning" data-c-cat="estadistica">
-          <div>
-            <div class="card-top-meta">
-              <span class="badge-soft">2. Estadística y Software</span>
-              <span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">R / Python / SPSS</span>
-            </div>
-            <h3 class="card-title">Modelado Estadístico Multivariante, SEM y Psicometría</h3>
-            <p class="card-text" style="margin-top: 8px;">Análisis factorial exploratorio y confirmatorio, modelos de ecuaciones estructurales (SEM), validación psicométrica y flujos reproducibles en R, Python y SPSS.</p>
-          </div>
-          <div class="card-footer">
-            <span>Ciencia de Datos</span>
-            <strong style="color: var(--ink-primary);">Avanzado</strong>
-          </div>
+          <div><div class="card-top-meta"><span class="badge-soft">2. Estadística y Software</span><span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">R / Python / SPSS</span></div><h3 class="card-title">Modelado Estadístico Multivariante, SEM y Psicometría</h3><p class="card-text" style="margin-top: 8px;">Análisis factorial exploratorio y confirmatorio, modelos de ecuaciones estructurales (SEM), validación psicométrica y flujos reproducibles en R, Python y SPSS.</p></div><div class="card-footer"><span>Ciencia de Datos</span><strong style="color: var(--ink-primary);">Avanzado</strong></div>
         </div>
-
-        <!-- 3. Docencia Universitaria -->
         <div class="exec-card comp-item visual-panel visual-panel--learning" data-c-cat="docencia">
+          <div><div class="card-top-meta"><span class="badge-soft">3. Docencia Universitaria</span><span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">Posgrados</span></div><h3 class="card-title">Diplomado en Docencia Universitaria y Evaluación por Competencias</h3><p class="card-text" style="margin-top: 8px;">Pedagogía en educación superior, diseño curricular, dirección de investigación formativa y evaluación académica en programas de pregrado y posgrado.</p></div><div class="card-footer"><span>Educación Superior</span><strong style="color: var(--ink-primary);">Diplomado</strong></div>
+        </div>
+        <div class="exec-card comp-item visual-panel visual-panel--learning" data-c-cat="sst">
+          <div><div class="card-top-meta"><span class="badge-soft">4. Organizacional y SST</span><span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">Batería Oficial</span></div><h3 class="card-title">Aplicación e Interpretación de Batería de Riesgo Psicosocial</h3><p class="card-text" style="margin-top: 8px;">Actualización técnica en evaluación intralaboral, extralaboral y del estrés, custodia de instrumentos, vigilancia epidemiológica e intervención.</p></div><div class="card-footer"><span>Riesgo Psicosocial</span><strong style="color: var(--ink-primary);">Especializado</strong></div>
+        </div>
+        <div class="exec-card comp-item visual-panel visual-panel--learning" data-c-cat="sst">
+          <div><div class="card-top-meta"><span class="badge-soft">4. Organizacional y SST</span><span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">Normativa SST</span></div><h3 class="card-title">Sistema de Gestión de la Seguridad y Salud en el Trabajo (SG-SST)</h3><p class="card-text" style="margin-top: 8px;">Diseño, implementación, administración y mejora continua del Sistema de Gestión de la Seguridad y Salud en el Trabajo bajo estándares legales vigentes.</p></div><div class="card-footer"><span>Seguridad y Salud Laboral</span><strong style="color: var(--ink-primary);">Certificado</strong></div>
+        </div>
+        <div class="exec-card comp-item visual-panel visual-panel--learning" data-c-cat="sst">
+          <div><div class="card-top-meta"><span class="badge-soft">4. Organizacional y SST</span><span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">Bienestar Laboral</span></div><h3 class="card-title">Comités de Convivencia Laboral, Clima y Salud Mental</h3><p class="card-text" style="margin-top: 8px;">Entrenamiento en gestión de la convivencia laboral, prevención del acoso laboral y síndrome de burnout, clima organizacional y salud mental en el trabajo.</p></div><div class="card-footer"><span>Psicología Organizacional</span><strong style="color: var(--ink-primary);">Formación Continua</strong></div>
+        </div>
+      </div>
+
+      <div class="comp-catalog" id="comp-catalog">
+        <div class="comp-catalog-head">
           <div>
-            <div class="card-top-meta">
-              <span class="badge-soft">3. Docencia Universitaria</span>
-              <span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">Posgrados</span>
-            </div>
-            <h3 class="card-title">Diplomado en Docencia Universitaria y Evaluación por Competencias</h3>
-            <p class="card-text" style="margin-top: 8px;">Pedagogía en educación superior, diseño curricular, dirección de investigación formativa y evaluación académica en programas de pregrado y posgrado.</p>
+            <span class="eyebrow">Inventario completo CvLAC</span>
+            <h3>76 registros de formación complementaria</h3>
+            <p>Filtra el catálogo por familia temática, año de inicio y tipo de formación. Los años se muestran en acordeones para mantener una lectura progresiva.</p>
           </div>
-          <div class="card-footer">
-            <span>Educación Superior</span>
-            <strong style="color: var(--ink-primary);">Diplomado</strong>
+          <div class="comp-selectors">
+            <label for="comp-year">Año de inicio<select id="comp-year" class="form-control"><option value="all">Todos los años</option><option value="2026">2026 (6)</option><option value="2025">2025 (9)</option><option value="2024">2024 (11)</option><option value="2023">2023 (22)</option><option value="2022">2022 (10)</option><option value="2020">2020 (12)</option><option value="2019">2019 (1)</option><option value="2018">2018 (2)</option><option value="2017">2017 (2)</option><option value="2011">2011 (1)</option></select></label>
+            <label for="comp-type">Tipo<select id="comp-type" class="form-control"><option value="all">Todos los tipos</option><option value="curso">Curso de corta duración (61)</option><option value="extension">Extensión (10)</option><option value="otros">Otros (5)</option></select></label>
           </div>
         </div>
-
-        <!-- 4. Organizacional y SST -->
-        <div class="exec-card comp-item visual-panel visual-panel--learning" data-c-cat="sst">
-          <div>
-            <div class="card-top-meta">
-              <span class="badge-soft">4. Organizacional y SST</span>
-              <span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">Batería Oficial</span>
-            </div>
-            <h3 class="card-title">Aplicación e Interpretación de Batería de Riesgo Psicosocial</h3>
-            <p class="card-text" style="margin-top: 8px;">Actualización técnica en evaluación intralaboral, extralaboral y del estrés, custodia de instrumentos, vigilancia epidemiológica e intervención.</p>
+        <p id="comp-results-status" class="comp-results-status" role="status" aria-live="polite">Mostrando 76 de 76 registros.</p>
+        <div class="comp-year-list">
+<details class="comp-year-group" data-comp-year-group="2026" open>
+          <summary><span>2026</span><strong>6 registros</strong></summary>
+          <div class="comp-record-list">
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2026" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Abril 2026</span></div>
+              <h4>GENERALIDADES DEL LIDERAZGO</h4>
+              <p>Corporacion Universidad de la Costa</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="otras" data-comp-year="2026" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Agosto 2026</span></div>
+              <h4>TIMING</h4>
+              <p>Corporacion Universidad de la Costa</p>
+              <span class="comp-record-family">Otras actualizaciones</span>
+            </article>
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2026" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Julio 2026</span></div>
+              <h4>PROGRAMA DE EXPERIENCIA PARA EL FORTALECIMIENTO DEL LIDERAZGO ACADÉMICO, LA GESTIÓN CURRICULAR Y LA VISIÓN ESTRATÉGICA DEL DIRECTOR DEL PROGRAMA ACADÉMICO</h4>
+              <p>Corporacion Universidad de la Costa</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2026" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Julio 2026</span></div>
+              <h4>IMPORTANCIA DEL DESARROLLO DE COMPETENCIAS PARA MEJORAR LA CALIDAD DE VIDA</h4>
+              <p>Corporacion Universidad de la Costa</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2026" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Agosto 2026</span></div>
+              <h4>EL PODER DE LA ESCUCHA</h4>
+              <p>Corporacion Universidad de la Costa</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2026" data-comp-type="otros">
+              <div class="comp-record-meta"><span class="badge-neutral">Otros</span><span>Marzo 2026 — Septiembre 2026</span></div>
+              <h4>FORMACIÓN EN COMPETENCIAS DE: INNOVACIÓN, ORIENTACIÓN A RESULTADOS, GESTIÓN DE LA INFORMACIÓN, COMUNICACIÓN EFECTIVA, FLEXIBILIDAD, INVESTIGACIÓN Y TRANSFERENCIA DE CONOCIMIENTOS, DESARROLLO CURRICULA</h4>
+              <p>Corporacion Universidad de la Costa</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
           </div>
-          <div class="card-footer">
-            <span>Riesgo Psicosocial</span>
-            <strong style="color: var(--ink-primary);">Especializado</strong>
+        </details>
+<details class="comp-year-group" data-comp-year-group="2025" open>
+          <summary><span>2025</span><strong>9 registros</strong></summary>
+          <div class="comp-record-list">
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2025" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Marzo 2025 — Abril 2025</span></div>
+              <h4>DOCENCIA INSTITUCIONAL</h4>
+              <p>Universidad de la Costa CUC</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2025" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Marzo 2025 — Abril 2025</span></div>
+              <h4>COMUNICACIÓN AVANZADA/CONVERSACIONES DIFICILES</h4>
+              <p>Udemy</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="otras" data-comp-year="2025" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Abril 2025</span></div>
+              <h4>CONTABILIDAD FINANCIERA</h4>
+              <p>Universidad de la Costa CUC</p>
+              <span class="comp-record-family">Otras actualizaciones</span>
+            </article>
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2025" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Mayo 2025</span></div>
+              <h4>INDUCCIÓN Y REINDUCCIÓN DEL SISTEMA DE GESTIÓN AMBIENTAL 2025</h4>
+              <p>Corporacion Universidad de la Costa</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2025" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Mayo 2025</span></div>
+              <h4>INDUCCIÓN Y REINDUCCIÓN AL SISTEMA DE GESTIÓN DOCUMENTAL 2025</h4>
+              <p>Corporacion Universidad de la Costa</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="investigacion" data-comp-year="2025" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Mayo 2025 — Junio 2025</span></div>
+              <h4>INVESTIGACIÓN E INNOVACIÓN ADJUNTO</h4>
+              <p>Corporacion Universidad de la Costa</p>
+              <span class="comp-record-family">Investigación y metodología</span>
+            </article>
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2025" data-comp-type="extension">
+              <div class="comp-record-meta"><span class="badge-neutral">Extensión</span><span>Febrero 2025 — Abril 2025</span></div>
+              <h4>ADMINISTRACIÓN DE LA PROPIEDAD HORIZONTAL</h4>
+              <p>Politécnico de Surámerica S.A.S.</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="proyectos" data-comp-year="2025" data-comp-type="otros">
+              <div class="comp-record-meta"><span class="badge-neutral">Otros</span><span>Marzo 2025 — Abril 2025</span></div>
+              <h4>PLAN DE MARKETING PARA LA INNOVACIÓN EMPRESARIAL</h4>
+              <p>Universidad de la Costa CUC</p>
+              <span class="comp-record-family">Innovación y proyectos</span>
+            </article>
+            <article class="comp-record" data-comp-family="proyectos" data-comp-year="2025" data-comp-type="otros">
+              <div class="comp-record-meta"><span class="badge-neutral">Otros</span><span>Marzo 2025 — Abril 2025</span></div>
+              <h4>GESTIÓN AGIL DE PROYECTOS</h4>
+              <p>Udemy</p>
+              <span class="comp-record-family">Innovación y proyectos</span>
+            </article>
           </div>
-        </div>
-
-        <div class="exec-card comp-item visual-panel visual-panel--learning" data-c-cat="sst">
-          <div>
-            <div class="card-top-meta">
-              <span class="badge-soft">4. Organizacional y SST</span>
-              <span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">Normativa SST</span>
-            </div>
-            <h3 class="card-title">Sistema de Gestión de la Seguridad y Salud en el Trabajo (SG-SST)</h3>
-            <p class="card-text" style="margin-top: 8px;">Diseño, implementación, administración y mejora continua del Sistema de Gestión de la Seguridad y Salud en el Trabajo bajo estándares legales vigentes.</p>
+        </details>
+<details class="comp-year-group" data-comp-year-group="2024">
+          <summary><span>2024</span><strong>11 registros</strong></summary>
+          <div class="comp-record-list">
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Enero 2024</span></div>
+              <h4>INDUCCIÓN CORPORATIVA</h4>
+              <p>ARL SURA</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="sst" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Enero 2024</span></div>
+              <h4>HOMOLOGACIÓN CORPORATIVA - SISTEMA DE GESTIÓN DE SEGURIDAD Y SALUD EN EL TRABAJO</h4>
+              <p>ARL SURA</p>
+              <span class="comp-record-family">SST y sistemas de gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Enero 2024</span></div>
+              <h4>PESO CORPORAL Y COMPOSICIÓN CORPORAL EN LA MENOPAUSIA</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Enero 2024</span></div>
+              <h4>LA OBESIDAD Y LA ETNIA</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Enero 2024</span></div>
+              <h4>LA OBESIDAD EN LA TERCERA EDAD</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Enero 2024</span></div>
+              <h4>LA OBESIDAD Y EL EMBARAZO</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Enero 2024</span></div>
+              <h4>COMPLICACIONES DE LA OBESIDAD EN LOS VARONES</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Febrero 2024</span></div>
+              <h4>MEDICINA PREVENTIVA (PSICOLOGÍA)</h4>
+              <p>Seguros Bolivar</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="sst" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Febrero 2024</span></div>
+              <h4>SISTEMA DE GESTIÓN DE SEGURIDAD Y SALUD EN EL TRABAJO</h4>
+              <p>Seguros Bolivar</p>
+              <span class="comp-record-family">SST y sistemas de gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="investigacion" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Marzo 2024 — Abril 2024</span></div>
+              <h4>APROPIACIÓN SOCIAL DEL CONOCIMIENTO</h4>
+              <p>Corporación Universitaria Minuto de Dios - UNIMINUTO</p>
+              <span class="comp-record-family">Investigación y metodología</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2024" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Septiembre 2024</span></div>
+              <h4>EVALUACIÓN COGNITIVA DE MONTREAL</h4>
+              <p>MoCA Test Inc.</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
           </div>
-          <div class="card-footer">
-            <span>Seguridad y Salud Laboral</span>
-            <strong style="color: var(--ink-primary);">Certificado</strong>
+        </details>
+<details class="comp-year-group" data-comp-year-group="2023">
+          <summary><span>2023</span><strong>22 registros</strong></summary>
+          <div class="comp-record-list">
+            <article class="comp-record" data-comp-family="estadistica" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Septiembre 2023</span></div>
+              <h4>ESTADISTICA FACIL USANDO LA INTERFAZ R COMMANDER</h4>
+              <p>UDEMY INC.</p>
+              <span class="comp-record-family">Estadística y datos</span>
+            </article>
+            <article class="comp-record" data-comp-family="estadistica" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Noviembre 2023 — Diciembre 2023</span></div>
+              <h4>CURSO AVANZADO DE ESTADISTICA MULTIVARIANTE CON R Y PYTHON</h4>
+              <p>UDEMY INC.</p>
+              <span class="comp-record-family">Estadística y datos</span>
+            </article>
+            <article class="comp-record" data-comp-family="estadistica" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Noviembre 2023 — Diciembre 2023</span></div>
+              <h4>CURSO COMPLETO DE ESTADISTICA DESCRIPTIVA: RSTUDIO Y PYTHON</h4>
+              <p>UDEMY INC.</p>
+              <span class="comp-record-family">Estadística y datos</span>
+            </article>
+            <article class="comp-record" data-comp-family="estadistica" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Julio 2023</span></div>
+              <h4>ESTADISTICA DESCRIPTIVA E INFERENCIAL CON R</h4>
+              <p>UDEMY INC.</p>
+              <span class="comp-record-family">Estadística y datos</span>
+            </article>
+            <article class="comp-record" data-comp-family="estadistica" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Noviembre 2023</span></div>
+              <h4>CURSO DE R Y PYTHON PARA DATA SCIENCE Y ANALISIS DE DATOS</h4>
+              <p>UDEMY INC.</p>
+              <span class="comp-record-family">Estadística y datos</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Noviembre 2023 — Diciembre 2023</span></div>
+              <h4>OBESIDAD Y SALUD MENTAL</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="sst" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>CURSO 20 HORAS DEL SG-SST - ACTUALIZACIÓN DEL PROCESO EDUCATIVO VIRTUAL</h4>
+              <p>Positiva Compañia de Seguros</p>
+              <span class="comp-record-family">SST y sistemas de gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>PERSPECTIVA GENERAL DE LA CIRUGÍA BARIÁTRICA</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>LA DISCAPACIDAD INTELECTUAL Y LA OBESIDAD</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>TRASTORNO POR ATRACÓN</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>SUPERAR LAS BARRERAS PERCIBIDAS EN LA ATENCIÓN PRIMARIA</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>EL SESGO DE PESO: UN DAÑO OCULTO</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>ENTENDER LAS PERSPECTIVAS DE LOS PACIENTES EN RELACIÓN CON LA OBESIDAD</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>FACILITAR EL CAMBIO CONDUCTUAL</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>MANEJO DEL PESO EN ATENCIÓN PRIMARIA: CÓMO EMPEZAR LA CONVERSACIÓN</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>REDUCIR LOS COMPORTAMIENTOS SEDENTARIOS</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>ACTIVIDAD FÍSICA CENTRADA EN EL PACIENTE</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>¿CUÁNDO RESULTA ADECUADO EL TRATAMIENTO QUIRÚRGICO PARA LA OBESIDAD?</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>TOMA DE DECISIONES PARA LA CIRUGÍA BARIÁTRICA</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>LA OBESIDAD Y EL CÁNCER</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>APNEA OBSTRUCTIVA DEL SUEÑO</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2023" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Diciembre 2023</span></div>
+              <h4>GENÉTICA Y OBESIDAD</h4>
+              <p>Strategic Centre for Obesity Professional Education</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
           </div>
-        </div>
-
-        <div class="exec-card comp-item visual-panel visual-panel--learning" data-c-cat="sst">
-          <div>
-            <div class="card-top-meta">
-              <span class="badge-soft">4. Organizacional y SST</span>
-              <span style="font-size: 11px; font-weight: 700; color: var(--ink-muted);">Bienestar Laboral</span>
-            </div>
-            <h3 class="card-title">Comités de Convivencia Laboral, Clima y Salud Mental</h3>
-            <p class="card-text" style="margin-top: 8px;">Entrenamiento en gestión de la convivencia laboral, prevención del acoso laboral y síndrome de burnout, clima organizacional y salud mental en el trabajo.</p>
+        </details>
+<details class="comp-year-group" data-comp-year-group="2022">
+          <summary><span>2022</span><strong>10 registros</strong></summary>
+          <div class="comp-record-list">
+            <article class="comp-record" data-comp-family="investigacion" data-comp-year="2022" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Febrero 2022 — Abril 2022</span></div>
+              <h4>INTRODUCTION TO SYSTEMATIC REVIEW AND META-ANALYSIS</h4>
+              <p>Jhons Hopkins University</p>
+              <span class="comp-record-family">Investigación y metodología</span>
+            </article>
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2022" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Noviembre 2022</span></div>
+              <h4>FUNDAMENTOS DE MOODLE</h4>
+              <p>Universidad de Pamplona</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2022" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Octubre 2022 — Noviembre 2022</span></div>
+              <h4>MS TEAMS PARA DOCENTES</h4>
+              <p>Universidad de Pamplona</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2022" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Octubre 2022 — Noviembre 2022</span></div>
+              <h4>ORGANIZACIÓN DE CURSOS DE MOODLE</h4>
+              <p>Universidad de Pamplona</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2022" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Octubre 2022 — Noviembre 2022</span></div>
+              <h4>SEGUIMIENTO DE CURSOS EN MOODLE</h4>
+              <p>Universidad de Pamplona</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2022" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Noviembre 2022</span></div>
+              <h4>CURSO ONLINE DE ACREDITACIÓN</h4>
+              <p>Universidad Simón Bolívar</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+            <article class="comp-record" data-comp-family="sst" data-comp-year="2022" data-comp-type="extension">
+              <div class="comp-record-meta"><span class="badge-neutral">Extensión</span><span>Enero 2022 — Febrero 2022</span></div>
+              <h4>Gestión del Riesgo Organizacional</h4>
+              <p>Politecnico Superior de Colombia</p>
+              <span class="comp-record-family">SST y sistemas de gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="sst" data-comp-year="2022" data-comp-type="extension">
+              <div class="comp-record-meta"><span class="badge-neutral">Extensión</span><span>Enero 2022 — Febrero 2022</span></div>
+              <h4>INTEGRACIÓN DE SISTEMAS DE GESTIÓN</h4>
+              <p>Politecnico Superior de Colombia</p>
+              <span class="comp-record-family">SST y sistemas de gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="investigacion" data-comp-year="2022" data-comp-type="otros">
+              <div class="comp-record-meta"><span class="badge-neutral">Otros</span><span>Mayo 2022</span></div>
+              <h4>BUENAS PRÁCTICAS DE INVESTIGACIÓN CIENTÍFICA EN PSICOLOGÍA</h4>
+              <p>Universidad Simon Bolivar (Sede Cúcuta)</p>
+              <span class="comp-record-family">Investigación y metodología</span>
+            </article>
+            <article class="comp-record" data-comp-family="sst" data-comp-year="2022" data-comp-type="otros">
+              <div class="comp-record-meta"><span class="badge-neutral">Otros</span><span>Abril 2022</span></div>
+              <h4>PREPARACIÓN Y RESPUESTA ANTE EMERGENCIAS</h4>
+              <p>Bomberos Voluntarios Cucuta</p>
+              <span class="comp-record-family">SST y sistemas de gestión</span>
+            </article>
           </div>
-          <div class="card-footer">
-            <span>Psicología Organizacional</span>
-            <strong style="color: var(--ink-primary);">Formación Continua</strong>
+        </details>
+<details class="comp-year-group" data-comp-year-group="2020">
+          <summary><span>2020</span><strong>12 registros</strong></summary>
+          <div class="comp-record-list">
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2020" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Marzo 2020</span></div>
+              <h4>MOOC - CURSO BÁSICO DE MS TEAMS EDUCATIVO</h4>
+              <p>Universidad de Pamplona</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2020" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Marzo 2020</span></div>
+              <h4>CULTURA DESEMPEÑO PROFESORAL</h4>
+              <p>Corporación Universitaria Minuto de Dios - UNIMINUTO</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2020" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Mayo 2020</span></div>
+              <h4>HUMANIZACIÓN DE LOS SERVICIOS DE SALUD</h4>
+              <p>Servicio Nacional de Aprendizaje SENA</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="investigacion" data-comp-year="2020" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Septiembre 2020</span></div>
+              <h4>SCOPUS Y MENDELEY COMO UNA HERRAMIENTA DE AYUDA EN LA BÚSQUEDA DE FINANCIAMIENTO</h4>
+              <p>Researcher Academy Elsevier</p>
+              <span class="comp-record-family">Investigación y metodología</span>
+            </article>
+            <article class="comp-record" data-comp-family="investigacion" data-comp-year="2020" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Agosto 2020</span></div>
+              <h4>GESTIÓN DE LA INFORMACIÓN Y APORTES PARA LA PREVENCIÓN DEL PLAGIO</h4>
+              <p>Universidad Nacional de Educación</p>
+              <span class="comp-record-family">Investigación y metodología</span>
+            </article>
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2020" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Junio 2020 — Septiembre 2020</span></div>
+              <h4>ESTILOS DE LIDERAZGO: OPCIONES PARA AVANZAR EN DESAFÍOS COMPLEJOS</h4>
+              <p>Universidad de los Andes</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2020" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Junio 2020 — Septiembre 2020</span></div>
+              <h4>PRIMEROS AUXILIOS PSICOLÓGICOS (PAP)</h4>
+              <p>Universidad Autónoma de Barcelona</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+            <article class="comp-record" data-comp-family="proyectos" data-comp-year="2020" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Agosto 2020 — Diciembre 2020</span></div>
+              <h4>CICLO DE LA INVERSIÓN PÚBLICA Y FORMULACIÓN DE PROYECTOS DE INVERSIÓN PARA ENTIDADES TERRITORIALES EN COLOMBIA</h4>
+              <p>Universidad Simón Bolívar</p>
+              <span class="comp-record-family">Innovación y proyectos</span>
+            </article>
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2020" data-comp-type="extension">
+              <div class="comp-record-meta"><span class="badge-neutral">Extensión</span><span>Agosto 2020</span></div>
+              <h4>DOCENCIA UNIVERSITARIA MEDIADA POR LAS TIC</h4>
+              <p>Universidad de Pamplona</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+            <article class="comp-record" data-comp-family="estadistica" data-comp-year="2020" data-comp-type="extension">
+              <div class="comp-record-meta"><span class="badge-neutral">Extensión</span><span>Noviembre 2020</span></div>
+              <h4>ANÁLISIS DE RESULTADOS CON ECUACIONES ESTRUCTURALES</h4>
+              <p>Fundación de Estudios Superiores Comfanorte FESC</p>
+              <span class="comp-record-family">Estadística y datos</span>
+            </article>
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2020" data-comp-type="extension">
+              <div class="comp-record-meta"><span class="badge-neutral">Extensión</span><span>Agosto 2020 — Enero 2021</span></div>
+              <h4>COMPETENCIAS DIGITALES PARA EDUCADORES</h4>
+              <p>Corporación Universitaria Minuto de Dios - UNIMINUTO</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+            <article class="comp-record" data-comp-family="investigacion" data-comp-year="2020" data-comp-type="extension">
+              <div class="comp-record-meta"><span class="badge-neutral">Extensión</span><span>Agosto 2020 — Diciembre 2020</span></div>
+              <h4>CURSO REVISIONES SISTEMÁTICAS Y META-ANÁLISIS</h4>
+              <p>Universidad de Pamplona</p>
+              <span class="comp-record-family">Investigación y metodología</span>
+            </article>
           </div>
+        </details>
+<details class="comp-year-group" data-comp-year-group="2019">
+          <summary><span>2019</span><strong>1 registro</strong></summary>
+          <div class="comp-record-list">
+            <article class="comp-record" data-comp-family="psicologia" data-comp-year="2019" data-comp-type="extension">
+              <div class="comp-record-meta"><span class="badge-neutral">Extensión</span><span>Noviembre 2019</span></div>
+              <h4>PSICOLOGÍA</h4>
+              <p>Universidad Simon Bolivar (Sede Cúcuta)</p>
+              <span class="comp-record-family">Psicología y salud</span>
+            </article>
+          </div>
+        </details>
+<details class="comp-year-group" data-comp-year-group="2018">
+          <summary><span>2018</span><strong>2 registros</strong></summary>
+          <div class="comp-record-list">
+            <article class="comp-record" data-comp-family="gestion" data-comp-year="2018" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Mayo 2018</span></div>
+              <h4>Desarrollo de Equipos de Alto Desempeño</h4>
+              <p>Corporación Industrial Minuto de Dios</p>
+              <span class="comp-record-family">Liderazgo y gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2018" data-comp-type="extension">
+              <div class="comp-record-meta"><span class="badge-neutral">Extensión</span><span>Junio 2018 — Agosto 2018</span></div>
+              <h4>Docencia Virtual</h4>
+              <p>Corporación Universitaria Minuto de Dios - UNIMINUTO</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+          </div>
+        </details>
+<details class="comp-year-group" data-comp-year-group="2017">
+          <summary><span>2017</span><strong>2 registros</strong></summary>
+          <div class="comp-record-list">
+            <article class="comp-record" data-comp-family="sst" data-comp-year="2017" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Agosto 2017 — Octubre 2017</span></div>
+              <h4>SISTEMA DE GESTIÓN DE LA SEGURIDAD Y SALUD EN EL TRABAJO (SG-SST)</h4>
+              <p>Servicio Nacional de Aprendizaje SENA</p>
+              <span class="comp-record-family">SST y sistemas de gestión</span>
+            </article>
+            <article class="comp-record" data-comp-family="docencia" data-comp-year="2017" data-comp-type="curso">
+              <div class="comp-record-meta"><span class="badge-neutral">Curso de corta duración</span><span>Septiembre 2017</span></div>
+              <h4>Inducción a Profesores Tutores en Metodología Distancia</h4>
+              <p>Corporación Universitaria Minuto de Dios - UNIMINUTO</p>
+              <span class="comp-record-family">Docencia y TIC</span>
+            </article>
+          </div>
+        </details>
+<details class="comp-year-group" data-comp-year-group="2011">
+          <summary><span>2011</span><strong>1 registro</strong></summary>
+          <div class="comp-record-list">
+            <article class="comp-record" data-comp-family="proyectos" data-comp-year="2011" data-comp-type="extension">
+              <div class="comp-record-meta"><span class="badge-neutral">Extensión</span><span>Julio 2011 — Octubre 2011</span></div>
+              <h4>FORMULACIÓN Y EVALUACIÓN DE PROYECTOS</h4>
+              <p>Escuela Superior De Administración Pública</p>
+              <span class="comp-record-family">Innovación y proyectos</span>
+            </article>
+          </div>
+        </details>
         </div>
       </div>
     </div>
@@ -4155,7 +4820,61 @@
 
       initTabs('exp-filters', 'data-exp', '.exp-item', 'data-exp-cat');
       initTabs('formacion-filters', 'data-f', '.form-item', 'data-f-cat');
-      initTabs('comp-filters', 'data-c', '.comp-item', 'data-c-cat');
+      // PARTE 5: filtros combinados de formación complementaria por familia, año y tipo.
+      (function initComplementaryCatalog() {
+        var filterGroup = document.getElementById('comp-filters');
+        var familyButtons = filterGroup ? filterGroup.querySelectorAll('.filter-btn') : [];
+        var summaryItems = document.querySelectorAll('#complementaria .comp-summary-grid .comp-item');
+        var records = document.querySelectorAll('#comp-catalog .comp-record');
+        var yearGroups = document.querySelectorAll('#comp-catalog .comp-year-group');
+        var yearSelect = document.getElementById('comp-year');
+        var typeSelect = document.getElementById('comp-type');
+        var status = document.getElementById('comp-results-status');
+        var activeFamily = 'all';
+
+        function updateComplementaryCatalog() {
+          var yearValue = yearSelect ? yearSelect.value : 'all';
+          var typeValue = typeSelect ? typeSelect.value : 'all';
+          var visible = 0;
+
+          for (var i = 0; i < summaryItems.length; i++) {
+            var summaryCats = (summaryItems[i].getAttribute('data-c-cat') || '').split(/\s+/);
+            summaryItems[i].style.display = (activeFamily === 'all' || summaryCats.indexOf(activeFamily) !== -1) ? '' : 'none';
+          }
+
+          for (var r = 0; r < records.length; r++) {
+            var familyOk = activeFamily === 'all' || records[r].getAttribute('data-comp-family') === activeFamily;
+            var yearOk = yearValue === 'all' || records[r].getAttribute('data-comp-year') === yearValue;
+            var typeOk = typeValue === 'all' || records[r].getAttribute('data-comp-type') === typeValue;
+            var show = familyOk && yearOk && typeOk;
+            records[r].style.display = show ? '' : 'none';
+            if (show) visible++;
+          }
+
+          var filtered = activeFamily !== 'all' || yearValue !== 'all' || typeValue !== 'all';
+          for (var g = 0; g < yearGroups.length; g++) {
+            var yearVisible = yearGroups[g].querySelectorAll('.comp-record:not([style*="display: none"])').length;
+            yearGroups[g].style.display = yearVisible ? '' : 'none';
+            if (filtered && yearVisible) yearGroups[g].open = true;
+          }
+
+          if (status) status.textContent = 'Mostrando ' + visible + ' de 76 registros.';
+        }
+
+        for (var b = 0; b < familyButtons.length; b++) {
+          familyButtons[b].setAttribute('aria-pressed', familyButtons[b].classList.contains('active') ? 'true' : 'false');
+          familyButtons[b].addEventListener('click', function() {
+            for (var x = 0; x < familyButtons.length; x++) familyButtons[x].classList.remove('active');
+            this.classList.add('active');
+            setPressedState(familyButtons, this);
+            activeFamily = this.getAttribute('data-c') || 'all';
+            updateComplementaryCatalog();
+          });
+        }
+        if (yearSelect) yearSelect.addEventListener('change', updateComplementaryCatalog);
+        if (typeSelect) typeSelect.addEventListener('change', updateComplementaryCatalog);
+        updateComplementaryCatalog();
+      })();
 
       // 3. Métricas bibliométricas dinámicas: OpenAlex + ORCID
       var METRICS_ORCID = '0000-0003-2169-3208';
