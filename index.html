@@ -5795,6 +5795,40 @@ body.design-system-v2 :is(a,button,summary,input,select,textarea):focus-visible 
       overflow-wrap: break-word;
     }
     body.design-system-v2 #inicio .hero-about-text p:last-child {margin-bottom: 22px;}
+
+/* Auditoría visual 2026-11-03: corregir únicamente estilos residuales y desplazamiento por navegación. */
+/* Evitar sumar scroll-padding y scroll-margin, que dejaba una franja de la portada sobre las secciones activadas. */
+html {scroll-padding-top:0!important;}
+body.design-system-v2 main > section.section {scroll-margin-top:95px!important;}
+@media (max-width:899px) {
+  body.design-system-v2 main > section.section {scroll-margin-top:140px!important;}
+}
+/* Homogeneizar los paneles académicos, filtros e indicadores con la paleta azul vigente. */
+body.design-system-v2 main > :is(#trayectoria,#complementaria,#contacto) {background:#CDD9EA!important;}
+body.design-system-v2 main > :is(#trayectoria,#complementaria) > .container {background:transparent!important;border-color:transparent!important;box-shadow:none!important;}
+body.design-system-v2 #trayectoria .academic-overview-item,
+body.design-system-v2 #complementaria .learning-summary > div {background:#E4ECF7!important;border-color:#A8BDD7!important;}
+body.design-system-v2 #trayectoria .grid-3 > .exec-card,
+body.design-system-v2 #complementaria .comp-summary-grid > .exec-card {background:#F2F6FC!important;border-color:#A8BDD7!important;}
+body.design-system-v2 #complementaria .comp-catalog {background:#E4ECF7!important;border-color:#A8BDD7!important;}
+body.design-system-v2 #trayectoria .filter-btn.active,
+body.design-system-v2 #complementaria .filter-btn.active {border-color:#24527F!important;}
+body.design-system-v2 :is(.experience-stat-value,.publication-summary-value,.curricular-kpi-value) {color:#24527F!important;}
+/* El encabezado de contacto y los campos todavía heredaban verde y marfil. */
+body.design-system-v2 #contacto .section-title {color:#142B49!important;}
+body.design-system-v2 #contacto .form-control {background:#EFF4FA!important;border-color:#92ABC9!important;color:#142B49!important;}
+body.design-system-v2 #contacto .form-control:focus {background:#FFFFFF!important;border-color:#24527F!important;}
+body.design-system-v2 #contacto .contact-form-card,
+body.design-system-v2 #contacto .contact-reason-card {border-color:#A8BDD7!important;}
+/* El icono de expandir/contraer seguía usando verde. */
+body.design-system-v2 main > .section:not(#inicio) .portfolio-drawer > summary::after {background:#DCE8F5!important;color:#24527F!important;}
+body.design-system-v2 #contacto :is(a,button,select,input,textarea):focus-visible {outline-color:#24527F!important;}
+
+/* Estados interactivos azules: no conservar verde en la cabecera ni en los detalles. */
+body.design-system-v2 .site-header .btn.btn-primary:hover,
+body.design-system-v2 .site-header .btn.btn-primary:focus-visible {background:#173F6F!important;border-color:#173F6F!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer > summary:hover {background:#DCE8F5!important;color:#142B49!important;}
+body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer__body :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) > summary:hover {background:#DCE8F5!important;color:#142B49!important;}
 </style>
 </head>
 <body class="design-system-v2">
