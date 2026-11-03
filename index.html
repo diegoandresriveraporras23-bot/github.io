@@ -11425,7 +11425,7 @@ main > .section:not(#inicio) > .container {max-width:1080px;}
         });
         drawerAround(document.querySelector('#trayectoria .grid-3'),'Consultar las siete credenciales académicas');
         drawerAround(document.querySelector('#complementaria .comp-summary-grid'),'Explorar áreas de actualización');
-        var comp=drawerAround(document.getElementById('comp-catalog'),'Abrir catálogo completo: 76 formaciones');
+        var comp=drawerAround(document.getElementById('comp-catalog'),'Abrir catálogo completo de formaciones');
         document.querySelectorAll('#comp-catalog .comp-year-group').forEach(function(item){item.removeAttribute('open');});
         var compFilter=document.getElementById('comp-filters');
         if(comp && compFilter) compFilter.addEventListener('click',function(evt){if(evt.target.closest('.filter-btn')) comp.open=true;});
@@ -11439,7 +11439,7 @@ main > .section:not(#inicio) > .container {max-width:1080px;}
         drawerAround(document.querySelector('#contacto .contact-form-card'),'Preparar solicitud por correo');
         drawerAround(document.querySelector('#publicaciones .publication-filter-panel'),'Buscar o filtrar publicaciones','progressive-inner--filters');
         var pubList=document.getElementById('pub-list');
-        var pubCatalog=drawerAround(pubList,'Abrir catálogo completo: 138 publicaciones');
+        var pubCatalog=drawerAround(pubList,'Abrir catálogo completo de publicaciones');
         // Índice de publicaciones por año y grupos de hasta ocho fichas.
         if(pubList) {
           var pubs=Array.prototype.slice.call(pubList.querySelectorAll(':scope > .pub-item'));
@@ -11448,13 +11448,13 @@ main > .section:not(#inicio) > .container {max-width:1080px;}
           years.forEach(function(year) {
             var found=pubs.filter(function(item){return (item.getAttribute('data-p-year')||'Sin año')===year;});
             var yearGroup=el('details','progressive-year');yearGroup.setAttribute('data-pub-year-group',year);
-            var yearSummary=el('summary','',year+' · '+found.length+' publicaciones');
+            var yearSummary=el('summary','',year);
             var yearBody=el('div','progressive-year__body');
             yearGroup.appendChild(yearSummary);yearGroup.appendChild(yearBody);pubList.appendChild(yearGroup);
             for(var i=0;i<found.length;i+=8){
               var subset=found.slice(i,i+8);
               var batch=el('details','progressive-batch');
-              batch.appendChild(el('summary','', 'Registros '+(i+1)+'–'+(i+subset.length)));
+              batch.appendChild(el('summary','', 'Consultar publicaciones'));
               var batchBody=el('div','progressive-batch__body');
               subset.forEach(function(card){batchBody.appendChild(card);});
               batch.appendChild(batchBody);yearBody.appendChild(batch);
