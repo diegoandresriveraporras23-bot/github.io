@@ -3930,6 +3930,362 @@
       .event-filter-actions { grid-column: auto; }
     }
 
+
+    /* PARTE 10 — producción técnica, consultoría y capacidades aplicadas */
+    .technical-production {
+      margin-top: clamp(34px, 5vw, 54px);
+      padding-top: clamp(30px, 4vw, 42px);
+      border-top: 1px solid var(--border-neutral);
+    }
+
+    .technical-overview {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .technical-kpi {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .technical-kpi strong {
+      display: block;
+      color: var(--brand-primary);
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .technical-kpi span {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink-muted);
+      font-size: 11.5px;
+      line-height: 1.45;
+    }
+
+    .technical-integrity-note {
+      margin: 18px 0 22px;
+      padding: 14px 16px;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid #0f766e;
+      border-radius: 12px;
+      background: #f8fafc;
+      color: var(--ink-secondary);
+      font-size: 12.5px;
+      line-height: 1.65;
+    }
+
+    .technical-capability-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0,1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .technical-capability {
+      min-width: 0;
+      padding: 14px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .technical-capability > span {
+      display: inline-flex;
+      min-width: 34px;
+      min-height: 34px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: #ecfeff;
+      color: #0f766e;
+      border: 1px solid #a5f3fc;
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .technical-capability strong {
+      display: block;
+      margin-top: 10px;
+      color: var(--ink-primary);
+      font-size: 12.5px;
+      line-height: 1.4;
+    }
+
+    .technical-capability p {
+      margin-top: 5px;
+      color: var(--ink-muted);
+      font-size: 10.8px;
+      line-height: 1.45;
+    }
+
+    .technical-layout {
+      display: grid;
+      gap: 20px;
+    }
+
+    .technical-panel {
+      min-width: 0;
+      padding: clamp(18px, 3vw, 26px);
+      border: 1px solid var(--border-neutral);
+      border-radius: 18px;
+      background: var(--bg-surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .technical-panel-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .technical-panel-head h4 {
+      color: var(--ink-primary);
+      font-size: clamp(18px, 2.3vw, 23px);
+      line-height: 1.25;
+      letter-spacing: -.01em;
+    }
+
+    .technical-panel-head p {
+      max-width: 840px;
+      margin-top: 6px;
+      color: var(--ink-secondary);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .technical-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 10px;
+      border: 1px solid #99f6e4;
+      border-radius: 999px;
+      background: #f0fdfa;
+      color: #0f766e;
+      font-size: 10.5px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .consulting-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+    }
+
+    .consulting-card {
+      min-width: 0;
+      padding: 15px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 14px;
+      background: var(--bg-elevated);
+    }
+
+    .consulting-card > span {
+      color: #0f766e;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .consulting-card strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--ink-primary);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .consulting-card p {
+      margin-top: 6px;
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.5;
+    }
+
+    .technical-crosslink {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) auto;
+      gap: 18px;
+      align-items: center;
+      margin-top: 14px;
+      padding: 14px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f8fafc, #f0fdfa);
+    }
+
+    .technical-crosslink strong {
+      color: var(--ink-primary);
+      font-size: 13px;
+    }
+
+    .technical-crosslink p {
+      margin-top: 4px;
+      color: var(--ink-muted);
+      font-size: 11.5px;
+      line-height: 1.5;
+    }
+
+    .technical-filter-panel {
+      display: grid;
+      grid-template-columns: minmax(180px,1.4fr) repeat(3, minmax(130px,.8fr)) auto;
+      gap: 10px;
+      align-items: end;
+      margin: 16px 0 10px;
+      padding: 14px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 14px;
+      background: var(--bg-elevated);
+    }
+
+    .technical-filter-field label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink-secondary);
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .technical-filter-status {
+      min-height: 24px;
+      margin-bottom: 12px;
+      color: var(--ink-muted);
+      font-size: 11.5px;
+    }
+
+    .technical-catalog {
+      border: 1px solid var(--border-neutral);
+      border-radius: 14px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .technical-catalog > summary {
+      min-height: 48px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      color: var(--ink-primary);
+      font-size: 12px;
+      font-weight: 850;
+      background: #f8fafc;
+    }
+
+    .technical-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+      padding: 12px;
+    }
+
+    .technical-card {
+      min-width: 0;
+      padding: 14px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .technical-card[hidden] { display: none !important; }
+
+    .technical-card-meta,
+    .technical-card-foot {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .technical-card-meta span,
+    .technical-card-foot span {
+      padding: 3px 7px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 999px;
+      background: var(--bg-elevated);
+      color: var(--ink-muted);
+      font-size: 9.5px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .technical-card-meta span:first-child {
+      color: #0f766e;
+      border-color: #99f6e4;
+      background: #f0fdfa;
+    }
+
+    .technical-card h5 {
+      margin-top: 9px;
+      color: var(--ink-primary);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .technical-card p {
+      margin-top: 7px;
+      color: var(--ink-secondary);
+      font-size: 11.3px;
+      line-height: 1.55;
+    }
+
+    .technical-card-foot {
+      margin-top: 10px;
+      padding-top: 9px;
+      border-top: 1px solid var(--border-neutral);
+    }
+
+    .technical-empty {
+      margin: 0 12px 12px;
+      padding: 14px;
+      border: 1px dashed var(--border-neutral);
+      border-radius: 12px;
+      color: var(--ink-muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 1000px) {
+      .technical-capability-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .technical-filter-panel { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .technical-filter-panel .btn { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 760px) {
+      .technical-overview,
+      .consulting-grid,
+      .technical-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .technical-capability-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .technical-crosslink { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .technical-overview,
+      .consulting-grid,
+      .technical-grid,
+      .technical-capability-grid,
+      .technical-filter-panel { grid-template-columns: 1fr; }
+      .technical-filter-panel .btn { grid-column: auto; }
+      .technical-catalog > summary { align-items: flex-start; flex-direction: column; }
+      .technical-crosslink .btn { width: 100%; }
+    }
+
 </style>
 </head>
 <body class="design-system-v2">
@@ -4616,7 +4972,7 @@
             </div>
           </div>
 
-          <details class="experience-transfer" open>
+          <details class="experience-transfer" id="transferencia-aplicada" open>
             <summary><span>Ver 11 actividades de transferencia</span><span class="badge-neutral">13 registros elegibles · 11 actividades únicas</span></summary>
             <div class="experience-transfer-grid">
               <article class="transfer-item exp-item" data-exp-cat="docencia investigacion gestion">
@@ -5087,6 +5443,364 @@
           </div>
 
           <div class="mentor-source-actions"><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Consultar evidencia completa en CvLAC ↗</a></div>
+        </div>
+
+
+        <div class="experience-block technical-production" id="produccion-tecnica" aria-labelledby="titulo-produccion-tecnica">
+          <div class="experience-block-head">
+            <div>
+              <span class="eyebrow">Aplicación profesional · Evidencia técnica</span>
+              <h3 id="titulo-produccion-tecnica" class="experience-block-title">Producción técnica, consultoría y capacidades aplicadas</h3>
+              <p class="experience-block-desc">Corpus técnico depurado del CvLAC: 42 productos publicables —6 innovaciones organizacionales y 36 informes técnicos— más la experiencia de consultoría/ad-hoc y las actividades de transferencia ya integradas en la trayectoria. La evidencia se presenta como registro curricular verificable y no como promesa comercial.</p>
+            </div>
+          </div>
+
+          <div class="technical-overview" aria-label="Resumen de producción técnica y consultoría">
+            <div class="technical-kpi"><strong>42</strong><span>productos técnicos publicables registrados en CvLAC</span></div>
+            <div class="technical-kpi"><strong>6</strong><span>innovaciones organizacionales registradas en 2025</span></div>
+            <div class="technical-kpi"><strong>36</strong><span>informes técnicos: 35 de 2016 y 1 de 2017</span></div>
+            <div class="technical-kpi"><strong>3</strong><span>contextos profesionales de consultoría/ad-hoc acreditados en la trayectoria</span></div>
+          </div>
+
+          <div class="technical-integrity-note"><strong>Criterio editorial y ético:</strong> se preservan los productos efectivamente registrados y sus referencias públicas, pero se omiten nombres de coautores y personas; clientes y organizaciones se generalizan por sector cuando su identidad no es necesaria. Los contratos/identificadores se muestran únicamente como referencia pública CvLAC. Las categorías de patentes, secretos empresariales, software, productos tecnológicos, procesos/técnicas, normas/regulaciones y empresas de base tecnológica no se rellenan porque la versión pública revisada no muestra registros sustantivos verificables.</div>
+
+          <div class="technical-capability-grid" aria-label="Familias de capacidad aplicada">
+            <article class="technical-capability"><span>17</span><strong>Educación inclusiva y neuroeducación</strong><p>Diagnóstico, inclusión, funciones ejecutivas, estrategias curriculares y recursos cognitivos.</p></article>
+            <article class="technical-capability"><span>13</span><strong>Gestión y desarrollo organizacional</strong><p>Talento humano, clima, liderazgo, negociación, trabajo en equipo, cambio y cualificación.</p></article>
+            <article class="technical-capability"><span>3</span><strong>SST y riesgo psicosocial</strong><p>Ergonomía, estrés/burnout y caracterización del riesgo psicosocial.</p></article>
+            <article class="technical-capability"><span>3</span><strong>Comunidad y acompañamiento social</strong><p>Caracterización, relaciones sociales y pautas de acompañamiento a cuidadores.</p></article>
+            <article class="technical-capability"><span>6</span><strong>Innovación organizacional</strong><p>Análisis ejecutivo de cargo y producción empresarial registrados en 2025.</p></article>
+          </div>
+
+          <div class="technical-layout">
+            <article class="technical-panel" aria-labelledby="titulo-consultoria-aplicada">
+              <div class="technical-panel-head">
+                <div>
+                  <h4 id="titulo-consultoria-aplicada">Experiencia de consultoría/ad-hoc</h4>
+                  <p>Contextos profesionales ya registrados en la cronología, resumidos aquí como evidencia aplicada sin duplicar la trayectoria completa.</p>
+                </div>
+                <span class="technical-badge">3 contextos profesionales</span>
+              </div>
+              <div class="consulting-grid">
+                <article class="consulting-card"><span>Desde ene. 2018</span><strong>Consultoría empresarial privada</strong><p>Profesional especializado · consultor ad-hoc · 2 h/sem. La fuente no consigna fecha de cierre.</p></article>
+                <article class="consulting-card"><span>Nov. 2016 – dic. 2017</span><strong>Innovación empresarial privada</strong><p>Profesional especializado · consultor ad-hoc · 2 h/sem.</p></article>
+                <article class="consulting-card"><span>Ene. 2015 – dic. 2017</span><strong>Sector salud · IPS privada</strong><p>Consultor ad-hoc y psicólogo · 12 h/sem.</p></article>
+              </div>
+              <div class="technical-crosslink">
+                <div><strong>Transferencia profesional ya integrada</strong><p>Los 13 registros elegibles de cursos dictados fueron consolidados previamente en 11 actividades únicas para evitar duplicación.</p></div>
+                <button type="button" id="technical-transfer-link" class="btn btn-outline">Ver 11 actividades de transferencia</button>
+              </div>
+            </article>
+
+            <article class="technical-panel" aria-labelledby="titulo-catalogo-tecnico">
+              <div class="technical-panel-head">
+                <div>
+                  <h4 id="titulo-catalogo-tecnico">Catálogo de 42 productos técnicos</h4>
+                  <p>Consulta por tipo, familia, año o texto. Los registros conservan su individualidad documental aunque dos productos compartan un título semejante.</p>
+                </div>
+                <span class="technical-badge">6 innovaciones · 36 informes</span>
+              </div>
+
+              <div class="technical-filter-panel" aria-label="Filtros del catálogo técnico">
+                <div class="technical-filter-field">
+                  <label for="tech-search">Buscar</label>
+                  <input id="tech-search" class="form-control" type="search" placeholder="Título, tema o referencia">
+                </div>
+                <div class="technical-filter-field">
+                  <label for="tech-type-filter">Tipo</label>
+                  <select id="tech-type-filter" class="form-control">
+                    <option value="all">Todos</option>
+                    <option value="innovacion">Innovación organizacional</option>
+                    <option value="informe">Informe técnico</option>
+                  </select>
+                </div>
+                <div class="technical-filter-field">
+                  <label for="tech-family-filter">Familia</label>
+                  <select id="tech-family-filter" class="form-control">
+                    <option value="all">Todas</option>
+                    <option value="innovacion">Innovación organizacional</option>
+                    <option value="educacion">Educación y neuroeducación</option>
+                    <option value="organizacional">Gestión organizacional</option>
+                    <option value="sst">SST y riesgo psicosocial</option>
+                    <option value="social">Comunidad y acompañamiento</option>
+                  </select>
+                </div>
+                <div class="technical-filter-field">
+                  <label for="tech-year-filter">Año</label>
+                  <select id="tech-year-filter" class="form-control">
+                    <option value="all">Todos</option>
+                    <option value="2025">2025</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                  </select>
+                </div>
+                <button type="button" id="tech-reset" class="btn btn-outline">Restablecer</button>
+              </div>
+              <p id="tech-results-count" class="technical-filter-status" role="status" aria-live="polite">42 de 42 productos técnicos visibles</p>
+
+              <details class="technical-catalog" open>
+                <summary><span>Explorar productos técnicos</span><span class="badge-neutral">42 registros CvLAC</span></summary>
+                <div id="technical-grid" class="technical-grid">
+
+              <article class="technical-card" data-tech-type="innovacion" data-tech-family="innovacion" data-tech-year="2025">
+                <div class="technical-card-meta"><span>Innovación organizacional</span><span>2025</span><span>Registro 1 de 6</span></div>
+                <h5>Analistas de Producción</h5>
+                <p>Análisis ejecutivo del cargo de Operativo de Producción.</p>
+                <div class="technical-card-foot"><span>Producción técnica · gestión empresarial</span><span>Fuente: CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="innovacion" data-tech-family="innovacion" data-tech-year="2025">
+                <div class="technical-card-meta"><span>Innovación organizacional</span><span>2025</span><span>Registro 2 de 6</span></div>
+                <h5>Ejecutivos en Acción</h5>
+                <p>Análisis ejecutivo del cargo de Operativo de Producción.</p>
+                <div class="technical-card-foot"><span>Producción técnica · gestión empresarial</span><span>Fuente: CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="innovacion" data-tech-family="innovacion" data-tech-year="2025">
+                <div class="technical-card-meta"><span>Innovación organizacional</span><span>2025</span><span>Registro 3 de 6</span></div>
+                <h5>Mentes en Producción</h5>
+                <p>Análisis ejecutivo del cargo de Operativo de Producción.</p>
+                <div class="technical-card-foot"><span>Producción técnica · gestión empresarial</span><span>Fuente: CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="innovacion" data-tech-family="innovacion" data-tech-year="2025">
+                <div class="technical-card-meta"><span>Innovación organizacional</span><span>2025</span><span>Registro 4 de 6</span></div>
+                <h5>Operativos Visionarios</h5>
+                <p>Análisis ejecutivo del cargo de Operativo de Producción.</p>
+                <div class="technical-card-foot"><span>Producción técnica · gestión empresarial</span><span>Fuente: CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="innovacion" data-tech-family="innovacion" data-tech-year="2025">
+                <div class="technical-card-meta"><span>Innovación organizacional</span><span>2025</span><span>Registro 5 de 6</span></div>
+                <h5>Líderes del Análisis</h5>
+                <p>Análisis ejecutivo del cargo de Operativo de Producción.</p>
+                <div class="technical-card-foot"><span>Producción técnica · gestión empresarial</span><span>Fuente: CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="innovacion" data-tech-family="innovacion" data-tech-year="2025">
+                <div class="technical-card-meta"><span>Innovación organizacional</span><span>2025</span><span>Registro 6 de 6</span></div>
+                <h5>Sinergia Productiva</h5>
+                <p>Análisis ejecutivo del cargo de Operativo de Producción.</p>
+                <div class="technical-card-foot"><span>Producción técnica · gestión empresarial</span><span>Fuente: CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2017">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2017</span><span>PICE0216379352118EJ</span></div>
+                <h5>Diagnóstico de la relación pedagógica y didáctica de los docentes frente a escolares con inatención e hiperactividad</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="social" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>C070-16</span></div>
+                <h5>Exploración y caracterización de población adulta mayor beneficiaria de una fundación social</h5>
+                <p>Intervención comunitaria. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Comunidad y acompañamiento social</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="social" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-069-16</span></div>
+                <h5>Desarrollo de estrategias para las relaciones sociales y pautas de acompañamiento a cuidadores</h5>
+                <p>Intervención comunitaria. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Comunidad y acompañamiento social</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-084-17</span></div>
+                <h5>Diseño de esquema de intervención desde las áreas social, familiar, educativa, neurociencias y terapia ocupacional</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-089-17</span></div>
+                <h5>Diagnóstico de actitudes, conocimientos y prácticas docentes ante la inclusión</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-090-17</span></div>
+                <h5>Taller de estrategias para la educación inclusiva e inclusión socioeducativa</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-086-17</span></div>
+                <h5>Condiciones y retos para la educación inclusiva</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-080-17</span></div>
+                <h5>Fortalecimiento de habilidades para la adaptación y funcionalidad en el contexto educativo y familiar</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-079-17</span></div>
+                <h5>Estrategias ocupacionales como soporte educativo ante necesidades educativas especiales</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-085-17</span></div>
+                <h5>Diagnóstico de actitudes, conocimientos y prácticas docentes ante la inclusión</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-081-17</span></div>
+                <h5>Capacitación en neuroeducación y aprendizaje: fortalecimiento de recursos cognitivos</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-082-17</span></div>
+                <h5>Desarrollo de estrategias para la educación e inclusión socioeducativa</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-093-17</span></div>
+                <h5>Neuroeducación y funciones ejecutivas</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-077-17</span></div>
+                <h5>Caracterización de funciones ejecutivas: diagnóstico y recomendaciones</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-083-17</span></div>
+                <h5>Adaptaciones de estrategias curriculares para el ejercicio de una enseñanza incluyente</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-087-17</span></div>
+                <h5>Educación inclusiva: estado de la cuestión y recomendaciones</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-078-17</span></div>
+                <h5>Funciones ejecutivas en adolescentes y contexto escolar: una mirada diagnóstica</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-076-17</span></div>
+                <h5>Evaluación de funciones ejecutivas: memoria de trabajo en adolescentes escolarizados</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-107-17</span></div>
+                <h5>Crecimiento personal, autoeficacia y motivación en el trabajo</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-104-17</span></div>
+                <h5>Estrategias de afrontamiento del estrés: planificación y gestión del tiempo</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-109-17</span></div>
+                <h5>Gestión estratégica del recurso humano</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-116-17</span></div>
+                <h5>Taller de negociación, conciliación y resolución de conflictos</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-108-17</span></div>
+                <h5>Comunicación asertiva, liderazgo e inteligencia emocional en el clima organizacional</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-115-17</span></div>
+                <h5>Fomento de la responsabilidad social empresarial: componente medioambiental</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="sst" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-111-17</span></div>
+                <h5>Higiene en el trabajo y ergonomía</h5>
+                <p>Seguridad y salud en el trabajo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>SST y riesgo psicosocial</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST 105-17</span></div>
+                <h5>Estrategias prácticas para el trabajo en equipo y la motivación laboral</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="educacion" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-088-17</span></div>
+                <h5>Educación inclusiva: estado de la cuestión y recomendaciones</h5>
+                <p>Sector educativo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Educación inclusiva y neuroeducación</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="sst" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-103-17</span></div>
+                <h5>Efectos de los riesgos psicosociales: estrés y síndrome de burnout</h5>
+                <p>Seguridad y salud en el trabajo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>SST y riesgo psicosocial</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-110-17</span></div>
+                <h5>Programa de cualificación organizacional</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-114-17</span></div>
+                <h5>Motivación al logro y desarrollo de competencias orientadas al logro</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-106-17</span></div>
+                <h5>Relaciones laborales positivas</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-117-17</span></div>
+                <h5>Coaching y programación neurolingüística: influencia positiva en las organizaciones</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-113-17</span></div>
+                <h5>Comité de convivencia laboral como herramienta para crear mejores estrategias laborales</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="sst" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-102-17</span></div>
+                <h5>Caracterización del riesgo psicosocial y su impacto en la salud mental de colaboradores</h5>
+                <p>Seguridad y salud en el trabajo. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>SST y riesgo psicosocial</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="organizacional" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-112-17</span></div>
+                <h5>Resistencia al cambio: gestión del cambio organizacional</h5>
+                <p>Sector salud / organizacional. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Gestión y desarrollo organizacional</span><span>Registro CvLAC</span></div>
+              </article>
+              <article class="technical-card" data-tech-type="informe" data-tech-family="social" data-tech-year="2016">
+                <div class="technical-card-meta"><span>Informe técnico</span><span>2016</span><span>CST-071-16</span></div>
+                <h5>Desarrollo de estrategias para las relaciones sociales y pautas de acompañamiento a cuidadores</h5>
+                <p>Intervención comunitaria. La presentación pública omite nombres de coautores, personas beneficiarias y clientes cuando no son necesarios para acreditar el producto.</p>
+                <div class="technical-card-foot"><span>Comunidad y acompañamiento social</span><span>Registro CvLAC</span></div>
+              </article>
+                </div>
+                <p id="tech-empty" class="technical-empty" hidden>No hay productos que coincidan con los filtros seleccionados.</p>
+              </details>
+            </article>
+          </div>
+
+          <div class="mentor-source-actions"><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Consultar producción técnica completa en CvLAC ↗</a></div>
         </div>
 
       </div>
@@ -8951,6 +9665,75 @@
           if (pubTypeFilter) window.setTimeout(function() { pubTypeFilter.focus(); }, reduceMotion ? 0 : 420);
         });
       }
+
+
+      // PARTE 10 — catálogo técnico y conexión con transferencia aplicada
+      var technicalItems = Array.prototype.slice.call(document.querySelectorAll('.technical-card'));
+      var techSearch = document.getElementById('tech-search');
+      var techTypeFilter = document.getElementById('tech-type-filter');
+      var techFamilyFilter = document.getElementById('tech-family-filter');
+      var techYearFilter = document.getElementById('tech-year-filter');
+      var techReset = document.getElementById('tech-reset');
+
+      function normalizeTechText(value) {
+        return (value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      }
+
+      function filterTechnicalProducts() {
+        var query = normalizeTechText(techSearch ? techSearch.value.trim() : '');
+        var typeValue = techTypeFilter ? techTypeFilter.value : 'all';
+        var familyValue = techFamilyFilter ? techFamilyFilter.value : 'all';
+        var yearValue = techYearFilter ? techYearFilter.value : 'all';
+        var visibleCount = 0;
+
+        technicalItems.forEach(function(item) {
+          var matchText = !query || normalizeTechText(item.textContent).indexOf(query) !== -1;
+          var matchType = typeValue === 'all' || item.getAttribute('data-tech-type') === typeValue;
+          var matchFamily = familyValue === 'all' || item.getAttribute('data-tech-family') === familyValue;
+          var matchYear = yearValue === 'all' || item.getAttribute('data-tech-year') === yearValue;
+          var show = matchText && matchType && matchFamily && matchYear;
+          item.hidden = !show;
+          if (show) visibleCount += 1;
+        });
+
+        var status = document.getElementById('tech-results-count');
+        var empty = document.getElementById('tech-empty');
+        if (status) status.textContent = visibleCount + ' de ' + technicalItems.length + ' ' + (technicalItems.length === 1 ? 'producto técnico visible' : 'productos técnicos visibles');
+        if (empty) empty.hidden = visibleCount !== 0;
+      }
+
+      [techSearch, techTypeFilter, techFamilyFilter, techYearFilter].forEach(function(el) {
+        if (!el) return;
+        el.addEventListener(el.tagName === 'INPUT' ? 'input' : 'change', filterTechnicalProducts);
+      });
+
+      if (techReset) {
+        techReset.addEventListener('click', function() {
+          if (techSearch) techSearch.value = '';
+          if (techTypeFilter) techTypeFilter.value = 'all';
+          if (techFamilyFilter) techFamilyFilter.value = 'all';
+          if (techYearFilter) techYearFilter.value = 'all';
+          filterTechnicalProducts();
+          if (techSearch) techSearch.focus();
+        });
+      }
+      filterTechnicalProducts();
+
+      var technicalTransferLink = document.getElementById('technical-transfer-link');
+      if (technicalTransferLink) {
+        technicalTransferLink.addEventListener('click', function() {
+          var target = document.getElementById('transferencia-aplicada');
+          if (target) {
+            target.open = true;
+            target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+            window.setTimeout(function() {
+              var summary = target.querySelector('summary');
+              if (summary) summary.focus({ preventScroll: true });
+            }, reduceMotion ? 0 : 420);
+          }
+        });
+      }
+
 
       var copyBtns = document.querySelectorAll('.btn-copy');
       for (var c = 0; c < copyBtns.length; c++) {
