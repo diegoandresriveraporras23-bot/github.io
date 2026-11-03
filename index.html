@@ -3574,6 +3574,362 @@
       .design-system-v2 .mentor-source-actions .btn { width: 100%; }
     }
 
+
+    /* PARTE 9 — apropiación social, eventos, redes y transferencia */
+    .transfer-block {
+      margin-top: clamp(34px, 5vw, 54px);
+      padding-top: clamp(30px, 4vw, 42px);
+      border-top: 1px solid var(--border-neutral);
+    }
+
+    .transfer-overview {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .transfer-kpi {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .transfer-kpi strong {
+      display: block;
+      color: var(--brand-primary);
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .transfer-kpi span {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink-muted);
+      font-size: 11.5px;
+      line-height: 1.45;
+    }
+
+    .transfer-integrity-note {
+      margin: 18px 0 24px;
+      padding: 14px 16px;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid var(--brand-accent);
+      border-radius: 12px;
+      background: rgba(248,250,252,.88);
+      color: var(--ink-secondary);
+      font-size: 12.5px;
+      line-height: 1.65;
+    }
+
+    .transfer-layout {
+      display: grid;
+      gap: 20px;
+    }
+
+    .transfer-panel {
+      border: 1px solid var(--border-neutral);
+      border-radius: 18px;
+      background: var(--bg-surface);
+      box-shadow: var(--shadow-sm);
+      padding: clamp(18px, 3vw, 26px);
+      min-width: 0;
+    }
+
+    .transfer-panel-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .transfer-panel-title {
+      color: var(--ink-primary);
+      font-size: clamp(18px, 2.3vw, 23px);
+      line-height: 1.25;
+      letter-spacing: -.01em;
+    }
+
+    .transfer-panel-desc {
+      max-width: 820px;
+      margin-top: 6px;
+      color: var(--ink-secondary);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .transfer-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 10px;
+      border: 1px solid var(--brand-accent-border);
+      border-radius: 999px;
+      background: var(--brand-accent-soft);
+      color: var(--brand-accent-strong);
+      font-size: 10.5px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .event-role-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .event-role-stat {
+      padding: 10px 12px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 12px;
+      background: var(--bg-elevated);
+    }
+
+    .event-role-stat strong {
+      display: block;
+      font-size: 18px;
+      color: var(--ink-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .event-role-stat span {
+      display: block;
+      margin-top: 2px;
+      color: var(--ink-muted);
+      font-size: 10.5px;
+      line-height: 1.35;
+    }
+
+    .event-filter-panel {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr)) auto;
+      gap: 10px;
+      align-items: end;
+      margin: 16px 0 10px;
+      padding: 14px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 14px;
+      background: var(--bg-elevated);
+    }
+
+    .event-filter-field label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink-secondary);
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .event-filter-status {
+      min-height: 24px;
+      margin-bottom: 12px;
+      color: var(--ink-muted);
+      font-size: 11.5px;
+    }
+
+    .event-year-group {
+      margin-top: 16px;
+    }
+
+    .event-year-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      color: var(--ink-primary);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .event-year-heading::after {
+      content: "";
+      height: 1px;
+      background: var(--border-neutral);
+      flex: 1;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+    }
+
+    .event-card {
+      min-width: 0;
+      padding: 14px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .event-card[hidden],
+    .event-year-group[hidden] { display: none !important; }
+
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+
+    .event-meta span {
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-neutral);
+      color: var(--ink-muted);
+      font-size: 9.5px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .event-meta .event-role {
+      color: var(--brand-accent-strong);
+      border-color: var(--brand-accent-border);
+      background: var(--brand-accent-soft);
+    }
+
+    .event-title {
+      color: var(--ink-primary);
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 800;
+    }
+
+    .event-context {
+      margin-top: 7px;
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.5;
+    }
+
+    .network-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+    }
+
+    .network-card {
+      min-width: 0;
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border-neutral);
+      background: var(--bg-elevated);
+    }
+
+    .network-name {
+      color: var(--ink-primary);
+      font-size: 12.5px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .network-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 8px;
+    }
+
+    .network-meta span {
+      padding: 3px 7px;
+      border-radius: 999px;
+      border: 1px solid var(--border-neutral);
+      background: #fff;
+      color: var(--ink-muted);
+      font-size: 9.5px;
+      font-weight: 800;
+    }
+
+    .appropriation-card {
+      display: grid;
+      grid-template-columns: minmax(0,1.5fr) minmax(220px,.5fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .appropriation-main,
+    .appropriation-meta-card {
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border-neutral);
+      background: var(--bg-elevated);
+    }
+
+    .appropriation-main h5 {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--ink-primary);
+    }
+
+    .appropriation-main p,
+    .appropriation-meta-card p {
+      margin-top: 8px;
+      color: var(--ink-secondary);
+      font-size: 11.8px;
+      line-height: 1.55;
+    }
+
+    .transfer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .dissemination-box {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) auto;
+      gap: 18px;
+      align-items: center;
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border-neutral);
+      background:
+        radial-gradient(circle at 95% 10%, rgba(37,99,235,.08), transparent 35%),
+        var(--bg-elevated);
+    }
+
+    .dissemination-box strong {
+      display: block;
+      color: var(--ink-primary);
+      font-size: 18px;
+    }
+
+    .dissemination-box p {
+      margin-top: 4px;
+      color: var(--ink-secondary);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 900px) {
+      .transfer-overview { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .event-filter-panel { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .event-filter-actions { grid-column: 1 / -1; }
+      .network-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .appropriation-card { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      .event-role-summary,
+      .event-grid,
+      .network-grid,
+      .event-filter-panel,
+      .dissemination-box { grid-template-columns: 1fr; }
+      .transfer-overview { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .event-filter-actions { grid-column: auto; }
+    }
+
 </style>
 </head>
 <body class="design-system-v2">
@@ -4554,6 +4910,179 @@
               </div>
 
               <div class="evaluation-integrity-note" style="margin-top:14px;"><strong>Criterio de integridad:</strong> “par evaluador”, “jurado”, “tutor principal”, “cotutor/asesor” y “edición/revisión” se mantienen como categorías distintas. No se fusionan como una única función ni se atribuyen roles que la ficha pública no declara.</div>
+            </article>
+          </div>
+
+          <div class="mentor-source-actions"><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Consultar evidencia completa en CvLAC ↗</a></div>
+        </div>
+
+
+        <div class="experience-block transfer-block" id="transferencia-conocimiento" aria-labelledby="titulo-transferencia-conocimiento">
+          <div class="experience-block-head">
+            <div>
+              <span class="eyebrow">Circulación del conocimiento · Presencia académica</span>
+              <h3 id="titulo-transferencia-conocimiento" class="experience-block-title">Eventos, redes, apropiación social y divulgación</h3>
+              <p class="experience-block-desc">Síntesis pública y verificable de actividades de circulación, relacionamiento académico y apropiación social registradas en CvLAC. Se distingue el rol real en cada evento, se preserva la privacidad de terceros y se excluyen de forma integral los registros vinculados a la institución no autorizada.</p>
+            </div>
+          </div>
+
+          <div class="transfer-overview" aria-label="Resumen de circulación y transferencia del conocimiento">
+            <div class="transfer-kpi"><strong>14</strong><span>eventos científicos publicables después de aplicar la política institucional</span></div>
+            <div class="transfer-kpi"><strong>6</strong><span>redes de conocimiento especializado registradas públicamente</span></div>
+            <div class="transfer-kpi"><strong>1</strong><span>producto explícito de apropiación social del conocimiento</span></div>
+            <div class="transfer-kpi"><strong>7</strong><span>registros de divulgación ya integrados al catálogo bibliográfico</span></div>
+          </div>
+
+          <div class="transfer-integrity-note"><strong>Criterio editorial y ético:</strong> los eventos se presentan con el rol exacto consignado en la fuente —ponente magistral, ponente, organizador o asistente— sin convertir participación en liderazgo. Las redes se muestran como registros de conocimiento especializado, sin inferir cargos ni membresía vigente a partir de su fecha de creación. Las categorías de contenido digital, transmedia y desarrollos web no se llenan artificialmente cuando la versión pública consultada de CvLAC no muestra un bloque sustantivo verificable.</div>
+
+          <div class="transfer-layout">
+            <article class="transfer-panel" aria-labelledby="titulo-eventos-cientificos">
+              <div class="transfer-panel-head">
+                <div>
+                  <h4 id="titulo-eventos-cientificos" class="transfer-panel-title">Eventos científicos y académicos</h4>
+                  <p class="transfer-panel-desc">CvLAC registra 18 eventos; cuatro se excluyen por la política institucional vigente y 14 permanecen publicables. El conjunto visible comprende 11 eventos nacionales y 3 internacionales, con roles diferenciados.</p>
+                </div>
+                <span class="transfer-badge">14 eventos · 2013–2026</span>
+              </div>
+
+              <div class="event-role-summary" aria-label="Eventos por rol del titular">
+                <div class="event-role-stat"><strong>5</strong><span>ponente magistral</span></div>
+                <div class="event-role-stat"><strong>2</strong><span>ponente</span></div>
+                <div class="event-role-stat"><strong>4</strong><span>organizador</span></div>
+                <div class="event-role-stat"><strong>3</strong><span>asistente</span></div>
+              </div>
+
+              <div class="event-filter-panel" aria-label="Filtros de eventos científicos">
+                <div class="event-filter-field"><label for="event-role-filter">Rol</label><select id="event-role-filter" class="form-control" aria-controls="event-list"><option value="all">Todos los roles</option><option value="magistral">Ponente magistral</option><option value="ponente">Ponente</option><option value="organizador">Organizador</option><option value="asistente">Asistente</option></select></div>
+                <div class="event-filter-field"><label for="event-scope-filter">Ámbito</label><select id="event-scope-filter" class="form-control" aria-controls="event-list"><option value="all">Nacional e internacional</option><option value="nacional">Nacional</option><option value="internacional">Internacional</option></select></div>
+                <div class="event-filter-field"><label for="event-year-filter">Año</label><select id="event-year-filter" class="form-control" aria-controls="event-list"><option value="all">Todos los años</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2020">2020</option><option value="2014">2014</option><option value="2013">2013</option></select></div>
+                <div class="event-filter-actions"><button type="button" id="event-reset" class="btn btn-outline">Restablecer</button></div>
+              </div>
+              <p id="event-results-count" class="event-filter-status" role="status" aria-live="polite">14 de 14 eventos visibles</p>
+              <p id="event-empty" class="event-filter-status" hidden>No hay eventos que coincidan con los filtros seleccionados.</p>
+              <div id="event-list"><div class="event-year-group" data-event-group-year="2026">
+              <div class="event-year-heading">2026</div>
+              <div class="event-grid"><article class="event-card" data-event-role="asistente" data-event-scope="nacional" data-event-year="2026">
+                  <div class="event-meta"><span class="event-role">Asistente</span><span>Nacional</span><span>Encuentro</span><span>16–17 jul 2026</span></div>
+                  <h5 class="event-title">BOOTCAMP EN GESTIÓN Y FORMULACIÓN DE PROYECTOS</h5>
+                  <p class="event-context">Barranquilla · Universidad de la Costa</p>
+                </article><article class="event-card" data-event-role="organizador" data-event-scope="nacional" data-event-year="2026">
+                  <div class="event-meta"><span class="event-role">Organizador</span><span>Nacional</span><span>Otro</span><span>4 mar 2026</span></div>
+                  <h5 class="event-title">Riesgo cardiovascular y obstétrico - Liderazgo y gestión del Talento Humano</h5>
+                  <p class="event-context">Barranquilla · Universidad de la Costa</p>
+                </article><article class="event-card" data-event-role="magistral" data-event-scope="nacional" data-event-year="2026">
+                  <div class="event-meta"><span class="event-role">Ponente magistral</span><span>Nacional</span><span>Seminario</span><span>19–21 mar 2026</span></div>
+                  <h5 class="event-title">Seminario de Investigación - Universidad Simón Bolívar - Cúcuta</h5>
+                  <p class="event-context">Registro CvLAC: Barranquilla · patrocinio Universidad de la Costa</p>
+                </article><article class="event-card" data-event-role="magistral" data-event-scope="nacional" data-event-year="2026">
+                  <div class="event-meta"><span class="event-role">Ponente magistral</span><span>Nacional</span><span>Otro</span><span>24–26 mar 2026</span></div>
+                  <h5 class="event-title">Invitado Experto Análisis de datos - Unipamplona</h5>
+                  <p class="event-context">Barranquilla · Universidad de Pamplona / patrocinio Universidad de la Costa</p>
+                </article></div>
+            </div><div class="event-year-group" data-event-group-year="2025">
+              <div class="event-year-heading">2025</div>
+              <div class="event-grid"><article class="event-card" data-event-role="asistente" data-event-scope="nacional" data-event-year="2025">
+                  <div class="event-meta"><span class="event-role">Asistente</span><span>Nacional</span><span>Encuentro</span><span>11–12 abr 2025</span></div>
+                  <h5 class="event-title">Encuentro de integrantes de la Red Iberoamericana de Empatía - I Simposio Internacional de Comportamiento Empático</h5>
+                  <p class="event-context">Santa Marta · Universidad del Magdalena</p>
+                </article><article class="event-card" data-event-role="organizador" data-event-scope="nacional" data-event-year="2025">
+                  <div class="event-meta"><span class="event-role">Organizador</span><span>Nacional</span><span>Otro</span><span>23 may 2025</span></div>
+                  <h5 class="event-title">Jornada de Socialización de Proyectos - Ciencia, Tecnología e Innovación</h5>
+                  <p class="event-context">Barranquilla · Universidad de la Costa</p>
+                </article><article class="event-card" data-event-role="organizador" data-event-scope="nacional" data-event-year="2025">
+                  <div class="event-meta"><span class="event-role">Organizador</span><span>Nacional</span><span>Otro</span><span>26 may 2025</span></div>
+                  <h5 class="event-title">Jornada de Socialización de Retos - Gestión de Competencias y Compensaciones</h5>
+                  <p class="event-context">Barranquilla · Universidad de la Costa</p>
+                </article><article class="event-card" data-event-role="asistente" data-event-scope="nacional" data-event-year="2025">
+                  <div class="event-meta"><span class="event-role">Asistente</span><span>Nacional</span><span>Encuentro</span><span>24–25 jul 2025</span></div>
+                  <h5 class="event-title">Bootcamp para la Formulación y Ejecución de Proyectos Rentables y Exitosos: No es Magia, es Metodología</h5>
+                  <p class="event-context">Barranquilla · Universidad de la Costa</p>
+                </article></div>
+            </div><div class="event-year-group" data-event-group-year="2024">
+              <div class="event-year-heading">2024</div>
+              <div class="event-grid"><article class="event-card" data-event-role="organizador" data-event-scope="internacional" data-event-year="2024">
+                  <div class="event-meta"><span class="event-role">Organizador</span><span>Internacional</span><span>Congreso</span><span>18 may 2024</span></div>
+                  <h5 class="event-title">VII Congreso Internacional de Innovación e Intervención Psicológica: Salud Mental, Inclusión, Sostenibilidad</h5>
+                  <p class="event-context">Cúcuta · Universidad Simón Bolívar</p>
+                </article><article class="event-card" data-event-role="ponente" data-event-scope="internacional" data-event-year="2024">
+                  <div class="event-meta"><span class="event-role">Ponente</span><span>Internacional</span><span>Otro</span><span>13–17 may 2024</span></div>
+                  <h5 class="event-title">Semana de la Investigación</h5>
+                  <p class="event-context">Cúcuta · Universidad Simón Bolívar</p>
+                </article></div>
+            </div><div class="event-year-group" data-event-group-year="2020">
+              <div class="event-year-heading">2020</div>
+              <div class="event-grid"><article class="event-card" data-event-role="ponente" data-event-scope="internacional" data-event-year="2020">
+                  <div class="event-meta"><span class="event-role">Ponente</span><span>Internacional</span><span>Otro</span><span>26 sep 2020</span></div>
+                  <h5 class="event-title">WELLBEING 360</h5>
+                  <p class="event-context">México · Universidad Tecmilenio</p>
+                </article></div>
+            </div><div class="event-year-group" data-event-group-year="2014">
+              <div class="event-year-heading">2014</div>
+              <div class="event-grid"><article class="event-card" data-event-role="magistral" data-event-scope="nacional" data-event-year="2014">
+                  <div class="event-meta"><span class="event-role">Ponente magistral</span><span>Nacional</span><span>Simposio</span><span>27 nov 2014</span></div>
+                  <h5 class="event-title">Primer Simposio de Enseñanza de las Ciencias</h5>
+                  <p class="event-context">Cúcuta · Universidad Francisco de Paula Santander</p>
+                </article><article class="event-card" data-event-role="magistral" data-event-scope="nacional" data-event-year="2014">
+                  <div class="event-meta"><span class="event-role">Ponente magistral</span><span>Nacional</span><span>Seminario</span><span>23–29 ago 2014</span></div>
+                  <h5 class="event-title">Humanización en la Atención en Salud: Deberes y Derechos del Usuario</h5>
+                  <p class="event-context">Registro CvLAC: Holguín · Universidad Francisco de Paula Santander</p>
+                </article></div>
+            </div><div class="event-year-group" data-event-group-year="2013">
+              <div class="event-year-heading">2013</div>
+              <div class="event-grid"><article class="event-card" data-event-role="magistral" data-event-scope="nacional" data-event-year="2013">
+                  <div class="event-meta"><span class="event-role">Ponente magistral</span><span>Nacional</span><span>Encuentro</span><span>6 jun 2013</span></div>
+                  <h5 class="event-title">XI Encuentro de Matemáticas Aplicadas y VIII Encuentro de Estadística</h5>
+                  <p class="event-context">Cúcuta · Universidad Francisco de Paula Santander</p>
+                </article></div>
+            </div></div>
+            </article>
+
+            <article class="transfer-panel" aria-labelledby="titulo-redes-conocimiento">
+              <div class="transfer-panel-head">
+                <div>
+                  <h4 id="titulo-redes-conocimiento" class="transfer-panel-title">Redes de conocimiento especializado</h4>
+                  <p class="transfer-panel-desc">Se muestran las seis redes que aparecen en CvLAC. La fecha corresponde a la creación registrada de la red en la fuente y no se interpreta como fecha personal de vinculación; tampoco se atribuye cargo o función individual cuando CvLAC no los declara.</p>
+                </div>
+                <span class="transfer-badge">4 reales · 2 virtuales</span>
+              </div>
+              <div class="network-grid" aria-label="Redes de conocimiento especializado"><article class="network-card"><div class="network-name">REDCOLSI · Red Nacional de Semilleros de Investigación</div><div class="network-meta"><span>Virtual</span><span>Creación registrada: 2 feb 2015</span><span>Cúcuta</span></div></article><article class="network-card"><div class="network-name">REDDOLAC · Red de Docentes de América Latina y del Caribe</div><div class="network-meta"><span>Real</span><span>Creación registrada: 13 jul 2018</span><span>Lima</span></div></article><article class="network-card"><div class="network-name">RID · Red Iberoamericana de Docentes</div><div class="network-meta"><span>Real</span><span>Creación registrada: 17 jul 2018</span><span>Bucaramanga</span></div></article><article class="network-card"><div class="network-name">REOALCEI · Red de Investigación Estudios Organizacionales en América Latina, el Caribe e Iberoamérica</div><div class="network-meta"><span>Real</span><span>Creación registrada: 17 jul 2018</span><span>Montevideo</span></div></article><article class="network-card"><div class="network-name">REDINPSIC · Red Internacional de Innovación en Intervención Psicológica</div><div class="network-meta"><span>Virtual</span><span>Creación registrada: 2 nov 2018</span><span>Cúcuta</span></div></article><article class="network-card"><div class="network-name">Evaluación y Promoción de Habilidades para la Vida</div><div class="network-meta"><span>Real</span><span>Creación registrada: 1 ene 2019</span><span>Bogotá, D.C.</span></div></article></div>
+            </article>
+
+            <article class="transfer-panel" aria-labelledby="titulo-apropiacion-social">
+              <div class="transfer-panel-head">
+                <div>
+                  <h4 id="titulo-apropiacion-social" class="transfer-panel-title">Apropiación social del conocimiento</h4>
+                  <p class="transfer-panel-desc">La versión pública consultada de CvLAC expone un producto explícito de fortalecimiento o solución de asuntos de interés social. Se conserva su naturaleza documental sin añadir resultados, población o alcance que la ficha no declare.</p>
+                </div>
+                <span class="transfer-badge">1 producto verificable · jul 2022</span>
+              </div>
+              <div class="appropriation-card">
+                <div class="appropriation-main">
+                  <h5>Estrategias de educación, información y comunicación: promoción de la salud y prevención de enfermedades asociadas al consumo de cigarrillo</h5>
+                  <p>Producto de apropiación social vinculado al proyecto sobre efecto de una intervención psicológica en el consumo de tabaco. La ficha pública reporta formato PDF y una licencia de atribución no comercial y compartir igual.</p>
+                  <div class="transfer-actions"><a href="https://bonga.unisimon.edu.co/home" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Medio de verificación ↗</a><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver CvLAC ↗</a></div>
+                </div>
+                <aside class="appropriation-meta-card" aria-label="Metadatos del producto de apropiación social">
+                  <p><strong>Presentación:</strong> julio de 2022.</p>
+                  <p><strong>Formato:</strong> PDF.</p>
+                  <p><strong>Licencia reportada:</strong> Atribución–No Comercial–Compartir Igual.</p>
+                  <p><strong>Enfoque:</strong> promoción de la salud y prevención asociada al consumo de cigarrillo.</p>
+                </aside>
+              </div>
+            </article>
+
+            <article class="transfer-panel" aria-labelledby="titulo-divulgacion-transferencia">
+              <div class="transfer-panel-head">
+                <div>
+                  <h4 id="titulo-divulgacion-transferencia" class="transfer-panel-title">Divulgación y acceso al conocimiento</h4>
+                  <p class="transfer-panel-desc">Los siete registros de divulgación/otra producción bibliográfica ya están integrados al catálogo general de producción para evitar duplicación. Desde este módulo se accede directamente a ese subconjunto.</p>
+                </div>
+                <span class="transfer-badge">7 registros bibliográficos</span>
+              </div>
+              <div class="dissemination-box">
+                <div><strong>Divulgación científica y profesional</strong><p>La presentación pública conserva título, año, fuente editorial y datos bibliográficos disponibles sin reproducir nombres de coautores o terceros.</p></div>
+                <button type="button" id="transfer-publications-link" class="btn btn-primary">Ver 7 textos de divulgación</button>
+              </div>
             </article>
           </div>
 
@@ -8360,6 +8889,66 @@
           var publicationsSection = document.getElementById('publicaciones');
           if (publicationsSection) publicationsSection.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
           if (pubSearch) window.setTimeout(function() { pubSearch.focus(); }, reduceMotion ? 0 : 420);
+        });
+      }
+
+
+      // PARTE 9 — filtros de eventos y acceso directo a divulgación
+      var eventItems = Array.prototype.slice.call(document.querySelectorAll('.event-card'));
+      var eventGroups = Array.prototype.slice.call(document.querySelectorAll('.event-year-group'));
+      var eventRoleFilter = document.getElementById('event-role-filter');
+      var eventScopeFilter = document.getElementById('event-scope-filter');
+      var eventYearFilter = document.getElementById('event-year-filter');
+      var eventReset = document.getElementById('event-reset');
+
+      function filterEvents() {
+        var roleValue = eventRoleFilter ? eventRoleFilter.value : 'all';
+        var scopeValue = eventScopeFilter ? eventScopeFilter.value : 'all';
+        var yearValue = eventYearFilter ? eventYearFilter.value : 'all';
+        var visibleCount = 0;
+        eventItems.forEach(function(item) {
+          var matchRole = roleValue === 'all' || item.getAttribute('data-event-role') === roleValue;
+          var matchScope = scopeValue === 'all' || item.getAttribute('data-event-scope') === scopeValue;
+          var matchYear = yearValue === 'all' || item.getAttribute('data-event-year') === yearValue;
+          var show = matchRole && matchScope && matchYear;
+          item.hidden = !show;
+          if (show) visibleCount += 1;
+        });
+        eventGroups.forEach(function(group) {
+          var hasVisible = Array.prototype.some.call(group.querySelectorAll('.event-card'), function(card) { return !card.hidden; });
+          group.hidden = !hasVisible;
+        });
+        var status = document.getElementById('event-results-count');
+        var empty = document.getElementById('event-empty');
+        if (status) status.textContent = visibleCount + ' de ' + eventItems.length + ' ' + (eventItems.length === 1 ? 'evento visible' : 'eventos visibles');
+        if (empty) empty.hidden = visibleCount !== 0;
+      }
+
+      [eventRoleFilter, eventScopeFilter, eventYearFilter].forEach(function(el) {
+        if (el) el.addEventListener('change', filterEvents);
+      });
+      if (eventReset) {
+        eventReset.addEventListener('click', function() {
+          if (eventRoleFilter) eventRoleFilter.value = 'all';
+          if (eventScopeFilter) eventScopeFilter.value = 'all';
+          if (eventYearFilter) eventYearFilter.value = 'all';
+          filterEvents();
+          if (eventRoleFilter) eventRoleFilter.focus();
+        });
+      }
+      filterEvents();
+
+      var transferPublicationsLink = document.getElementById('transfer-publications-link');
+      if (transferPublicationsLink) {
+        transferPublicationsLink.addEventListener('click', function() {
+          if (pubSearch) pubSearch.value = '';
+          if (pubTypeFilter) pubTypeFilter.value = 'divulgacion';
+          if (pubYearFilter) pubYearFilter.value = 'all';
+          if (pubThemeFilter) pubThemeFilter.value = 'all';
+          filterPublications();
+          var publicationsSection = document.getElementById('publicaciones');
+          if (publicationsSection) publicationsSection.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+          if (pubTypeFilter) window.setTimeout(function() { pubTypeFilter.focus(); }, reduceMotion ? 0 : 420);
         });
       }
 
