@@ -5757,6 +5757,44 @@ body.design-system-v2 #inicio .db-icon {background:#DCE8F5!important;color:#2452
 body.design-system-v2 #inicio .photo-frame {background:#DCE8F5!important;border-color:#A8BDD7!important;}
 body.design-system-v2 #inicio .db-sub {color:#405A75!important;}
 body.design-system-v2 :is(a,button,summary,input,select,textarea):focus-visible {outline-color:#3974B1!important;}
+
+    /* Inicio: cita y presentación personal autorizadas — 2026-11-03 */
+    body.design-system-v2 #inicio .hero-about-quote {
+      margin: 19px 0 24px;
+      padding: 14px 19px;
+      border-left: 3px solid #24527F;
+      background: rgba(228,236,247,.68);
+      border-radius: 0 12px 12px 0;
+      color: #142B49;
+    }
+    body.design-system-v2 #inicio .hero-about-quote p {
+      margin: 0;
+      font-size: clamp(15px,1.4vw,17px);
+      line-height: 1.6;
+    }
+    body.design-system-v2 #inicio .hero-about-quote .hero-quote-attribution {
+      display: block;
+      margin-top: 8px;
+      color: #29425F;
+      font-style: normal;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    body.design-system-v2 #inicio .hero-about-title {
+      color: #142B49;
+      font-size: clamp(20px,1.85vw,25px);
+      line-height: 1.25;
+      margin: 0 0 15px;
+      font-weight: 700;
+    }
+    body.design-system-v2 #inicio .hero-about-text p {
+      color: #29425F;
+      font-size: clamp(14px,1.2vw,15.5px);
+      line-height: 1.7 !important;
+      margin: 0 0 16px;
+      overflow-wrap: break-word;
+    }
+    body.design-system-v2 #inicio .hero-about-text p:last-child {margin-bottom: 22px;}
 </style>
 </head>
 <body class="design-system-v2">
@@ -5795,13 +5833,17 @@ body.design-system-v2 :is(a,button,summary,input,select,textarea):focus-visible 
       <div class="hero-copy">
         <h1 id="titulo-inicio" class="hero-title">Diego Rivera-Porras</h1>
 
-        <p class="hero-positioning">
-          Investigación, estadística y psicología aplicada con evidencia científica verificable.
-        </p>
+        <blockquote class="hero-about-quote">
+          <p><em>"En la vida no hay cosas que temer, solo cosas que comprender."</em></p>
+          <cite class="hero-quote-attribution">- <strong>Marie Curie</strong></cite>
+        </blockquote>
 
-        <p class="hero-lead">
-          Doctor en Psicología y especialista en Estadística Aplicada y Seguridad y Salud en el Trabajo. Mi trayectoria profesional articula 13 áreas de actuación, 14 líneas de investigación activas y experiencia en producción científica, evaluación por pares, formación de talento, análisis cuantitativo y consultoría.
-        </p>
+        <h2 class="hero-about-title">Sobre mí</h2>
+        <div class="hero-about-text">
+          <p>Detrás de cada base de datos o proyecto de investigación suele haber una pregunta compleja esperando una respuesta clara, y es justo en ese terreno donde más disfruto trabajar. Como para mí los modelos estadísticos solo cobran sentido cuando salen del papel y resuelven problemas reales, he enfocado mi carrera en tender puentes entre la ciencia y el día a día de las organizaciones, una labor que hoy desarrollo como profesor e investigador en el Departamento de Productividad e Innovación de la Universidad de la Costa y a través de la consultoría independiente.</p>
+          <p>En lugar de quedarme en una sola disciplina, con los años he ido sumando herramientas que me permiten entender los problemas desde varios ángulos a la vez. Al conectar el análisis estadístico con la gestión humana, la seguridad laboral y el ámbito jurídico, consigo mirar más allá del número frío y construir soluciones donde el rigor matemático va de la mano con lo que una institución realmente necesita y lo que la norma exige, dejando de lado esas recetas de "caja negra" que nadie sabe muy bien cómo interpretar.</p>
+          <p>Esa misma forma de entender el oficio me acompaña cuando escribo artículos científicos, publico datos abiertos o participo como evaluador por pares en revistas nacionales e internacionales, y se traslada de manera natural a los proyectos en los que asesoro a otros. Ya sea diseñando el análisis estadístico de una investigación, afinando un manuscrito académico bajo cualquier norma editorial o evaluando en terreno los factores de riesgo en una empresa, mi propósito es que quien trabaje conmigo cuente con resultados transparentes, bien fundamentados y listos para respaldar decisiones con tranquilidad.</p>
+        </div>
 
         <div class="hero-actions" aria-label="Accesos rápidos del portafolio">
           <button type="button" class="btn btn-primary nav-scroll" data-target="#experiencia">
