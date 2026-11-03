@@ -2268,6 +2268,381 @@
       }
     }
 
+
+    /* Experiencia profesional ampliada — PARTE 4 — 2026-11-02 */
+    .experience-overview {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0 26px;
+    }
+
+    .experience-stat {
+      min-width: 0;
+      padding: 15px 16px;
+      border: 1px solid var(--border-neutral);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,.82);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .experience-stat-value {
+      display: block;
+      font-size: clamp(20px, 2.4vw, 28px);
+      line-height: 1;
+      font-weight: 850;
+      letter-spacing: -.03em;
+      color: var(--ink-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .experience-stat-label {
+      display: block;
+      margin-top: 7px;
+      font-size: 11px;
+      line-height: 1.45;
+      color: var(--ink-muted);
+    }
+
+    .experience-source-note {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px 16px;
+      margin: 0 0 24px;
+      padding: 12px 14px;
+      border: 1px solid var(--brand-accent-border);
+      border-radius: var(--radius-md);
+      background: var(--brand-accent-soft);
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.55;
+    }
+
+    .experience-source-note a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      font-weight: 800;
+      color: var(--brand-accent-strong);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .experience-capability-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .experience-capability-grid .exec-card {
+      min-width: 0;
+      padding: 18px;
+    }
+
+    .experience-capability-grid .card-title {
+      font-size: 15px;
+    }
+
+    .experience-capability-grid .card-text {
+      font-size: 12.5px;
+    }
+
+    .experience-block {
+      margin-top: 34px;
+    }
+
+    .experience-block-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      margin-bottom: 16px;
+    }
+
+    .experience-block-title {
+      font-size: clamp(19px, 2.2vw, 24px);
+      line-height: 1.2;
+      letter-spacing: -.015em;
+      color: var(--ink-primary);
+    }
+
+    .experience-block-desc {
+      max-width: 760px;
+      margin-top: 5px;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--ink-muted);
+    }
+
+    .experience-periods {
+      display: grid;
+      gap: 12px;
+    }
+
+    .experience-period {
+      border: 1px solid var(--border-neutral);
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      box-shadow: var(--shadow-xs);
+      overflow: clip;
+    }
+
+    .experience-period[open] {
+      border-color: var(--brand-accent-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .experience-period > summary {
+      min-height: 72px;
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px 18px;
+      padding: 15px 18px;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+
+    .experience-period > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .experience-period > summary::after {
+      content: "+";
+      width: 30px;
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-neutral);
+      border-radius: 999px;
+      background: var(--bg-elevated);
+      color: var(--brand-accent-strong);
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 700;
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .experience-period[open] > summary::after {
+      content: "−";
+      background: var(--brand-accent-soft);
+      border-color: var(--brand-accent-border);
+    }
+
+    .experience-date {
+      font-size: 11px;
+      line-height: 1.45;
+      font-weight: 850;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      color: var(--brand-accent-strong);
+    }
+
+    .experience-period-title {
+      display: block;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 850;
+      color: var(--ink-primary);
+    }
+
+    .experience-period-sub {
+      display: block;
+      margin-top: 3px;
+      font-size: 11.5px;
+      line-height: 1.45;
+      color: var(--ink-muted);
+    }
+
+    .experience-period-body {
+      padding: 0 18px 18px 181px;
+      border-top: 1px solid var(--border-neutral);
+    }
+
+    .experience-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      padding-top: 14px;
+      margin-bottom: 12px;
+    }
+
+    .experience-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-neutral);
+      font-size: 10.5px;
+      line-height: 1.25;
+      font-weight: 750;
+      color: var(--ink-secondary);
+    }
+
+    .experience-activity-list {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+    }
+
+    .experience-activity-list li {
+      position: relative;
+      padding-left: 17px;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--ink-secondary);
+    }
+
+    .experience-activity-list li::before {
+      content: "";
+      position: absolute;
+      left: 1px;
+      top: .62em;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--brand-accent);
+    }
+
+    .experience-privacy {
+      margin-top: 11px;
+      padding: 9px 11px;
+      border-left: 3px solid var(--accent-teal);
+      border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+      background: var(--accent-teal-soft);
+      color: var(--ink-secondary);
+      font-size: 10.5px;
+      line-height: 1.5;
+    }
+
+    .experience-transfer {
+      border: 1px solid var(--border-neutral);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.72);
+      overflow: clip;
+    }
+
+    .experience-transfer > summary {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 17px;
+      cursor: pointer;
+      list-style: none;
+      font-size: 13px;
+      font-weight: 850;
+      color: var(--ink-primary);
+    }
+
+    .experience-transfer > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .experience-transfer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      padding: 0 16px 16px;
+    }
+
+    .transfer-item {
+      min-width: 0;
+      padding: 12px 13px;
+      border: 1px solid var(--border-neutral);
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+    }
+
+    .transfer-year {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--brand-accent-strong);
+    }
+
+    .transfer-title {
+      display: block;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 800;
+      color: var(--ink-primary);
+    }
+
+    .transfer-meta {
+      display: block;
+      margin-top: 5px;
+      font-size: 10.5px;
+      line-height: 1.45;
+      color: var(--ink-muted);
+    }
+
+    .exp-filter-status {
+      width: 100%;
+      margin-top: 8px;
+      font-size: 11px;
+      line-height: 1.45;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width: 1099px) {
+      .experience-capability-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 899px) {
+      .experience-overview {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .experience-capability-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .experience-period > summary {
+        grid-template-columns: 125px minmax(0, 1fr) auto;
+      }
+
+      .experience-period-body {
+        padding-left: 161px;
+      }
+    }
+
+    @media (max-width: 639px) {
+      .experience-overview,
+      .experience-capability-grid,
+      .experience-transfer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-period > summary {
+        min-height: 84px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+      }
+
+      .experience-date {
+        grid-column: 1 / -1;
+      }
+
+      .experience-period-body {
+        padding: 0 16px 16px;
+      }
+    }
+
   </style>
 </head>
 <body class="design-system-v2">
@@ -2531,99 +2906,466 @@
   </section>
 
   <!-- 2. EXPERIENCIA INVESTIGATIVA, CONSULTORÍA EN DATOS, DOCENCIA Y ORGANIZACIONAL (ANTES DE IMPACTO CIENTÍFICO) -->
+
   <section id="experiencia" class="section section-experience" aria-labelledby="titulo-experiencia">
     <div class="container">
       <div class="section-header section-heading-block">
         <div>
-          <span class="eyebrow">Trayectoria Consolidada</span>
+          <span class="eyebrow">Trayectoria Consolidada · CvLAC depurado</span>
           <h2 id="titulo-experiencia" class="section-title">Experiencia Investigativa, Consultoría en Datos, Docencia y Organizacional</h2>
           <p class="section-desc">Trayectoria organizada en cuatro líneas complementarias: investigación científica, consultoría cuantitativa, docencia de posgrado y psicología organizacional. Cada línea resume responsabilidades, capacidades técnicas y ámbito de aplicación.</p>
+          <p class="section-desc">La ampliación incorpora además gestión y coordinación como eje transversal y despliega 19 periodos profesionales entre 2013 y la vinculación vigente, con fechas, dedicaciones y actividades conservadas cuando la fuente las declara.</p>
         </div>
 
-        <div class="filter-group" id="exp-filters">
-          <button type="button" class="filter-btn active" data-exp="all" aria-controls="experiencia">Toda la Experiencia</button>
-          <button type="button" class="filter-btn" data-exp="investigacion" aria-controls="experiencia">1. Investigación</button>
-          <button type="button" class="filter-btn" data-exp="datos" aria-controls="experiencia">2. Consultoría en Datos y Estadística</button>
-          <button type="button" class="filter-btn" data-exp="docencia" aria-controls="experiencia">3. Docencia y Posgrados</button>
-          <button type="button" class="filter-btn" data-exp="organizacional" aria-controls="experiencia">4. Organizacional y SST</button>
+        <div class="filter-group" id="exp-filters" aria-label="Filtrar experiencia por dominio">
+          <button type="button" class="filter-btn active" data-exp="all" aria-controls="exp-corpus">Toda la Experiencia</button>
+          <button type="button" class="filter-btn" data-exp="investigacion" aria-controls="exp-corpus">1. Investigación</button>
+          <button type="button" class="filter-btn" data-exp="datos" aria-controls="exp-corpus">2. Consultoría en Datos y Estadística</button>
+          <button type="button" class="filter-btn" data-exp="docencia" aria-controls="exp-corpus">3. Docencia y Posgrados</button>
+          <button type="button" class="filter-btn" data-exp="gestion" aria-controls="exp-corpus">Gestión y coordinación</button>
+          <button type="button" class="filter-btn" data-exp="organizacional" aria-controls="exp-corpus">4. Organizacional y SST</button>
+          <p id="exp-filter-status" class="exp-filter-status" role="status" aria-live="polite">Mostrando el corpus completo de experiencia y transferencia.</p>
         </div>
       </div>
 
-      <div class="grid-2">
-        <!-- 1. Investigación -->
-        <div class="exec-card border-left-navy exp-item visual-panel visual-panel--experience" data-exp-cat="investigacion">
-          <div>
-            <div class="card-top-meta">
-              <span class="badge-solid">1. Investigación Científica</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--brand-accent);">MinCiencias &bull; Revistas Q1/Q2</span>
+      <div class="experience-overview" aria-label="Resumen de la trayectoria profesional">
+        <div class="experience-stat">
+          <span class="experience-stat-value">19</span>
+          <span class="experience-stat-label">periodos de experiencia profesional registrados en CvLAC</span>
+        </div>
+        <div class="experience-stat">
+          <span class="experience-stat-value">2013–Actual</span>
+          <span class="experience-stat-label">rango cronológico cubierto por la experiencia profesional</span>
+        </div>
+        <div class="experience-stat">
+          <span class="experience-stat-value">5</span>
+          <span class="experience-stat-label">dominios de lectura para filtrar la trayectoria</span>
+        </div>
+        <div class="experience-stat">
+          <span class="experience-stat-value">11</span>
+          <span class="experience-stat-label">actividades únicas de transferencia tras consolidar 13 registros elegibles</span>
+        </div>
+      </div>
+
+      <div class="experience-source-note">
+        <span><strong>Tratamiento editorial:</strong> fechas, dedicaciones y actividades se conservan cuando el CvLAC las declara; no se completan vacíos por inferencia. Se aplica íntegramente la política de exclusión autoritativa vigente y se omiten nombres de personas y de clientes privados cuando no son necesarios para acreditar la capacidad profesional.</span>
+        <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer">Consultar CvLAC completo ↗</a>
+      </div>
+
+      <div id="exp-corpus">
+        <div class="experience-block">
+          <div class="experience-block-head">
+            <div>
+              <span class="eyebrow">Lectura por capacidades</span>
+              <h3 class="experience-block-title">Cinco dominios que articulan la trayectoria</h3>
+              <p class="experience-block-desc">Esta capa conserva las capacidades profesionales ya publicadas y añade gestión/coordinación como dominio explícito para reflejar responsabilidades administrativas y académicas registradas en el CvLAC.</p>
             </div>
-            <h3 class="card-title">Investigador Sénior (IS) &amp; Líder de Producción Científica</h3>
-            <p class="card-subtitle">Sistema Nacional de Ciencia, Tecnología e Innovación</p>
-            <p class="card-text">
-              Dirección y formulación de proyectos, liderazgo de líneas de investigación y arbitraje científico internacional para revistas indexadas en Scopus y Web of Science. La trayectoria declarada integra más de 140 productos académicos entre artículos, capítulos y libros resultado de investigación.
-            </p>
           </div>
-          <div class="card-footer">
-            <span>Grupos Categorizados A1 / A</span>
-            <strong style="color: var(--ink-primary);">Categoría Investigador Sénior Vigente</strong>
+
+          <div class="experience-capability-grid">
+            <article class="exec-card border-left-navy exp-item visual-panel visual-panel--experience" data-exp-cat="investigacion">
+              <div>
+                <div class="card-top-meta">
+                  <span class="badge-solid">1. Investigación Científica</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--brand-accent);">MinCiencias &bull; Revistas Q1/Q2</span>
+                </div>
+                <h3 class="card-title">Investigador Sénior (IS) &amp; Líder de Producción Científica</h3>
+                <p class="card-subtitle">Sistema Nacional de Ciencia, Tecnología e Innovación</p>
+                <p class="card-text">
+                  Dirección y formulación de proyectos, liderazgo de líneas de investigación y arbitraje científico internacional para revistas indexadas en Scopus y Web of Science. La trayectoria declarada integra más de 140 productos académicos entre artículos, capítulos y libros resultado de investigación.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span>Grupos Categorizados A1 / A</span>
+                <strong style="color: var(--ink-primary);">Categoría Investigador Sénior Vigente</strong>
+              </div>
+            </article>
+
+            <article class="exec-card border-left-blue exp-item visual-panel visual-panel--experience" data-exp-cat="datos">
+              <div>
+                <div class="card-top-meta">
+                  <span class="badge-soft">2. Consultoría en Datos y Estadística</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">R &bull; Python &bull; SPSS &bull; AMOS</span>
+                </div>
+                <h3 class="card-title">Consultor Especializado en Ciencia de Datos, Bioestadística y Psicometría</h3>
+                <p class="card-subtitle">Modelado Cuantitativo, Ecuaciones Estructurales (SEM) y Validación</p>
+                <p class="card-text">
+                  Consultoría en diseño muestral, análisis multivariante, ecuaciones estructurales (SEM), análisis factorial exploratorio y confirmatorio, construcción y baremación de instrumentos psicométricos y flujos reproducibles en R y Python.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span>Bioestadística &amp; Psicometría Avanzada</span>
+                <strong style="color: var(--ink-primary);">Consultoría Activa</strong>
+              </div>
+            </article>
+
+            <article class="exec-card border-left-navy exp-item visual-panel visual-panel--experience" data-exp-cat="docencia">
+              <div>
+                <div class="card-top-meta">
+                  <span class="badge-solid">3. Docencia y Posgrados</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--brand-accent);">Maestría y Doctorado</span>
+                </div>
+                <h3 class="card-title">Profesor Universitario, Catedrático de Posgrado y Director de Tesis</h3>
+                <p class="card-subtitle">Instituciones de Educación Superior</p>
+                <p class="card-text">
+                  Docencia en pregrado, especialización, maestría y doctorado en investigación, bioestadística, psicometría y comportamiento organizacional. Incluye dirección metodológica, evaluación académica y revisión multinorma de trabajos de posgrado.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span>Formación Doctoral y de Maestría</span>
+                <strong style="color: var(--ink-primary);">Trayectoria Consolidada</strong>
+              </div>
+            </article>
+
+            <article class="exec-card border-left-navy exp-item visual-panel visual-panel--experience" data-exp-cat="gestion">
+              <div>
+                <div class="card-top-meta">
+                  <span class="badge-solid">Gestión y Coordinación</span>
+                  <span style="font-size: 11px; font-weight: 700; color: var(--brand-accent);">Académica &bull; administrativa</span>
+                </div>
+                <h3 class="card-title">Coordinación académica, laboratorios, bienestar y orientación</h3>
+                <p class="card-subtitle">Responsabilidades de gestión registradas desde 2013</p>
+                <p class="card-text">La cronología CvLAC documenta coordinación de orientación y asesoría psicológica, área organizacional, laboratorios, apoyo a bienestar institucional y funciones profesionales especializadas en contextos públicos y académicos.</p>
+              </div>
+              <div class="card-footer">
+                <span>Coordinación y soporte institucional</span>
+                <strong style="color: var(--ink-primary);">Evidencia CvLAC</strong>
+              </div>
+            </article>
+
+            <article class="exec-card border-left-blue exp-item visual-panel visual-panel--experience" data-exp-cat="organizacional">
+              <div>
+                <div class="card-top-meta">
+                  <span class="badge-soft">4. Organizacional y SST</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">Sector Público y Privado</span>
+                </div>
+                <h3 class="card-title">Consultor en Psicología Organizacional y Riesgo Psicosocial</h3>
+                <p class="card-subtitle">Clima, Cultura y Diagnóstico Presencial con Licencia SST Vigente</p>
+                <p class="card-text">
+                  Intervención en clima y cultura organizacional, liderazgo, bienestar laboral y gestión del talento humano. El diagnóstico e intervención de factores de riesgo psicosocial se ofrece exclusivamente en modalidad presencial con Licencia SST vigente.
+                </p>
+              </div>
+              <div class="card-footer">
+                <span>Licencia SST Vigente</span>
+                <strong style="color: var(--ink-primary);">Modalidad Presencial</strong>
+              </div>
+            </article>
           </div>
         </div>
 
-        <!-- 2. Consultoría en Datos y Estadística -->
-        <div class="exec-card border-left-blue exp-item visual-panel visual-panel--experience" data-exp-cat="datos">
-          <div>
-            <div class="card-top-meta">
-              <span class="badge-soft">2. Consultoría en Datos y Estadística</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">R &bull; Python &bull; SPSS &bull; AMOS</span>
+        <div class="experience-block">
+          <div class="experience-block-head">
+            <div>
+              <span class="eyebrow">Cronología verificable</span>
+              <h3 class="experience-block-title">19 periodos de experiencia profesional</h3>
+              <p class="experience-block-desc">Orden descendente. Cada periodo puede desplegarse para revisar dedicación, rol y actividades expresamente consignadas en CvLAC.</p>
             </div>
-            <h3 class="card-title">Consultor Especializado en Ciencia de Datos, Bioestadística y Psicometría</h3>
-            <p class="card-subtitle">Modelado Cuantitativo, Ecuaciones Estructurales (SEM) y Validación</p>
-            <p class="card-text">
-              Consultoría en diseño muestral, análisis multivariante, ecuaciones estructurales (SEM), análisis factorial exploratorio y confirmatorio, construcción y baremación de instrumentos psicométricos y flujos reproducibles en R y Python.
-            </p>
           </div>
-          <div class="card-footer">
-            <span>Bioestadística &amp; Psicometría Avanzada</span>
-            <strong style="color: var(--ink-primary);">Consultoría Activa</strong>
+
+          <div class="experience-periods">
+            <details class="experience-period exp-item" data-exp-cat="gestion docencia investigacion" open>
+              <summary>
+                <span class="experience-date">Oct. 2024 – Actual</span>
+                <span><span class="experience-period-title">Corporación Universidad de la Costa</span><span class="experience-period-sub">Vinculación académica vigente · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Vigente</span><span>Educación superior</span></div>
+                <ul class="experience-activity-list">
+                  <li>El CvLAC registra la vinculación desde octubre de 2024 y su continuidad actual.</li>
+                  <li>En este bloque de experiencia profesional la fuente no consigna cargo ni actividades específicas; se conserva el vacío sin inferir funciones.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="gestion">
+              <summary>
+                <span class="experience-date">Desde ene. 2018</span>
+                <span><span class="experience-period-title">Consultoría empresarial privada</span><span class="experience-period-sub">Profesional especializado · 2 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>2 h/sem</span><span>Consultor ad hoc</span><span>Profesional especializado</span></div>
+                <ul class="experience-activity-list">
+                  <li>Actividad de consultoría profesional especializada registrada desde enero de 2018.</li>
+                  <li>El CvLAC no consigna una fecha de cierre en el registro revisado; no se presenta como vínculo vigente por inferencia.</li>
+                </ul>
+                <p class="experience-privacy">El nombre comercial se omite por minimización de datos: para esta lectura pública resulta suficiente acreditar naturaleza, rol, fecha y dedicación.</p>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="gestion">
+              <summary>
+                <span class="experience-date">Ago. – oct. 2024</span>
+                <span><span class="experience-period-title">Universidad Simón Bolívar · sede Cúcuta</span><span class="experience-period-sub">Vinculación académica registrada · dedicación consignada: 0 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>Ago.–oct. 2024</span><span>0 h/sem consignadas</span></div>
+                <ul class="experience-activity-list">
+                  <li>Periodo institucional registrado por CvLAC entre agosto y octubre de 2024.</li>
+                  <li>No se detallan funciones, cursos ni actividades en este segmento; se publica únicamente lo verificable.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="docencia investigacion organizacional">
+              <summary>
+                <span class="experience-date">Ago. – dic. 2019</span>
+                <span><span class="experience-period-title">Universidad Simón Bolívar · sede Cúcuta</span><span class="experience-period-sub">Docencia e investigación · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Docencia</span><span>Investigación</span><span>Psicología organizacional</span></div>
+                <ul class="experience-activity-list">
+                  <li>Docencia de pregrado en Psicología Organizacional e Introducción a la Psicología Organizacional.</li>
+                  <li>Investigación y desarrollo sobre bienestar psicológico, satisfacción laboral y felicidad en el trabajo en sectores económicos y productivos de Cúcuta y Norte de Santander.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="docencia investigacion organizacional">
+              <summary>
+                <span class="experience-date">Feb. – jun. 2019</span>
+                <span><span class="experience-period-title">Universidad Simón Bolívar · sede Cúcuta</span><span class="experience-period-sub">Docencia e investigación · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Docencia</span><span>Investigación</span><span>Psicología organizacional</span></div>
+                <ul class="experience-activity-list">
+                  <li>Docencia de pregrado en Psicología Organizacional e Introducción a la Psicología Organizacional.</li>
+                  <li>Continuidad del proyecto de investigación sobre bienestar psicológico, satisfacción laboral y felicidad en el trabajo.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="docencia organizacional">
+              <summary>
+                <span class="experience-date">Jul. – nov. 2018</span>
+                <span><span class="experience-period-title">Universidad Simón Bolívar · sede Cúcuta</span><span class="experience-period-sub">Docencia · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Docencia</span><span>Área organizacional</span></div>
+                <ul class="experience-activity-list">
+                  <li>Docencia en Psicología Organizacional, Introducción a la Psicología Organizacional y Comportamiento Humano en el Trabajo.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="gestion docencia investigacion organizacional">
+              <summary>
+                <span class="experience-date">Feb. – jun. 2018</span>
+                <span><span class="experience-period-title">Universidad Simón Bolívar · sede Cúcuta</span><span class="experience-period-sub">Coordinación, docencia e investigación · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Coordinador de laboratorios</span><span>Docencia</span><span>Investigación</span></div>
+                <ul class="experience-activity-list">
+                  <li>Coordinación de laboratorios.</li>
+                  <li>Docencia en Comportamiento Humano en el Trabajo, Introducción a la Psicología Organizacional y Psicología Organizacional.</li>
+                  <li>Coordinación del semillero de investigación PSICORGER, según denominación registrada en CvLAC.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="gestion organizacional">
+              <summary>
+                <span class="experience-date">Nov. 2016 – dic. 2017</span>
+                <span><span class="experience-period-title">Empresa privada de innovación y gestión</span><span class="experience-period-sub">Profesional especializado · 2 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>2 h/sem</span><span>Consultor ad hoc</span><span>Profesional especializado</span></div>
+                <ul class="experience-activity-list"><li>Consultoría profesional especializada entre noviembre de 2016 y diciembre de 2017.</li></ul>
+                <p class="experience-privacy">El nombre comercial se omite por minimización de datos y porque no es necesario para demostrar la naturaleza de la experiencia.</p>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="organizacional gestion">
+              <summary>
+                <span class="experience-date">Ene. 2015 – dic. 2017</span>
+                <span><span class="experience-period-title">IPS privada del sector salud</span><span class="experience-period-sub">Psicología y consultoría especializada · 12 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>12 h/sem</span><span>Psicólogo</span><span>Consultor ad hoc</span><span>Profesional especializado</span></div>
+                <ul class="experience-activity-list"><li>Ejercicio profesional como psicólogo y consultor especializado en una institución prestadora de servicios de salud.</li></ul>
+                <p class="experience-privacy">Se omite la razón social de la IPS por minimización de datos, manteniendo periodo, dedicación y naturaleza del rol.</p>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="docencia">
+              <summary>
+                <span class="experience-date">Oct. – nov. 2017</span>
+                <span><span class="experience-period-title">Corporación Universitaria Minuto de Dios · UNIMINUTO</span><span class="experience-period-sub">Docencia de pregrado · 48 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>48 h/sem</span><span>Docencia</span><span>Pregrado</span></div>
+                <ul class="experience-activity-list">
+                  <li>Docencia en Desarrollo Psicoafectivo, Psicología del Desarrollo — Infancia y Adolescencia, Diferencias Individuales y Procesos Psicológicos Básicos.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="gestion docencia organizacional">
+              <summary>
+                <span class="experience-date">Ago. – nov. 2017</span>
+                <span><span class="experience-period-title">Universidad Simón Bolívar · sede Cúcuta</span><span class="experience-period-sub">Coordinación del área organizacional y docencia · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Coordinación</span><span>Docencia</span><span>Área organizacional</span></div>
+                <ul class="experience-activity-list">
+                  <li>Coordinación del área organizacional.</li>
+                  <li>Docencia en Introducción a la Psicología Organizacional, Comportamiento Humano en el Trabajo y una electiva profesional clínica.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="organizacional gestion">
+              <summary>
+                <span class="experience-date">Jun. 2014 – jul. 2017</span>
+                <span><span class="experience-period-title">Centro privado de rehabilitación y seguridad y salud en el trabajo</span><span class="experience-period-sub">Psicología y consultoría especializada · 6 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>6 h/sem</span><span>Psicólogo</span><span>Consultor ad hoc</span><span>SST</span></div>
+                <ul class="experience-activity-list">
+                  <li>El periodo institucional se registra entre junio de 2014 y julio de 2017.</li>
+                  <li>Las funciones explícitas de psicólogo y profesional especializado aparecen consignadas para el subperiodo junio de 2014 a julio de 2015.</li>
+                </ul>
+                <p class="experience-privacy">Se omite la razón social privada por minimización de datos.</p>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="gestion docencia organizacional">
+              <summary>
+                <span class="experience-date">Feb. – jun. 2017</span>
+                <span><span class="experience-period-title">Universidad Simón Bolívar · sede Cúcuta</span><span class="experience-period-sub">Coordinación del área organizacional y docencia · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Coordinación</span><span>Docencia</span><span>Área organizacional</span></div>
+                <ul class="experience-activity-list">
+                  <li>Coordinación del área organizacional.</li>
+                  <li>Docencia en Psicología Organizacional, Introducción a la Psicología Organizacional, Comportamiento Humano en el Trabajo y una electiva profesional clínica.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="docencia">
+              <summary>
+                <span class="experience-date">Jul. – nov. 2016</span>
+                <span><span class="experience-period-title">Universidad Simón Bolívar · sede Cúcuta</span><span class="experience-period-sub">Docencia de pregrado · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Docencia</span><span>Psicología clínica y social</span></div>
+                <ul class="experience-activity-list">
+                  <li>Docencia en Patología y Rehabilitación Social, Psicopatología I, Psicología Clínica y de la Salud, Psicología de la Personalidad y una electiva profesional clínica.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="docencia">
+              <summary>
+                <span class="experience-date">Feb. – jun. 2016</span>
+                <span><span class="experience-period-title">Universidad Simón Bolívar · sede Cúcuta</span><span class="experience-period-sub">Docencia de pregrado · 20 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>20 h/sem</span><span>Docencia</span><span>Electivas profesionales</span></div>
+                <ul class="experience-activity-list"><li>Docencia en electivas profesionales y electivas profesionales clínicas I y II.</li></ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="gestion docencia investigacion">
+              <summary>
+                <span class="experience-date">Ene. – dic. 2015</span>
+                <span><span class="experience-period-title">Fundación de Estudios Superiores Comfanorte</span><span class="experience-period-sub">Bienestar institucional y docencia · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Bienestar institucional</span><span>Docencia</span><span>Metodología de investigación</span></div>
+                <ul class="experience-activity-list">
+                  <li>Docente de apoyo a bienestar institucional.</li>
+                  <li>Docencia de Metodología de la Investigación durante el segundo semestre de 2015.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="gestion">
+              <summary>
+                <span class="experience-date">Ene. – ago. 2014</span>
+                <span><span class="experience-period-title">Alcaldía Municipal de Cúcuta</span><span class="experience-period-sub">Profesional especializado · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Sector público</span><span>Profesional especializado</span></div>
+                <ul class="experience-activity-list"><li>Ejercicio como profesional especializado entre enero y agosto de 2014.</li></ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="gestion">
+              <summary>
+                <span class="experience-date">Oct. – dic. 2013</span>
+                <span><span class="experience-period-title">Alcaldía Municipal de Cúcuta</span><span class="experience-period-sub">Profesional especializado · 40 horas semanales</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>40 h/sem</span><span>Sector público</span><span>Profesional especializado</span></div>
+                <ul class="experience-activity-list"><li>Ejercicio como profesional especializado entre octubre y diciembre de 2013.</li></ul>
+              </div>
+            </details>
+
+            <details class="experience-period exp-item" data-exp-cat="gestion organizacional">
+              <summary>
+                <span class="experience-date">May. – sep. 2013</span>
+                <span><span class="experience-period-title">Universidad Francisco de Paula Santander</span><span class="experience-period-sub">Orientación, asesoría psicológica y coordinación</span></span>
+              </summary>
+              <div class="experience-period-body">
+                <div class="experience-meta"><span>2013</span><span>Coordinación</span><span>Psicología</span><span>Orientación</span></div>
+                <ul class="experience-activity-list">
+                  <li>Coordinación de la Unidad de Orientación y Asesoría Psicológica.</li>
+                  <li>Ejercicio profesional como psicólogo.</li>
+                  <li>La fuente no consigna número de horas semanales para este periodo.</li>
+                </ul>
+              </div>
+            </details>
           </div>
         </div>
 
-        <!-- 3. Docencia y Posgrados -->
-        <div class="exec-card border-left-navy exp-item visual-panel visual-panel--experience" data-exp-cat="docencia">
-          <div>
-            <div class="card-top-meta">
-              <span class="badge-solid">3. Docencia y Posgrados</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--brand-accent);">Maestría y Doctorado</span>
+        <div class="experience-block">
+          <div class="experience-block-head">
+            <div>
+              <span class="eyebrow">Docencia, extensión y transferencia</span>
+              <h3 class="experience-block-title">Cursos y actividades impartidas</h3>
+              <p class="experience-block-desc">El CvLAC registra 14 entradas de cursos de corta duración dictados. Tras aplicar la política de exclusión autoritativa vigente quedan 13 registros elegibles; dos pares duplicados por título y roles complementarios se agrupan editorialmente, dando 11 actividades únicas.</p>
             </div>
-            <h3 class="card-title">Profesor Universitario, Catedrático de Posgrado y Director de Tesis</h3>
-            <p class="card-subtitle">Instituciones de Educación Superior</p>
-            <p class="card-text">
-              Docencia en pregrado, especialización, maestría y doctorado en investigación, bioestadística, psicometría y comportamiento organizacional. Incluye dirección metodológica, evaluación académica y revisión multinorma de trabajos de posgrado.
-            </p>
           </div>
-          <div class="card-footer">
-            <span>Formación Doctoral y de Maestría</span>
-            <strong style="color: var(--ink-primary);">Trayectoria Consolidada</strong>
-          </div>
-        </div>
 
-        <!-- 4. Organizacional y SST (Sin números de licencia) -->
-        <div class="exec-card border-left-blue exp-item visual-panel visual-panel--experience" data-exp-cat="organizacional">
-          <div>
-            <div class="card-top-meta">
-              <span class="badge-soft">4. Organizacional y SST</span>
-              <span style="font-size: 12px; font-weight: 700; color: var(--ink-muted);">Sector Público y Privado</span>
+          <details class="experience-transfer" open>
+            <summary><span>Ver 11 actividades de transferencia</span><span class="badge-neutral">13 registros elegibles · 11 actividades únicas</span></summary>
+            <div class="experience-transfer-grid">
+              <article class="transfer-item exp-item" data-exp-cat="docencia investigacion gestion">
+                <span class="transfer-year">2024</span><span class="transfer-title">Simposio Innovación Educativa para la Prevención</span><span class="transfer-meta">Organizador · Universidad Simón Bolívar, sede Cúcuta</span>
+              </article>
+              <article class="transfer-item exp-item" data-exp-cat="docencia datos investigacion">
+                <span class="transfer-year">2024</span><span class="transfer-title">Taller práctico de inteligencia artificial</span><span class="transfer-meta">Docente y organizador · dos registros consolidados · Universidad Simón Bolívar, sede Cúcuta</span>
+              </article>
+              <article class="transfer-item exp-item" data-exp-cat="docencia datos investigacion">
+                <span class="transfer-year">2024</span><span class="transfer-title">Conferencia: análisis de información cuantitativa</span><span class="transfer-meta">Docente y organizador · dos registros consolidados · Universidad Simón Bolívar, sede Cúcuta</span>
+              </article>
+              <article class="transfer-item exp-item" data-exp-cat="investigacion datos docencia">
+                <span class="transfer-year">2020</span><span class="transfer-title">Metodología GRADE</span><span class="transfer-meta">Organizador · Universidad de Pamplona</span>
+              </article>
+              <article class="transfer-item exp-item" data-exp-cat="investigacion docencia">
+                <span class="transfer-year">2020</span><span class="transfer-title">Normas APA</span><span class="transfer-meta">Organizador · UNIMINUTO</span>
+              </article>
+              <article class="transfer-item exp-item" data-exp-cat="organizacional docencia">
+                <span class="transfer-year">2019</span><span class="transfer-title">La ecuación del trabajo: una forma de equilibrar la carga laboral</span><span class="transfer-meta">Organizador · UNIMINUTO</span>
+              </article>
+              <article class="transfer-item exp-item" data-exp-cat="organizacional docencia">
+                <span class="transfer-year">2019</span><span class="transfer-title">Inteligencia emocional en las organizaciones</span><span class="transfer-meta">Organizador · UNIMINUTO</span>
+              </article>
+              <article class="transfer-item exp-item" data-exp-cat="organizacional gestion docencia">
+                <span class="transfer-year">2018</span><span class="transfer-title">Gestión de las organizaciones</span><span class="transfer-meta">Docente · UNIMINUTO</span>
+              </article>
+              <article class="transfer-item exp-item" data-exp-cat="organizacional docencia">
+                <span class="transfer-year">2018</span><span class="transfer-title">Seminario de actualización en salud laboral</span><span class="transfer-meta">Organizador · Universidad Simón Bolívar, sede Cúcuta</span>
+              </article>
+              <article class="transfer-item exp-item" data-exp-cat="datos investigacion docencia">
+                <span class="transfer-year">2018</span><span class="transfer-title">Diseño, construcción, validación y aplicación de instrumentos de medición</span><span class="transfer-meta">Docente · UNIMINUTO</span>
+              </article>
+              <article class="transfer-item exp-item" data-exp-cat="organizacional docencia">
+                <span class="transfer-year">2017</span><span class="transfer-title">Atención y prevención en desastres</span><span class="transfer-meta">Organizador · Universidad Simón Bolívar, sede Cúcuta</span>
+              </article>
             </div>
-            <h3 class="card-title">Consultor en Psicología Organizacional y Riesgo Psicosocial</h3>
-            <p class="card-subtitle">Clima, Cultura y Diagnóstico Presencial con Licencia SST Vigente</p>
-            <p class="card-text">
-              Intervención en clima y cultura organizacional, liderazgo, bienestar laboral y gestión del talento humano. El diagnóstico e intervención de factores de riesgo psicosocial se ofrece exclusivamente en modalidad presencial con Licencia SST vigente.
-            </p>
-          </div>
-          <div class="card-footer">
-            <span>Licencia SST Vigente</span>
-            <strong style="color: var(--ink-primary);">Modalidad Presencial</strong>
-          </div>
+          </details>
         </div>
       </div>
     </div>
@@ -3388,8 +4130,24 @@
             setPressedState(btns, this);
             var val = this.getAttribute(btnAttr);
             for (var k = 0; k < items.length; k++) {
-              var cat = items[k].getAttribute(itemAttr);
-              items[k].style.display = (val === 'all' || cat === val) ? 'flex' : 'none';
+              var cat = (items[k].getAttribute(itemAttr) || '').trim();
+              var cats = cat ? cat.split(/\s+/) : [];
+              var showItem = (val === 'all' || cats.indexOf(val) !== -1);
+              items[k].style.display = showItem ? '' : 'none';
+            }
+            if (groupId === 'exp-filters') {
+              var status = document.getElementById('exp-filter-status');
+              if (status) {
+                var labels = {
+                  all: 'el corpus completo de experiencia y transferencia',
+                  investigacion: 'experiencia relacionada con investigación',
+                  datos: 'experiencia relacionada con datos y estadística',
+                  docencia: 'experiencia relacionada con docencia',
+                  gestion: 'experiencia relacionada con gestión y coordinación',
+                  organizacional: 'experiencia relacionada con psicología organizacional y SST'
+                };
+                status.textContent = 'Mostrando ' + (labels[val] || 'la selección solicitada') + '.';
+              }
             }
           });
         }
