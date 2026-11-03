@@ -5829,6 +5829,87 @@ body.design-system-v2 .site-header .btn.btn-primary:hover,
 body.design-system-v2 .site-header .btn.btn-primary:focus-visible {background:#173F6F!important;border-color:#173F6F!important;}
 body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer > summary:hover {background:#DCE8F5!important;color:#142B49!important;}
 body.design-system-v2 main > .section:not(#inicio):not(#contacto) .portfolio-drawer__body :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) > summary:hover {background:#DCE8F5!important;color:#142B49!important;}
+/* Ajustes visuales localizados en Impacto científico, 2026-11-03. Sin cambios a datos ni controles. */
+body.design-system-v2 #metricas.section-impact {background:#CDD9EA!important;color:#142B49!important;}
+body.design-system-v2 #metricas .visual-panel--impact {
+  background:#E4ECF7!important;
+  border-color:#A8BDD7!important;
+}
+body.design-system-v2 #metricas :is(.impact-source-card,.metrics-trust,.metric-box) {
+  background:#F2F6FC!important;
+  border-color:#A8BDD7!important;
+}
+body.design-system-v2 #metricas .impact-source-card--dynamic {border-left-color:#24527F!important;}
+body.design-system-v2 #metricas .impact-source-card--curricular {
+  border-left-color:#648BB5!important;
+  background:#EAF1FA!important;
+}
+body.design-system-v2 #metricas .curricular-impact-panel {
+  border-top-color:#648BB5!important;
+  background:#FFFFFF!important;
+}
+body.design-system-v2 #metricas .impact-source-badge--curricular {
+  background:#DEE9F8!important;
+  border-color:#A8BDD7!important;
+  color:#24527F!important;
+}
+body.design-system-v2 #metricas .curricular-source-note,
+body.design-system-v2 #metricas .impact-separation-note {
+  background:#EFF4FA!important;
+  border-color:#A8BDD7!important;
+}
+body.design-system-v2 #metricas .curricular-kpi {
+  background:#F2F6FC!important;
+  border-color:#A8BDD7!important;
+}
+body.design-system-v2 #metricas .curricular-kpi:hover,
+body.design-system-v2 #metricas .curricular-kpi:focus-visible {
+  background:#E4ECF7!important;
+  border-color:#24527F!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+body.design-system-v2 #metricas .section-header .filter-group {
+  display:flex!important;
+  flex-wrap:wrap!important;
+  max-width:100%!important;
+  min-width:0!important;
+  gap:8px!important;
+  overflow:visible!important;
+}
+body.design-system-v2 #metricas .section-header .filter-btn.active {
+  background:#24527F!important;
+  border-color:#24527F!important;
+  color:#FFFFFF!important;
+}
+body.design-system-v2 #metricas .impact-source-kicker,
+body.design-system-v2 #metricas .metric-label-row,
+body.design-system-v2 #metricas .metric-desc,
+body.design-system-v2 #metricas .trend-stat-label,
+body.design-system-v2 #metricas .curricular-kpi > span:not(.curricular-kpi-value) {font-size:11.5px!important;}
+body.design-system-v2 #metricas .metric-source-token,
+body.design-system-v2 #metricas .curricular-kpi small,
+body.design-system-v2 #metricas .bars-box .bar-col span {font-size:10.5px!important;}
+body.design-system-v2 #metricas .impact-source-badge {
+  font-size:10.5px!important;
+  letter-spacing:.02em!important;
+  white-space:normal!important;
+  text-align:center;
+}
+@media(min-width:360px) and (max-width:639px) {
+  body.design-system-v2 #metricas .bars-box {grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:4px!important;padding-inline:6px!important;overflow-x:visible!important;}
+  body.design-system-v2 #metricas .bars-box .bar-col {min-width:0!important;}
+  body.design-system-v2 #metricas .bars-box .bar-col span {font-size:9px!important;letter-spacing:-.02em!important;}
+}
+@media(max-width:359px) {
+  body.design-system-v2 #metricas .bars-box {overflow-x:auto!important;grid-template-columns:repeat(7,minmax(30px,1fr))!important;gap:5px!important;}
+}
+@media(max-width:639px) {
+  body.design-system-v2 #metricas .section-header .filter-group {width:100%!important;}
+  body.design-system-v2 #metricas .section-header .filter-btn {flex:1 1 108px!important;white-space:normal!important;}
+  body.design-system-v2 #metricas #btn-m-sync {flex:1 1 100%!important;white-space:normal!important;justify-content:center!important;text-align:center!important;}
+}
+
 </style>
 </head>
 <body class="design-system-v2">
