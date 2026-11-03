@@ -6264,6 +6264,99 @@ body.design-system-v2 main > #metricas.section-impact:not(#inicio):not(#contacto
   body.design-system-v2 main > #metricas.section-impact:not(#inicio):not(#contacto) .metric-dynamic-grid {grid-template-columns:1fr!important;}
   body.design-system-v2 main > #metricas.section-impact:not(#inicio):not(#contacto) .trend-summary-grid {grid-template-columns:1fr!important;}
 }
+
+
+/* Auditoría cromática integral — 2026-11-03. Solo CSS; respeta contenidos, estructura y lógica. */
+/* La gama aprobada es azul: se neutralizan acentos verde/índigo y superficies marfil heredadas. */
+body.design-system-v2 {
+  --accent-teal:#24527F;
+  --accent-teal-soft:#DCE8F5;
+  --accent-indigo:#24527F;
+  --accent-indigo-soft:#DCE8F5;
+}
+/* Continuidad de fondo entre portada, navegación de las ocho secciones y pie. */
+body.design-system-v2 main > section.section { background-color:#CDD9EA!important; background-image:none!important; }
+body.design-system-v2 main > #inicio.section.section-hero {background:transparent!important;}
+body.design-system-v2 main > #metricas.section.section-impact {background:#CDD9EA!important;}
+body.design-system-v2 main > #contacto.section.section-contact {background:#CDD9EA!important;}
+body.design-system-v2 main > :is(#trayectoria,#complementaria,#contacto).section > .container {
+  background:#E4ECF7!important; border-color:#A8BDD7!important;
+  box-shadow:none!important;
+}
+/* Rótulos, encabezados desplegables, elementos expandidos y activos: sin retorno al verde. */
+body.design-system-v2 main > :is(#trayectoria,#complementaria,#contacto).section .section-title,
+body.design-system-v2 main > .section .section-title,
+body.design-system-v2 main > .section .card-title {color:#142B49!important;}
+body.design-system-v2 main > .section:not(#inicio) .portfolio-drawer > summary {
+  color:#142B49!important;background:#E4ECF7!important;
+}
+body.design-system-v2 main > .section:not(#inicio) .portfolio-drawer[open] > summary {
+  color:#142B49!important;border-bottom-color:#A8BDD7!important;
+}
+body.design-system-v2 main > .section:not(#inicio) .portfolio-drawer > summary:hover {
+  color:#173F6F!important;background:#DCE8F5!important;
+}
+body.design-system-v2 main > .section:not(#inicio) .portfolio-drawer > summary::after {
+  background:#DCE8F5!important;color:#24527F!important;
+}
+body.design-system-v2 main > .section:not(#inicio) .portfolio-drawer,
+body.design-system-v2 main > .section:not(#inicio) .portfolio-drawer__body :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) {
+  background:#E4ECF7!important;border-color:#A8BDD7!important;
+  box-shadow:none!important;
+}
+body.design-system-v2 main > .section:not(#inicio) .portfolio-drawer__body :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) > summary,
+body.design-system-v2 main > .section:not(#inicio) .portfolio-drawer__body .progressive-inner--filters > summary {
+  color:#173F6F!important;background:#E4ECF7!important;border-color:#A8BDD7!important;
+}
+body.design-system-v2 main > .section:not(#inicio) .portfolio-drawer__body :is(.progressive-inner,.progressive-subsection,.progressive-year,.progressive-batch) > summary:hover {
+  background:#DCE8F5!important;color:#173F6F!important;
+}
+/* Inicio: distintivos y tarjetas de los bloques de credenciales/sitios externos. */
+body.design-system-v2 #inicio :is(.mini-pillar,.proof-item,.reputation-hub,.profile-db-card,.progressive-inner,.visual-panel--hero) {
+  background:#E4ECF7!important;border-color:#A8BDD7!important;box-shadow:none!important;
+}
+body.design-system-v2 #inicio :is(.mini-icon,.db-icon) {
+  background:#DCE8F5!important;border-color:#A8BDD7!important;color:#24527F!important;
+}
+body.design-system-v2 #inicio :is(.hero-specialties-label,.proof-kicker,.hero-identity-role) {color:#24527F!important;}
+body.design-system-v2 #inicio :is(.hero-chip,.hero-formation span) {
+  color:#173F6F!important;background:#DCE8F5!important;border-color:#A8BDD7!important;
+}
+body.design-system-v2 #inicio :is(.proof-value,.hero-identity-name) {color:#142B49!important;}
+/* Experiencia y producción técnica: fichas, enlaces de índice y microetiquetas sin turquesa. */
+body.design-system-v2 #experiencia .experience-index {background:#E4ECF7!important;border-color:#A8BDD7!important;}
+body.design-system-v2 #experiencia .experience-index__links a {
+  color:#173F6F!important;background:#F2F6FC!important;border-color:#A8BDD7!important;
+}
+body.design-system-v2 #experiencia .experience-index__links a:hover {background:#DCE8F5!important;}
+body.design-system-v2 #experiencia :is(.technical-integrity-note,.technical-badge,.technical-capability > span,.technical-card-meta span:first-child) {
+  color:#173F6F!important;background:#DCE8F5!important;border-color:#A8BDD7!important;
+}
+body.design-system-v2 #experiencia :is(.consulting-card > span,.technical-card-foot a,.technical-card-meta a) {color:#24527F!important;}
+body.design-system-v2 #experiencia .technical-integrity-note {border-left-color:#24527F!important;}
+/* Formación: elimina títulos de la gama verde e índigo anteriores. */
+body.design-system-v2 #trayectoria :is(.card-subtitle,.form-item .card-subtitle) {color:#24527F!important;}
+body.design-system-v2 #trayectoria :is(.academic-overview-item,.grid-3 > .exec-card),
+body.design-system-v2 #complementaria :is(.learning-summary > div,.comp-summary-grid > .exec-card,.comp-catalog) {
+  background:#F2F6FC!important;border-color:#A8BDD7!important;
+}
+/* Contacto: no conservar marfil ni bordes verdes en tarjeta y formulario. */
+body.design-system-v2 #contacto :is(.contact-form-card,.contact-reason-card) {
+  background:#F2F6FC!important;border-color:#A8BDD7!important;box-shadow:none!important;
+}
+body.design-system-v2 #contacto :is(.form-control,input,textarea,select) {
+  background:#EFF4FA!important;color:#142B49!important;border-color:#92ABC9!important;
+}
+/* Superficies compartidas y estados de foco/selección. Las alertas mantienen su significado semántico. */
+body.design-system-v2 :is(.badge-soft,.pub-year-badge,.venue-chip) {border-color:#A8BDD7!important;}
+body.design-system-v2 main > .section :is(.filter-btn.active,.btn-primary) {
+  background:#24527F!important;border-color:#24527F!important;color:#F8FBFF!important;
+}
+body.design-system-v2 main > .section :is(.filter-btn.active,.btn-primary):hover {
+  background:#173F6F!important;border-color:#173F6F!important;color:#FFFFFF!important;
+}
+body.design-system-v2 :is(a,button,summary,input,select,textarea):focus-visible {outline-color:#3974B1!important;}
+
 </style>
 </head>
 <body class="design-system-v2">
