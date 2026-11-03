@@ -4286,6 +4286,397 @@
       .technical-crosslink .btn { width: 100%; }
     }
 
+
+    /* PARTE 12 — impacto científico, indicadores y evidencia cuantitativa */
+    .design-system-v2 .impact-source-legend {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 18px 0 20px;
+    }
+
+    .design-system-v2 .impact-source-card {
+      min-width: 0;
+      padding: 15px 16px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 14px;
+      background: var(--bg-elevated);
+    }
+
+    .design-system-v2 .impact-source-card--dynamic {
+      border-left: 4px solid var(--brand-accent);
+    }
+
+    .design-system-v2 .impact-source-card--curricular {
+      border-left: 4px solid var(--accent-teal);
+      background: #f4fbf9;
+    }
+
+    .design-system-v2 .impact-source-kicker {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    .design-system-v2 .impact-source-card strong {
+      display: block;
+      color: var(--ink-primary);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .design-system-v2 .impact-source-card p {
+      margin-top: 5px;
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.55;
+    }
+
+    .design-system-v2 .impact-panel {
+      padding: clamp(18px, 2.5vw, 26px);
+      border: 1px solid var(--border-neutral);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .design-system-v2 .impact-panel--dynamic {
+      border-top: 4px solid var(--brand-accent);
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    }
+
+    .design-system-v2 .curricular-impact-panel {
+      border-top: 4px solid var(--accent-teal);
+      background: linear-gradient(180deg, #ffffff 0%, #f7fcfb 100%);
+    }
+
+    .design-system-v2 .impact-panel-heading,
+    .design-system-v2 .annual-trend-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .design-system-v2 .impact-panel-heading > div,
+    .design-system-v2 .annual-trend-heading > div {
+      min-width: 0;
+      max-width: 780px;
+    }
+
+    .design-system-v2 .impact-panel-heading h3,
+    .design-system-v2 .annual-trend-heading h4 {
+      margin: 2px 0 5px;
+      color: var(--ink-primary);
+      line-height: 1.25;
+      letter-spacing: -.02em;
+    }
+
+    .design-system-v2 .impact-panel-heading h3 {
+      font-size: clamp(19px, 2vw, 24px);
+    }
+
+    .design-system-v2 .annual-trend-heading h4 {
+      font-size: 17px;
+    }
+
+    .design-system-v2 .impact-panel-heading p,
+    .design-system-v2 .annual-trend-heading p {
+      color: var(--ink-secondary);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .design-system-v2 .impact-source-badge {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: 9.5px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      white-space: nowrap;
+    }
+
+    .design-system-v2 .impact-source-badge--dynamic {
+      border: 1px solid var(--brand-accent-border);
+      background: var(--brand-accent-soft);
+      color: var(--brand-accent-strong);
+    }
+
+    .design-system-v2 .impact-source-badge--curricular {
+      border: 1px solid #a7d9d2;
+      background: var(--accent-teal-soft);
+      color: var(--accent-teal);
+    }
+
+    .design-system-v2 .metrics-status-box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 10px 12px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 11px;
+      background: var(--bg-canvas);
+      font-size: 11.5px;
+      color: var(--ink-secondary);
+    }
+
+    .design-system-v2 .metrics-status-box #metrics-source-link {
+      font-weight: 800;
+      color: var(--brand-accent);
+    }
+
+    .design-system-v2 .metrics-mode-note {
+      margin-bottom: 14px;
+      padding: 10px 12px;
+      border-left: 3px solid var(--brand-accent);
+      border-radius: 0 9px 9px 0;
+      background: var(--brand-accent-soft);
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.55;
+    }
+
+    .design-system-v2 .metric-dynamic-grid {
+      margin-bottom: 20px;
+    }
+
+    .design-system-v2 .metric-label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+      color: var(--ink-muted);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: .025em;
+    }
+
+    .design-system-v2 .metric-source-token {
+      color: var(--brand-accent);
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .055em;
+    }
+
+    .design-system-v2 .metric-desc {
+      color: var(--ink-muted);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .design-system-v2 .annual-trend-panel {
+      padding-top: 20px;
+      border-top: 1px solid var(--border-neutral);
+    }
+
+    .design-system-v2 .trend-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .design-system-v2 .trend-stat {
+      min-width: 0;
+      padding: 12px 13px;
+      border: 1px solid #d9e1ec;
+      border-radius: 12px;
+      background: #f8fafc;
+    }
+
+    .design-system-v2 .trend-stat-value {
+      display: block;
+      color: var(--ink-primary);
+      font-size: clamp(20px, 2vw, 27px);
+      font-weight: 900;
+      line-height: 1.05;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -.03em;
+    }
+
+    .design-system-v2 .trend-stat-label {
+      display: block;
+      margin-top: 5px;
+      color: var(--ink-muted);
+      font-size: 10.5px;
+      line-height: 1.4;
+    }
+
+    .design-system-v2 .trend-chart-layout {
+      display: grid;
+      grid-template-columns: minmax(190px, .8fr) minmax(0, 1.2fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .design-system-v2 .trend-chart-copy {
+      padding: 12px 0;
+    }
+
+    .design-system-v2 .trend-chart-copy p {
+      color: var(--ink-secondary);
+      font-size: 12.5px;
+      line-height: 1.65;
+    }
+
+    .design-system-v2 .bars-box .bar-col span {
+      font-size: 9.5px;
+      font-weight: 800;
+      color: var(--ink-muted);
+    }
+
+    .design-system-v2 .impact-method-note {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--border-neutral);
+      border-radius: 10px;
+      background: #f8fafc;
+      color: var(--ink-muted);
+      font-size: 10.8px;
+      line-height: 1.55;
+    }
+
+    .design-system-v2 .impact-separation-note {
+      margin: 18px 0;
+      padding: 13px 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 13px;
+      background: #f8fafc;
+      color: var(--ink-secondary);
+      font-size: 11.5px;
+      line-height: 1.6;
+    }
+
+    .design-system-v2 .impact-separation-note strong {
+      color: var(--ink-primary);
+    }
+
+    .design-system-v2 .curricular-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .design-system-v2 .curricular-kpi {
+      min-width: 0;
+      min-height: 176px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+      border: 1px solid #cfe2de;
+      border-radius: 14px;
+      background: #fff;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .design-system-v2 .curricular-kpi:hover,
+    .design-system-v2 .curricular-kpi:focus-visible {
+      border-color: var(--accent-teal);
+      box-shadow: 0 14px 28px -24px rgba(15,118,110,.7);
+      transform: translateY(-1px);
+    }
+
+    .design-system-v2 .curricular-kpi-value {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--accent-teal);
+      font-size: clamp(30px, 3vw, 40px);
+      font-weight: 900;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -.045em;
+    }
+
+    .design-system-v2 .curricular-kpi strong {
+      color: var(--ink-primary);
+      font-size: 12.5px;
+      line-height: 1.4;
+    }
+
+    .design-system-v2 .curricular-kpi > span:not(.curricular-kpi-value) {
+      margin-top: 6px;
+      color: var(--ink-secondary);
+      font-size: 10.8px;
+      line-height: 1.5;
+    }
+
+    .design-system-v2 .curricular-kpi small {
+      margin-top: auto;
+      padding-top: 10px;
+      color: var(--ink-muted);
+      font-size: 9.8px;
+      line-height: 1.45;
+    }
+
+    .design-system-v2 .curricular-source-note {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 16px;
+      padding: 13px 14px;
+      border: 1px solid #cfe2de;
+      border-radius: 12px;
+      background: #f4fbf9;
+      color: var(--ink-secondary);
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .design-system-v2 .curricular-source-note strong {
+      color: var(--ink-primary);
+    }
+
+    @media (max-width: 1023px) {
+      .design-system-v2 .curricular-kpi-grid,
+      .design-system-v2 .trend-summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 899px) {
+      .design-system-v2 .impact-source-legend,
+      .design-system-v2 .trend-chart-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .design-system-v2 .impact-panel-heading,
+      .design-system-v2 .annual-trend-heading,
+      .design-system-v2 .curricular-source-note {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 639px) {
+      .design-system-v2 .curricular-kpi-grid,
+      .design-system-v2 .trend-summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .design-system-v2 .curricular-kpi {
+        min-height: 0;
+      }
+
+      .design-system-v2 .impact-panel {
+        padding: 16px;
+        border-radius: 15px;
+      }
+    }
+
 </style>
 </head>
 <body class="design-system-v2">
@@ -5807,18 +6198,18 @@
     </div>
   </section>
 
-  <!-- 3. IMPACTO CIENTÍFICO Y PRODUCCIÓN ACADÉMICA (DATOS DINÁMICOS OPENALEX) -->
+  <!-- 3. IMPACTO CIENTÍFICO, INDICADORES Y EVIDENCIA CUANTITATIVA -->
   <section id="metricas" class="section section-impact" aria-labelledby="titulo-metricas">
     <div class="container">
       <div class="exec-card visual-panel visual-panel--impact">
         <div class="section-header section-heading-block" style="margin-bottom: 12px; padding-bottom: 18px; border-bottom: 1px solid var(--border-neutral);">
           <div>
-            <span class="eyebrow">Impacto científico · fuente OpenAlex</span>
-            <h2 id="titulo-metricas" class="section-title">Impacto Científico y Producción Académica</h2>
-            <p class="metrics-intro">Indicadores bibliométricos consultados automáticamente mediante el ORCID del investigador. La interfaz distingue métricas históricas de la ventana móvil de cinco años y evita estimar valores que la fuente no publica.</p>
+            <span class="eyebrow">Impacto científico · fuentes diferenciadas</span>
+            <h2 id="titulo-metricas" class="section-title">Impacto Científico, Indicadores y Evidencia Cuantitativa</h2>
+            <p class="metrics-intro">La sección separa dos capas de evidencia: bibliometría dinámica consultada en OpenAlex mediante ORCID y conteos curriculares estáticos derivados del CvLAC y del corpus ya reconciliado en este portafolio. Las dos capas se documentan por fuente y no se suman ni se comparan entre sí.</p>
           </div>
 
-          <div class="filter-group">
+          <div class="filter-group" aria-label="Ventana de métricas bibliométricas">
             <button type="button" id="btn-m-total" class="filter-btn active">Histórico Total</button>
             <button type="button" id="btn-m-recent" class="filter-btn">Últimos 5 Años</button>
             <button type="button" id="btn-m-sync" class="btn btn-outline" style="padding: 7px 13px; font-size: 11px;">
@@ -5827,79 +6218,215 @@
           </div>
         </div>
 
-        <div class="metrics-trust" aria-label="Transparencia de la fuente">
-          <span><strong>Fuente:</strong> OpenAlex</span>
-          <span><strong>Identificador:</strong> ORCID 0000-0003-2169-3208</span>
-          <span><strong>Frecuencia:</strong> consulta al cargar y reintento cada 15 min</span>
-        </div>
-
-        <div id="metrics-status" role="status" aria-live="polite" aria-atomic="true" aria-busy="true" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 18px; padding: 9px 12px; border: 1px solid var(--border-neutral); border-radius: 10px; background: var(--bg-canvas); font-size: 11.5px; color: var(--ink-secondary);">
-          <span id="metrics-status-text">Consultando OpenAlex mediante ORCID...</span>
-          <a id="metrics-source-link" href="https://orcid.org/0000-0003-2169-3208" target="_blank" rel="noopener noreferrer" style="font-weight: 800; color: var(--brand-accent);">Fuente verificable &nearr;</a>
-        </div>
-
-        <p id="metrics-mode-note" style="font-size: 11.5px; color: var(--ink-muted); margin-bottom: 14px;">
-          Histórico total: métricas globales del perfil OpenAlex asociado al ORCID 0000-0003-2169-3208.
-        </p>
-
-        <div class="grid-4" style="margin-bottom: 22px;">
-          <div class="metric-box">
-            <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: var(--ink-muted); margin-bottom: 6px;">
-              <span>CITAS ACUMULADAS</span>
-              <span style="color: var(--brand-accent); font-weight: 800;">AUTO</span>
-            </div>
-            <div class="metric-val"><span id="val-cit">—</span></div>
-            <div class="progress-track"><div id="bar-cit" class="progress-fill" style="width: 0%;"></div></div>
-            <p id="desc-cit" style="font-size: 11px; color: var(--ink-muted);">Consultando fuente bibliométrica</p>
+        <div class="impact-source-legend" aria-label="Fuentes de los indicadores">
+          <div class="impact-source-card impact-source-card--dynamic">
+            <span class="impact-source-kicker">Bibliometría dinámica</span>
+            <strong>OpenAlex · ORCID 0000-0003-2169-3208</strong>
+            <p>Citas, h-index, i10-index, obras y serie anual. Se consultan al cargar la página y se reintentan cada 15 minutos.</p>
           </div>
-
-          <div class="metric-box">
-            <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: var(--ink-muted); margin-bottom: 6px;">
-              <span>ÍNDICE H</span>
-              <span style="color: var(--brand-accent); font-weight: 800;">H</span>
-            </div>
-            <div class="metric-val" id="val-h">—</div>
-            <div class="progress-track"><div id="bar-h" class="progress-fill" style="width: 0%; background-color: var(--brand-primary);"></div></div>
-            <p id="desc-h" style="font-size: 11px; color: var(--ink-muted);">Consultando fuente bibliométrica</p>
-          </div>
-
-          <div class="metric-box">
-            <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: var(--ink-muted); margin-bottom: 6px;">
-              <span>ÍNDICE i10</span>
-              <span style="color: var(--brand-accent); font-weight: 800;">i10</span>
-            </div>
-            <div class="metric-val" id="val-i10">—</div>
-            <div class="progress-track"><div id="bar-i10" class="progress-fill" style="width: 0%;"></div></div>
-            <p id="desc-i10" style="font-size: 11px; color: var(--ink-muted);">Consultando fuente bibliométrica</p>
-          </div>
-
-          <div class="metric-box">
-            <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: var(--ink-muted); margin-bottom: 6px;">
-              <span>OBRAS EN OPENALEX</span>
-              <span style="color: var(--brand-accent); font-weight: 800;">OpenAlex</span>
-            </div>
-            <div class="metric-val"><span id="val-w">—</span></div>
-            <div class="progress-track"><div id="bar-w" class="progress-fill" style="width: 0%; background-color: var(--brand-primary);"></div></div>
-            <p id="desc-w" style="font-size: 11px; color: var(--ink-muted);">Consultando fuente bibliométrica</p>
+          <div class="impact-source-card impact-source-card--curricular">
+            <span class="impact-source-kicker">Evidencia curricular estática</span>
+            <strong>CvLAC · corpus depurado del portafolio</strong>
+            <p>Conteos de registros bibliográficos, técnicos, proyectos, formación, mentoría, evaluación y eventos ya verificados en las partes anteriores.</p>
           </div>
         </div>
 
-        <div class="grid-2" style="align-items: center; padding-top: 16px; border-top: 1px solid var(--border-neutral);">
-          <div>
-            <span id="citation-curve-title" class="eyebrow">Curva de Citación Anual</span>
-            <p id="bar-info" style="font-size: 13px; color: var(--ink-secondary);">
-              La serie se construirá automáticamente con los datos anuales publicados por OpenAlex.
-            </p>
+        <div class="impact-panel impact-panel--dynamic" aria-labelledby="impact-dynamic-title">
+          <div class="impact-panel-heading">
+            <div>
+              <span class="record-kicker">Datos bibliométricos automáticos</span>
+              <h3 id="impact-dynamic-title">OpenAlex: histórico, ventana móvil y tendencia anual</h3>
+              <p>Los controles de período afectan únicamente esta capa bibliométrica. Cuando OpenAlex no publica un indicador para la ventana seleccionada, se muestra <strong>N/D</strong> en lugar de estimarlo.</p>
+            </div>
+            <span class="impact-source-badge impact-source-badge--dynamic">DINÁMICO · OPENALEX</span>
           </div>
 
-          <div class="bars-box" role="group" aria-label="Citas anuales según OpenAlex">
-            <button type="button" class="bar-col" data-y="" data-c="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span style="font-size: 10px; font-weight: 700; color: var(--ink-muted);">—</span></button>
-            <button type="button" class="bar-col" data-y="" data-c="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span style="font-size: 10px; font-weight: 700; color: var(--ink-muted);">—</span></button>
-            <button type="button" class="bar-col" data-y="" data-c="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span style="font-size: 10px; font-weight: 700; color: var(--ink-muted);">—</span></button>
-            <button type="button" class="bar-col" data-y="" data-c="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span style="font-size: 10px; font-weight: 700; color: var(--ink-muted);">—</span></button>
-            <button type="button" class="bar-col" data-y="" data-c="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span style="font-size: 10px; font-weight: 700; color: var(--ink-muted);">—</span></button>
-            <button type="button" class="bar-col" data-y="" data-c="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span style="font-size: 10px; font-weight: 700; color: var(--ink-muted);">—</span></button>
-            <button type="button" class="bar-col" data-y="" data-c="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span style="font-size: 10px; font-weight: 800; color: var(--brand-accent);">—</span></button>
+          <div class="metrics-trust" aria-label="Transparencia de la fuente bibliométrica">
+            <span><strong>Fuente:</strong> OpenAlex</span>
+            <span><strong>Identificador:</strong> ORCID 0000-0003-2169-3208</span>
+            <span><strong>Frecuencia:</strong> consulta al cargar y reintento cada 15 min</span>
+            <span><strong>Política:</strong> sin valores bibliométricos simulados</span>
+          </div>
+
+          <div id="metrics-status" role="status" aria-live="polite" aria-atomic="true" aria-busy="true" class="metrics-status-box">
+            <span id="metrics-status-text">Consultando OpenAlex mediante ORCID...</span>
+            <a id="metrics-source-link" href="https://orcid.org/0000-0003-2169-3208" target="_blank" rel="noopener noreferrer">Fuente verificable &nearr;</a>
+          </div>
+
+          <p id="metrics-mode-note" class="metrics-mode-note">
+            Histórico total: métricas globales del perfil OpenAlex asociado al ORCID 0000-0003-2169-3208.
+          </p>
+
+          <div class="grid-4 metric-dynamic-grid">
+            <div class="metric-box">
+              <div class="metric-label-row">
+                <span>CITAS ACUMULADAS</span>
+                <span class="metric-source-token">OPENALEX</span>
+              </div>
+              <div class="metric-val"><span id="val-cit">—</span></div>
+              <div class="progress-track" aria-hidden="true"><div id="bar-cit" class="progress-fill" style="width: 0%;"></div></div>
+              <p id="desc-cit" class="metric-desc">Consultando fuente bibliométrica</p>
+            </div>
+
+            <div class="metric-box">
+              <div class="metric-label-row">
+                <span>ÍNDICE H</span>
+                <span class="metric-source-token">OPENALEX</span>
+              </div>
+              <div class="metric-val" id="val-h">—</div>
+              <div class="progress-track" aria-hidden="true"><div id="bar-h" class="progress-fill" style="width: 0%; background-color: var(--brand-primary);"></div></div>
+              <p id="desc-h" class="metric-desc">Consultando fuente bibliométrica</p>
+            </div>
+
+            <div class="metric-box">
+              <div class="metric-label-row">
+                <span>ÍNDICE i10</span>
+                <span class="metric-source-token">OPENALEX</span>
+              </div>
+              <div class="metric-val" id="val-i10">—</div>
+              <div class="progress-track" aria-hidden="true"><div id="bar-i10" class="progress-fill" style="width: 0%;"></div></div>
+              <p id="desc-i10" class="metric-desc">Consultando fuente bibliométrica</p>
+            </div>
+
+            <div class="metric-box">
+              <div class="metric-label-row">
+                <span>OBRAS EN OPENALEX</span>
+                <span class="metric-source-token">OPENALEX</span>
+              </div>
+              <div class="metric-val"><span id="val-w">—</span></div>
+              <div class="progress-track" aria-hidden="true"><div id="bar-w" class="progress-fill" style="width: 0%; background-color: var(--brand-primary);"></div></div>
+              <p id="desc-w" class="metric-desc">Consultando fuente bibliométrica</p>
+            </div>
+          </div>
+
+          <div class="annual-trend-panel" aria-labelledby="citation-curve-title">
+            <div class="annual-trend-heading">
+              <div>
+                <span class="record-kicker">Serie temporal automática</span>
+                <h4 id="citation-curve-title">Tendencia anual de citas</h4>
+                <p>Ventana móvil de siete años construida exclusivamente con <code>counts_by_year</code> de OpenAlex.</p>
+              </div>
+              <span class="impact-source-badge impact-source-badge--dynamic">OPENALEX · COUNTS_BY_YEAR</span>
+            </div>
+
+            <div class="trend-summary-grid" aria-label="Resumen de la ventana anual mostrada">
+              <div class="trend-stat">
+                <span id="trend-window-citations" class="trend-stat-value">—</span>
+                <span class="trend-stat-label">citas en los 7 años mostrados</span>
+              </div>
+              <div class="trend-stat">
+                <span id="trend-window-works" class="trend-stat-value">—</span>
+                <span class="trend-stat-label">obras publicadas en esa ventana</span>
+              </div>
+              <div class="trend-stat">
+                <span id="trend-peak-year" class="trend-stat-value">—</span>
+                <span class="trend-stat-label">año con más citas en la ventana</span>
+              </div>
+              <div class="trend-stat">
+                <span id="trend-latest-citations" class="trend-stat-value">—</span>
+                <span class="trend-stat-label">citas del año más reciente mostrado</span>
+              </div>
+            </div>
+
+            <div class="trend-chart-layout">
+              <div class="trend-chart-copy">
+                <p id="bar-info">
+                  La serie se construirá automáticamente con los datos anuales publicados por OpenAlex. Seleccione una barra para ver citas y obras del año.
+                </p>
+              </div>
+
+              <div class="bars-box" role="group" aria-label="Citas y obras anuales según OpenAlex">
+                <button type="button" class="bar-col" data-y="" data-c="0" data-w="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span>—</span></button>
+                <button type="button" class="bar-col" data-y="" data-c="0" data-w="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span>—</span></button>
+                <button type="button" class="bar-col" data-y="" data-c="0" data-w="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span>—</span></button>
+                <button type="button" class="bar-col" data-y="" data-c="0" data-w="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span>—</span></button>
+                <button type="button" class="bar-col" data-y="" data-c="0" data-w="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span>—</span></button>
+                <button type="button" class="bar-col" data-y="" data-c="0" data-w="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span>—</span></button>
+                <button type="button" class="bar-col" data-y="" data-c="0" data-w="0" aria-label="Año sin datos"><div class="bar-visual" style="height: 8px;"></div><span>—</span></button>
+              </div>
+            </div>
+
+            <p class="impact-method-note"><strong>Lectura correcta:</strong> la altura de las barras representa citas dentro de esta serie anual. El total de obras se informa como contexto del mismo año, pero no comparte escala visual con las citas. h-index e i10-index tampoco se comparan mediante esta gráfica.</p>
+          </div>
+        </div>
+
+        <div class="impact-separation-note" role="note">
+          <strong>Dos fuentes, dos significados.</strong> OpenAlex aporta métricas bibliométricas dinámicas; CvLAC y el corpus reconciliado aportan conteos curriculares estáticos. Un registro curricular no equivale a una cita, una obra OpenAlex, un índice h o un i10, por lo que estos indicadores no se suman ni se presentan como una misma escala.
+        </div>
+
+        <div class="impact-panel curricular-impact-panel" aria-labelledby="impact-curricular-title">
+          <div class="impact-panel-heading">
+            <div>
+              <span class="record-kicker">Evidencia curricular consolidada</span>
+              <h3 id="impact-curricular-title">Amplitud documentada del portafolio</h3>
+              <p>Conteos estáticos ya verificados y reconciliados en las partes anteriores. Se expresan como registros o productos curriculares según corresponda y mantienen su trazabilidad hacia los módulos detallados del sitio.</p>
+            </div>
+            <span class="impact-source-badge impact-source-badge--curricular">ESTÁTICO · CVLAC</span>
+          </div>
+
+          <div class="curricular-kpi-grid" aria-label="Conteos curriculares verificados">
+            <a class="curricular-kpi" href="#publicaciones">
+              <span class="curricular-kpi-value">138</span>
+              <strong>registros bibliográficos</strong>
+              <span>96 artículos · 34 capítulos · 1 libro · 7 textos de divulgación</span>
+              <small>Fuente: CvLAC + 3 publicaciones destacadas previamente verificadas</small>
+            </a>
+
+            <a class="curricular-kpi" href="#produccion-tecnica">
+              <span class="curricular-kpi-value">42</span>
+              <strong>productos técnicos publicables</strong>
+              <span>6 registros de innovación · 36 informes técnicos</span>
+              <small>Fuente: CvLAC · producción técnica depurada</small>
+            </a>
+
+            <a class="curricular-kpi" href="#proyectos-investigacion">
+              <span class="curricular-kpi-value">13</span>
+              <strong>proyectos publicables</strong>
+              <span>Investigación, desarrollo, innovación y extensión CTI</span>
+              <small>Fuente: CvLAC · corpus de proyectos depurado</small>
+            </a>
+
+            <a class="curricular-kpi" href="#mentoria-evaluacion">
+              <span class="curricular-kpi-value">114</span>
+              <strong>registros de tutoría y dirección</strong>
+              <span>Pregrado, maestría/especialidad clínica y perfeccionamiento</span>
+              <small>Fuente: CvLAC · conteo de registros</small>
+            </a>
+
+            <a class="curricular-kpi" href="#mentoria-evaluacion">
+              <span class="curricular-kpi-value">18</span>
+              <strong>registros de jurado publicables</strong>
+              <span>Pregrado, maestría y doctorado</span>
+              <small>Fuente: CvLAC · conteo depurado</small>
+            </a>
+
+            <a class="curricular-kpi" href="#mentoria-evaluacion">
+              <span class="curricular-kpi-value">33</span>
+              <strong>actuaciones publicables como par evaluador</strong>
+              <span>31 evaluaciones de material científico · 2 evaluaciones de proyectos</span>
+              <small>Fuente: CvLAC · conteo depurado</small>
+            </a>
+
+            <a class="curricular-kpi" href="#transferencia-conocimiento">
+              <span class="curricular-kpi-value">14</span>
+              <strong>eventos científicos publicables</strong>
+              <span>Ponencia magistral, ponencia, organización y asistencia</span>
+              <small>Fuente: CvLAC · roles preservados según registro</small>
+            </a>
+
+            <a class="curricular-kpi" href="#complementaria">
+              <span class="curricular-kpi-value">76</span>
+              <strong>registros de formación complementaria</strong>
+              <span>Cursos cortos, extensión y otros procesos formativos · 2011–2026</span>
+              <small>Fuente: CvLAC · catálogo completo incorporado</small>
+            </a>
+          </div>
+
+          <div class="curricular-source-note">
+            <div>
+              <strong>Fuente curricular:</strong> CvLAC público del titular y corpus depurado/reconciliado ya persistido en este proyecto. Los conteos permanecen estáticos hasta una nueva revisión curricular autorizada.
+            </div>
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000010526" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Consultar CvLAC ↗</a>
           </div>
         </div>
       </div>
@@ -9360,30 +9887,65 @@
       }
 
       function renderYearBars(rows) {
-        var barCols = document.querySelectorAll('.bar-col');
+        var barCols = document.querySelectorAll('#metricas .bar-col');
         if (!barCols.length) return;
+
         var nowYear = new Date().getFullYear();
         var firstYear = nowYear - (barCols.length - 1);
-        var byYear = {};
-        for (var r = 0; r < rows.length; r++) byYear[Number(rows[r].year)] = Number(rows[r].cited_by_count) || 0;
-        var values = [];
-        for (var y = firstYear; y <= nowYear; y++) values.push(byYear[y] || 0);
-        var maxVal = Math.max.apply(null, values.concat([1]));
+        var byYearCitations = {};
+        var byYearWorks = {};
+
+        for (var r = 0; r < rows.length; r++) {
+          var rowYear = Number(rows[r].year);
+          byYearCitations[rowYear] = Number(rows[r].cited_by_count) || 0;
+          byYearWorks[rowYear] = Number(rows[r].works_count) || 0;
+        }
+
+        var citationValues = [];
+        var workValues = [];
+        for (var y = firstYear; y <= nowYear; y++) {
+          citationValues.push(byYearCitations[y] || 0);
+          workValues.push(byYearWorks[y] || 0);
+        }
+
+        var maxVal = Math.max.apply(null, citationValues.concat([1]));
+        var totalWindowCitations = citationValues.reduce(function(sum, value) { return sum + value; }, 0);
+        var totalWindowWorks = workValues.reduce(function(sum, value) { return sum + value; }, 0);
+        var peakIndex = 0;
+        for (var p = 1; p < citationValues.length; p++) {
+          if (citationValues[p] > citationValues[peakIndex]) peakIndex = p;
+        }
+        var peakYear = firstYear + peakIndex;
+        var latestCitations = citationValues[citationValues.length - 1] || 0;
 
         for (var i = 0; i < barCols.length; i++) {
           var year = firstYear + i;
-          var citations = values[i];
+          var citations = citationValues[i];
+          var works = workValues[i];
           var visual = barCols[i].querySelector('.bar-visual');
           var label = barCols[i].querySelector('span');
           var height = citations > 0 ? Math.max(10, Math.round(68 * citations / maxVal)) : 6;
+
           barCols[i].setAttribute('data-y', String(year));
           barCols[i].setAttribute('data-c', String(citations));
-          barCols[i].setAttribute('aria-label', 'Año ' + year + ': ' + formatMetricNumber(citations) + ' citas registradas por OpenAlex');
+          barCols[i].setAttribute('data-w', String(works));
+          barCols[i].setAttribute('aria-label', 'Año ' + year + ': ' + formatMetricNumber(citations) + ' citas y ' + formatMetricNumber(works) + ' obras registradas por OpenAlex');
           if (visual) visual.style.height = height + 'px';
           if (label) label.textContent = String(year);
         }
+
+        setMetricText('trend-window-citations', formatMetricNumber(totalWindowCitations));
+        setMetricText('trend-window-works', formatMetricNumber(totalWindowWorks));
+        setMetricText('trend-peak-year', maxVal > 0 ? String(peakYear) + ' · ' + formatMetricNumber(citationValues[peakIndex]) : 'N/D');
+        setMetricText('trend-latest-citations', formatMetricNumber(latestCitations));
+
         var curveTitle = document.getElementById('citation-curve-title');
-        if (curveTitle) curveTitle.textContent = 'Curva de Citación Anual (' + firstYear + '–' + nowYear + ')';
+        if (curveTitle) curveTitle.textContent = 'Tendencia anual de citas (' + firstYear + '–' + nowYear + ')';
+
+        var barInfo = document.getElementById('bar-info');
+        if (barInfo) {
+          barInfo.innerHTML = 'Ventana <strong>' + firstYear + '–' + nowYear + '</strong>: <strong>' + formatMetricNumber(totalWindowCitations) + ' citas</strong> y <strong>' + formatMetricNumber(totalWindowWorks) + ' obras</strong> registradas por OpenAlex. El año con más citas en esta ventana es <strong>' + (maxVal > 0 ? peakYear + ' (' + formatMetricNumber(citationValues[peakIndex]) + ')' : 'N/D') + '</strong>.';
+        }
       }
 
       function renderMetrics(mode) {
@@ -9509,19 +10071,18 @@
       });
 
       // Barras anuales interactivas
-      var barCols = document.querySelectorAll('.bar-col');
+      var barCols = document.querySelectorAll('#metricas .bar-col');
       var barInfo = document.getElementById('bar-info');
+
+      function announceAnnualBar(bar) {
+        if (!barInfo || !bar || !bar.getAttribute('data-y')) return;
+        barInfo.innerHTML = 'Año <strong>' + bar.getAttribute('data-y') + '</strong>: <strong>' + formatMetricNumber(bar.getAttribute('data-c')) + ' citas</strong> y <strong>' + formatMetricNumber(bar.getAttribute('data-w')) + ' obras</strong> registradas por OpenAlex. Las barras se escalan únicamente por citas.';
+      }
+
       for (var b = 0; b < barCols.length; b++) {
-        barCols[b].addEventListener('mouseenter', function() {
-          if (barInfo && this.getAttribute('data-y')) {
-            barInfo.innerHTML = 'Año <strong>' + this.getAttribute('data-y') + '</strong>: <strong>' + formatMetricNumber(this.getAttribute('data-c')) + ' citas</strong> registradas por OpenAlex.';
-          }
-        });
-        barCols[b].addEventListener('click', function() {
-          if (barInfo && this.getAttribute('data-y')) {
-            barInfo.innerHTML = 'Año <strong>' + this.getAttribute('data-y') + '</strong>: <strong>' + formatMetricNumber(this.getAttribute('data-c')) + ' citas</strong> registradas por OpenAlex.';
-          }
-        });
+        barCols[b].addEventListener('mouseenter', function() { announceAnnualBar(this); });
+        barCols[b].addEventListener('focus', function() { announceAnnualBar(this); });
+        barCols[b].addEventListener('click', function() { announceAnnualBar(this); });
       }
 
       // 4. Buscador y filtro de publicaciones
