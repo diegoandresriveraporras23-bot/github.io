@@ -5910,6 +5910,24 @@ body.design-system-v2 #metricas .impact-source-badge {
   body.design-system-v2 #metricas #btn-m-sync {flex:1 1 100%!important;white-space:normal!important;justify-content:center!important;text-align:center!important;}
 }
 
+
+/* Correcciones de auditoría visual, 2026-11-03: alcance exclusivamente CSS. */
+/* Evita que la regla antigua con :not(#inicio) restaure márgenes marfil. */
+body.design-system-v2 main > section.section:not(#inicio):not(#contacto) {
+  background:transparent!important;
+  background-image:none!important;
+}
+/* Cinco títulos largos no caben legiblemente en cinco columnas estrechas. */
+@media (min-width:1100px) {
+  body.design-system-v2 #experiencia .experience-capability-grid {
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  }
+}
+/* Evita recorte de palabras largas en tarjetas con anchura reducida. */
+body.design-system-v2 #experiencia .experience-capability-grid .card-title,
+body.design-system-v2 #publicaciones .pub-item .card-title {
+  overflow-wrap:anywhere;
+}
 </style>
 </head>
 <body class="design-system-v2">
