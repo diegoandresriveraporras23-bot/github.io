@@ -4884,7 +4884,7 @@
 
     .design-system-v2 .contact-reason-action {
       margin-top: auto;
-      min-height: 40px;
+      min-height: 44px;
       padding: 8px 11px;
       font-size: 11px;
     }
@@ -4979,6 +4979,17 @@
       .design-system-v2 .contact-reason-grid {
         grid-template-columns: 1fr;
       }
+    }
+
+
+    /* PARTE 15 — foco de teclado explícito en controles interactivos */
+    .design-system-v2 .btn:focus-visible,
+    .design-system-v2 .filter-btn:focus-visible,
+    .design-system-v2 .form-control:focus-visible,
+    .design-system-v2 summary:focus-visible {
+      outline: 3px solid #60a5fa !important;
+      outline-offset: 3px !important;
+      box-shadow: 0 0 0 3px #60a5fa !important;
     }
 
 </style>
@@ -10560,6 +10571,10 @@
       var pubYearFilter = document.getElementById('pub-year-filter');
       var pubThemeFilter = document.getElementById('pub-theme-filter');
       var pubReset = document.getElementById('pub-reset');
+
+      function normalizeText(value) {
+        return (value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      }
 
       function publicationQuery() {
         var a = pubSearch ? pubSearch.value : '';
