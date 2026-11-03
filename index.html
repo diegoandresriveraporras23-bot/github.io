@@ -6357,6 +6357,17 @@ body.design-system-v2 main > .section :is(.filter-btn.active,.btn-primary):hover
 }
 body.design-system-v2 :is(a,button,summary,input,select,textarea):focus-visible {outline-color:#3974B1!important;}
 
+
+/* Corrección específica OpenAlex — 2026-11-03: enlace azul, sin heredar acentos verdosos. */
+body.design-system-v2 main > #metricas.section-impact #metrics-status #metrics-source-link,
+body.design-system-v2 main > #metricas.section-impact #metrics-status #metrics-source-link:visited {
+  color: #1D4ED8 !important;
+}
+body.design-system-v2 main > #metricas.section-impact #metrics-status #metrics-source-link:hover,
+body.design-system-v2 main > #metricas.section-impact #metrics-status #metrics-source-link:focus-visible {
+  color: #1E40AF !important;
+}
+
 </style>
 </head>
 <body class="design-system-v2">
