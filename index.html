@@ -5375,6 +5375,60 @@
       .design-system-v2 * { scroll-behavior: auto; }
     }
 
+  
+/* BLOQUE D — Presentación progresiva; conserva íntegro el contenido original. */
+main > .section:not(#inicio) {padding-block:0 !important; background:#fff !important; border-bottom:1px solid #e2e8f0;}
+main > .section:not(#inicio) > .container {max-width:1080px;}
+.portfolio-drawer {display:block; width:100%; min-width:0; border:0; background:transparent;}
+.portfolio-drawer > summary {list-style:none; display:flex; align-items:center; justify-content:space-between; gap:18px; padding:23px 2px; cursor:pointer; font-size:clamp(19px,2.4vw,25px); font-weight:700; line-height:1.25; color:#18243b;}
+.portfolio-drawer > summary::-webkit-details-marker, .progressive-subsection > summary::-webkit-details-marker, .progressive-inner > summary::-webkit-details-marker, .progressive-year > summary::-webkit-details-marker, .progressive-batch > summary::-webkit-details-marker {display:none;}
+.portfolio-drawer > summary::after, .progressive-subsection > summary::after, .progressive-inner > summary::after, .progressive-year > summary::after, .progressive-batch > summary::after {content:'+'; flex-shrink:0; font-size:22px; font-weight:400; color:#475569;}
+.portfolio-drawer[open] > summary::after, .progressive-subsection[open] > summary::after, .progressive-inner[open] > summary::after, .progressive-year[open] > summary::after, .progressive-batch[open] > summary::after {content:'−';}
+.portfolio-drawer > summary:hover, .progressive-subsection > summary:hover, .progressive-inner > summary:hover, .progressive-year > summary:hover, .progressive-batch > summary:hover {color:#1d4ed8;}
+.portfolio-drawer__body {padding:0 0 36px; min-width:0;}
+.portfolio-drawer__body .section-header > div:first-child, .portfolio-drawer__body .contact-intro > .eyebrow, .portfolio-drawer__body .contact-intro > .section-title {position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important;}
+.portfolio-drawer__body .section-header:empty {display:none;}
+.portfolio-drawer__body .section-header {margin-bottom:14px;}
+.progressive-subsection, .progressive-inner, .progressive-year, .progressive-batch {border:1px solid #dbe2ec; border-radius:10px; background:#fff; overflow:clip; margin:0 0 10px; min-width:0;}
+.progressive-subsection > summary, .progressive-inner > summary, .progressive-year > summary, .progressive-batch > summary {cursor:pointer; list-style:none; padding:17px 20px; display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:16px; font-weight:650; line-height:1.35; color:#1b2b46;}
+.progressive-inner > summary, .progressive-year > summary {font-size:15px; padding:15px 18px;}
+.progressive-batch > summary {font-size:14px; padding:12px 15px;}
+.progressive-subsection[open] > summary, .progressive-inner[open] > summary, .progressive-year[open] > summary, .progressive-batch[open] > summary {border-bottom:1px solid #e2e8f0;}
+.progressive-subsection__body, .progressive-inner__body, .progressive-year__body, .progressive-batch__body {padding:18px; min-width:0;}
+.progressive-subsection__body > .experience-block {padding:0; margin:0; border:0;}
+.progressive-subsection__body > .experience-block > .experience-block-head {display:none;}
+.progressive-inner__body > .grid-2, .progressive-inner__body > .grid-3 {margin-top:0;}
+.progressive-year__body {padding:12px;}
+.progressive-batch__body {padding:12px;}
+.progressive-inner--hero {margin-top:17px;}
+.progressive-inner--hero .reputation-hub {margin-top:22px;}
+.progressive-inner--profile {margin-top:16px;}
+.progressive-inner--service > summary {font-size:15px;}
+.progressive-inner--service > .progressive-inner__body {padding:0;}
+.progressive-inner--service .exec-card {border:0; box-shadow:none; margin:0;}
+.progressive-inner--service .card-top-meta, .progressive-inner--service .card-title {display:none;}
+.portfolio-drawer__body .experience-index {margin:0 0 14px;}
+.portfolio-drawer__body .experience-overview, .portfolio-drawer__body .academic-overview, .portfolio-drawer__body .learning-summary, .portfolio-drawer__body .publication-summary-grid, .portfolio-drawer__body .technical-overview {box-shadow:none;}
+.portfolio-drawer__body #exp-corpus {display:block;}
+.portfolio-drawer__body #pub-list {display:block;}
+.portfolio-drawer__body .publication-catalog {display:block;}
+.progressive-year [hidden], .progressive-batch [hidden] {display:none!important;}
+.progressive-inner--filters {border:0; background:transparent; margin-bottom:14px;}
+.progressive-inner--filters > summary {font-size:13px; padding:11px 13px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px;}
+.progressive-inner--filters .progressive-inner__body {padding:13px 0 4px;}
+.portfolio-drawer__body .section-header > .progressive-inner--filters {flex-basis:100%;}
+.portfolio-drawer__body .contact-grid {grid-template-columns:1fr;}
+@media (min-width:900px) {.portfolio-drawer__body.contact-grid{grid-template-columns:5fr 7fr;} }
+@media (max-width:600px) {
+ .portfolio-drawer > summary {padding:18px 0; font-size:19px;}
+ .portfolio-drawer__body {padding-bottom:22px;}
+ .progressive-subsection > summary, .progressive-inner > summary {font-size:14px; padding:14px;}
+ .progressive-subsection__body, .progressive-inner__body {padding:12px;}
+ .progressive-year__body, .progressive-batch__body {padding:8px;}
+ .progressive-inner--service > .progressive-inner__body {padding:0;}
+ #inicio .hero-domain-grid, #inicio .hero-proof {grid-template-columns:1fr;}
+}
+
   </style>
 </head>
 <body class="design-system-v2">
@@ -11301,6 +11355,156 @@
           notify('Borrador preparado. Revisa destinatario, asunto y contenido antes de enviarlo.');
         });
       }
+
+      // BLOQUE D — Navegación por clics, sin eliminación ni duplicación de registros.
+      (function initProgressiveDisclosure() {
+        function el(tag, className, textValue) {
+          var n = document.createElement(tag);
+          if (className) n.className = className;
+          if (textValue) n.textContent = textValue;
+          return n;
+        }
+        function drawerAround(node, title, styleClass) {
+          if (!node || !node.parentNode) return null;
+          var outer = el('details', 'progressive-inner' + (styleClass ? ' '+styleClass : ''));
+          var summary = el('summary', '', title);
+          var body = el('div', 'progressive-inner__body');
+          node.parentNode.insertBefore(outer, node);
+          outer.appendChild(summary); outer.appendChild(body); body.appendChild(node);
+          return outer;
+        }
+        // Portada: identidad, fotografía y acciones visibles. El resto se consulta al abrir.
+        var heroCopy = document.querySelector('#inicio .hero-copy');
+        if (heroCopy) {
+          var heroMore = el('details', 'progressive-inner progressive-inner--hero');
+          var heroSummary = el('summary', '', 'Conocer áreas, credenciales y presencia académica');
+          var heroBody = el('div', 'progressive-inner__body');
+          heroMore.appendChild(heroSummary); heroMore.appendChild(heroBody);
+          ['.hero-domain-grid','.hero-specialties','.hero-proof','.reputation-hub'].forEach(function(sel) {
+            var part=heroCopy.querySelector(':scope > '+sel);
+            if(part) heroBody.appendChild(part);
+          });
+          if (heroBody.children.length) heroCopy.appendChild(heroMore);
+        }
+        var heroSide = document.querySelector('#inicio .hero-grid > div:nth-child(2)');
+        if (heroSide) {
+          var profileCard=heroSide.querySelectorAll(':scope > .exec-card');
+          if (profileCard.length > 1) drawerAround(profileCard[1], 'Abrir perfiles científicos y bases de datos', 'progressive-inner--profile');
+        }
+        // Secciones principales accesibles por clic. Ninguna se elimina del documento.
+        var labels = {
+          experiencia:'Experiencia profesional', metricas:'Impacto científico', trayectoria:'Formación académica',
+          complementaria:'Formación complementaria', servicios:'Servicios profesionales',
+          publicaciones:'Publicaciones y producción científica', contacto:'Contacto y colaboración'
+        };
+        Object.keys(labels).forEach(function(id) {
+          var sec=document.getElementById(id);
+          if (!sec) return;
+          var box=sec.querySelector(':scope > .container');
+          if(!box) return;
+          var drawer=el('details','portfolio-drawer'); drawer.setAttribute('data-disclosure-section',id);
+          var summary=el('summary','portfolio-drawer__summary',labels[id]);
+          var body=el('div','portfolio-drawer__body');
+          if(box.classList.contains('contact-grid')) {box.classList.remove('contact-grid');body.classList.add('contact-grid');}
+          while(box.firstChild)body.appendChild(box.firstChild);
+          drawer.appendChild(summary);drawer.appendChild(body);box.appendChild(drawer);
+        });
+        // Agrupar por materias, dentro de Experiencia, sin reemplazar los IDs existentes.
+        var expCorpus=document.getElementById('exp-corpus');
+        if(expCorpus) Array.prototype.slice.call(expCorpus.querySelectorAll(':scope > .experience-block')).forEach(function(block) {
+          var head=block.querySelector('.experience-block-head h3');
+          var title=head ? head.textContent.trim() : (block.id || 'Consultar contenido');
+          var outer=el('details','progressive-subsection');
+          var summary=el('summary','',title);
+          var body=el('div','progressive-subsection__body');
+          block.parentNode.insertBefore(outer,block);outer.appendChild(summary);outer.appendChild(body);body.appendChild(block);
+        });
+        // Los filtros siguen disponibles, pero no ocupan toda la primera pantalla.
+        [['exp-filters','Filtrar experiencia'],['formacion-filters','Filtrar credenciales'],['comp-filters','Filtrar formación complementaria']].forEach(function(pair) {
+          var group=document.getElementById(pair[0]);if(group) drawerAround(group,pair[1],'progressive-inner--filters');
+        });
+        drawerAround(document.querySelector('#trayectoria .grid-3'),'Consultar las siete credenciales académicas');
+        drawerAround(document.querySelector('#complementaria .comp-summary-grid'),'Explorar áreas de actualización');
+        var comp=drawerAround(document.getElementById('comp-catalog'),'Abrir catálogo completo: 76 formaciones');
+        document.querySelectorAll('#comp-catalog .comp-year-group').forEach(function(item){item.removeAttribute('open');});
+        var compFilter=document.getElementById('comp-filters');
+        if(comp && compFilter) compFilter.addEventListener('click',function(evt){if(evt.target.closest('.filter-btn')) comp.open=true;});
+        drawerAround(document.querySelector('#metricas .curricular-impact-panel'),'Consultar indicadores curriculares');
+        drawerAround(document.querySelector('#metricas .annual-trend-panel'),'Consultar tendencia anual de citas');
+        // Servicios: mostrar cuatro opciones breves y abrir cada explicación con un clic.
+        document.querySelectorAll('#servicios .grid-2 > .exec-card').forEach(function(card) {
+          var h=card.querySelector('.card-title');
+          drawerAround(card, h ? h.textContent.trim() : 'Consultar servicio', 'progressive-inner--service');
+        });
+        drawerAround(document.querySelector('#contacto .contact-form-card'),'Preparar solicitud por correo');
+        drawerAround(document.querySelector('#publicaciones .publication-filter-panel'),'Buscar o filtrar publicaciones','progressive-inner--filters');
+        var pubList=document.getElementById('pub-list');
+        var pubCatalog=drawerAround(pubList,'Abrir catálogo completo: 138 publicaciones');
+        // Índice de publicaciones por año y grupos de hasta ocho fichas.
+        if(pubList) {
+          var pubs=Array.prototype.slice.call(pubList.querySelectorAll(':scope > .pub-item'));
+          var years=[];
+          pubs.forEach(function(item){var year=item.getAttribute('data-p-year')||'Sin año';if(years.indexOf(year)<0)years.push(year);});
+          years.forEach(function(year) {
+            var found=pubs.filter(function(item){return (item.getAttribute('data-p-year')||'Sin año')===year;});
+            var yearGroup=el('details','progressive-year');yearGroup.setAttribute('data-pub-year-group',year);
+            var yearSummary=el('summary','',year+' · '+found.length+' publicaciones');
+            var yearBody=el('div','progressive-year__body');
+            yearGroup.appendChild(yearSummary);yearGroup.appendChild(yearBody);pubList.appendChild(yearGroup);
+            for(var i=0;i<found.length;i+=8){
+              var subset=found.slice(i,i+8);
+              var batch=el('details','progressive-batch');
+              batch.appendChild(el('summary','', 'Registros '+(i+1)+'–'+(i+subset.length)));
+              var batchBody=el('div','progressive-batch__body');
+              subset.forEach(function(card){batchBody.appendChild(card);});
+              batch.appendChild(batchBody);yearBody.appendChild(batch);
+            }
+          });
+          function syncPublicationGroups() {
+            var filtered=!!(document.getElementById('pub-search')||{}).value ||
+              ['pub-type-filter','pub-year-filter','pub-theme-filter'].some(function(id){var v=document.getElementById(id);return !!v&&v.value!=='all';});
+            pubList.querySelectorAll('.progressive-year').forEach(function(group){
+              var any=false;
+              group.querySelectorAll('.progressive-batch').forEach(function(batch){
+                var found=Array.prototype.some.call(batch.querySelectorAll('.pub-item'),function(x){return !x.hidden;});
+                batch.hidden=filtered&&!found;
+                if(filtered&&found) batch.open=true;
+                if(!filtered) batch.open=false;
+                if(found)any=true;
+              });
+              group.hidden=filtered&&!any;
+              group.open=filtered&&any;
+            });
+            if(filtered&&pubCatalog)pubCatalog.open=true;
+          }
+          ['pub-search','pub-type-filter','pub-year-filter','pub-theme-filter','pub-reset'].forEach(function(id){
+            var input=document.getElementById(id);
+            if(input) input.addEventListener(id==='pub-search'?'input':(id==='pub-reset'?'click':'change'),syncPublicationGroups);
+          });
+          syncPublicationGroups();
+        }
+        // Navegación: abrir automáticamente los padres del destino, incluso desde el índice o los CTA.
+        function revealTarget(selector) {
+          if(!selector||selector.charAt(0)!=='#')return;
+          var target=document.getElementById(selector.slice(1));if(!target)return;
+          if(target.matches('main > section')) {var major=target.querySelector('.portfolio-drawer');if(major)major.open=true;}
+          var node=target;
+          while(node){if(node.tagName==='DETAILS')node.open=true;node=node.parentElement;}
+        }
+        document.addEventListener('click',function(evt){
+          var link=evt.target.closest('a[href^="#"], [data-target^="#"]');
+          if(link)revealTarget(link.getAttribute('data-target')||link.getAttribute('href'));
+          if(evt.target.closest('.btn-cotizar, .contact-reason-action')) {
+            revealTarget('#contacto');
+            var formCard=document.querySelector('#contacto .contact-form-card');
+            if(formCard){var p=formCard.parentElement;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement;}}
+          }
+        },true);
+        window.addEventListener('hashchange',function(){revealTarget(window.location.hash);});
+        if(window.location.hash)revealTarget(window.location.hash);
+        document.documentElement.classList.add('progressive-ui-ready');
+      })();
+
     })();
   </script>
 </body>
